@@ -23,6 +23,7 @@ class FirestoreCache {
     @required DocumentReference cacheDocRef,
     @required String firestoreCacheField,
     String localCacheKey,
+    bool isUpdateCacheDate = true,
   }) async {
     assert(query != null && cacheDocRef != null && firestoreCacheField != null);
     localCacheKey = localCacheKey ?? firestoreCacheField;
@@ -32,16 +33,18 @@ class FirestoreCache {
     final Source src = isFetch ? Source.serverAndCache : Source.cache;
     QuerySnapshot snapshot = await query.getDocuments(source: src);
 
-    // If it was triggered to get documents from cache but the documents do not exist,
+    // If it is triggered to get documents from cache but the documents do not exist,
     // which means documents may be removed from cache,
     // we then fallback to default get documents behavior.
     if (src == Source.cache && snapshot.documents.isEmpty) {
       snapshot = await query.getDocuments();
     }
 
-    // If there are documents in the snapshot and at least one of the documents
-    // was retrieved from the server, update the latest local cache date.
-    if (snapshot.documents.isNotEmpty &&
+    // If it is set to update cache date, and there are documents in the snapshot, and
+    // at least one of the documents was retrieved from the server,
+    // update the latest local cache date.
+    if (isUpdateCacheDate &&
+        snapshot.documents.isNotEmpty &&
         snapshot.documents.any(
             (DocumentSnapshot doc) => doc.metadata?.isFromCache == false)) {
       SharedPreferences prefs = await SharedPreferences.getInstance();
