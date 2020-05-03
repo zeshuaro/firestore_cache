@@ -1,6 +1,6 @@
 # Firestore Cache
 
-A Flutter plugin for caching Firestore documents.
+A Flutter plugin for fetching Firestore documents with read from cache first then server.
 
 This plugin is mainly designed for applications using the `DocumentReference.get()` and `Query.getDocuments()` methods in the `cloud_firestore` plugin, and is implemented with read from cache first then server.
 

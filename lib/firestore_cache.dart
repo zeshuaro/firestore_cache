@@ -4,8 +4,28 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// FirestoreCache is a Flutter plugin for fetching Firestore documents
+/// with read from cache first then server.
+///
+/// Before using this plugin, you will need to do some inital setup on Firestore.
+/// Then you can use this sample code to fetch documents:
+///
+/// ```dart
+/// // This should be the path of the document that you created
+/// final DocumentReference cacheDocRef = Firestore.instance.document('status/status');
+///
+/// // This should be the timestamp field in that document
+/// final String cacheField = 'updatedAt';
+///
+/// final Query query = Firestore.instance.collection('collection');
+/// final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+///     query: query,
+///     cacheDocRef: cacheDocRef,
+///     firestoreCacheField: cacheField,
+/// );
+/// ```
 class FirestoreCache {
-  /// Returns a [Future<DocumentSnapshot>] with read from cache first then server.
+  /// Fetch a document with read from cache first then server.
   ///
   /// This method takes in a [docRef] which is the usual [DocumentReference] object
   /// on Firestore used for retrieving a single document. It tries to retrieve the
@@ -27,7 +47,7 @@ class FirestoreCache {
     return doc;
   }
 
-  /// Returns a [Future<QuerySnapshot>] with read read from cache first then server.
+  /// Fetch documents with read read from cache first then server.
   ///
   /// This method takes in a [query] which is the usual Firestore [Query] object
   /// used to query a collection, and a [cacheDocRef] which is the [DocumentReference]
@@ -100,6 +120,7 @@ class FirestoreCache {
   }
 }
 
+/// Exception for cache document does not exist on Firestore
 class CacheDocDoesNotExist implements Exception {
   final String message = '''Your cache document does not exist on Firestore, 
             which means you will always be fetching your documents from the server. 
@@ -113,6 +134,7 @@ class CacheDocDoesNotExist implements Exception {
   }
 }
 
+/// Exception for timestamp field in cache document does not exist on Firestore
 class CacheDocFieldDoesNotExist implements Exception {
   final String message =
       '''Your cache document does not contain your specified field, 
