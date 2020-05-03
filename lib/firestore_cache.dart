@@ -30,17 +30,18 @@ class FirestoreCache {
   /// This method takes in a [docRef] which is the usual [DocumentReference] object
   /// on Firestore used for retrieving a single document. It tries to retrieve the
   /// document from the cache first, and fallback to retrieving from the server if it
-  /// fails to do so.
+  /// fails to do so. It also takes in an optional argument [source] which you can
+  /// force it to fetch the document from the server.
   ///
   /// This method should only be used if the document you are fetching does not
-  /// change over time. Once the document is cached, it will always read from the cache.
-  static Future<DocumentSnapshot> getDocument(DocumentReference docRef) async {
-    DocumentSnapshot doc = await docRef.get(source: Source.cache);
-
-    // If the document does not exist, which means the document
-    // may have been removed from cache,
-    // we then fallback to default get document behavior.
-    if (!doc.exists) {
+  /// change over time. Once the document is cached, it will always be read from the cache.
+  static Future<DocumentSnapshot> getDocument(DocumentReference docRef,
+      [Source source = Source.cache]) async {
+    DocumentSnapshot doc;
+    try {
+      doc = await docRef.get(source: source);
+    } catch (_) {
+      // Document cache is unavailable so we fallback to default get document behavior.
       doc = await docRef.get();
     }
 
@@ -71,7 +72,7 @@ class FirestoreCache {
     QuerySnapshot snapshot = await query.getDocuments(source: src);
 
     // If it is triggered to get documents from cache but the documents do not exist,
-    // which means documents may be removed from cache,
+    // which means documents may have been removed from cache,
     // we then fallback to default get documents behavior.
     if (src == Source.cache && snapshot.documents.isEmpty) {
       snapshot = await query.getDocuments();
