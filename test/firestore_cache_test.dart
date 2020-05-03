@@ -8,9 +8,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   const String docCacheKey = 'isFetchDoc';
   const String docsCacheKey = 'updatedAt';
-  SharedPreferences.setMockInitialValues({});
 
   test('Test document exists', () async {
+    SharedPreferences.setMockInitialValues({});
     final firestore = MockFirestoreInstance();
     final DocumentReference dataDocRef =
         firestore.collection('data').document();
@@ -24,6 +24,7 @@ void main() {
   });
 
   test('Test document does not exist', () async {
+    SharedPreferences.setMockInitialValues({});
     final firestore = MockFirestoreInstance();
 
     final DocumentReference dataDocRef =
@@ -36,6 +37,7 @@ void main() {
   });
 
   test('Test documents exists', () async {
+    SharedPreferences.setMockInitialValues({});
     final firestore = MockFirestoreInstance();
     final DocumentReference cacheDocRef =
         firestore.collection('cache').document('cache');
@@ -57,6 +59,7 @@ void main() {
   });
 
   test('Test documents do not exist', () async {
+    SharedPreferences.setMockInitialValues({});
     final firestore = MockFirestoreInstance();
     final DocumentReference cacheDocRef =
         firestore.collection('cache').document('cache');
@@ -73,6 +76,8 @@ void main() {
   });
 
   test('Test cache collection does not exist', () async {
+    SharedPreferences.setMockInitialValues(
+        {docsCacheKey: DateTime(2020, 1, 1).toIso8601String()});
     final firestore = MockFirestoreInstance();
     final DocumentReference cacheDocRef =
         firestore.collection('cache').document('cache');
@@ -83,15 +88,20 @@ void main() {
         .add(<String, dynamic>{'hello': 'world again'});
 
     final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
-      query: query,
-      cacheDocRef: cacheDocRef,
-      firestoreCacheField: docsCacheKey,
-    );
-    expect(snapshot.documents.isNotEmpty, true);
+    try {
+      await FirestoreCache.getDocuments(
+        query: query,
+        cacheDocRef: cacheDocRef,
+        firestoreCacheField: docsCacheKey,
+      );
+    } catch (e) {
+      expect(e, isInstanceOf<CacheDocDoesNotExist>());
+    }
   });
 
   test('Test cache document field does not exist', () async {
+    SharedPreferences.setMockInitialValues(
+        {docsCacheKey: DateTime(2020, 1, 1).toIso8601String()});
     final firestore = MockFirestoreInstance();
     final DocumentReference cacheDocRef =
         firestore.collection('cache').document('cache');
@@ -103,11 +113,14 @@ void main() {
         .add(<String, dynamic>{'hello': 'world again'});
 
     final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
-      query: query,
-      cacheDocRef: cacheDocRef,
-      firestoreCacheField: docsCacheKey,
-    );
-    expect(snapshot.documents.isNotEmpty, true);
+    try {
+      await FirestoreCache.getDocuments(
+        query: query,
+        cacheDocRef: cacheDocRef,
+        firestoreCacheField: docsCacheKey,
+      );
+    } catch (e) {
+      expect(e, isInstanceOf<CacheDocFieldDoesNotExist>());
+    }
   });
 }
