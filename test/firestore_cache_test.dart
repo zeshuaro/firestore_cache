@@ -6,7 +6,6 @@ import 'package:firestore_cache/firestore_cache.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  const String docCacheKey = 'isFetchDoc';
   const String docsCacheKey = 'updatedAt';
 
   test('Test document exists', () async {
@@ -16,10 +15,7 @@ void main() {
         firestore.collection('data').document();
     await dataDocRef.setData(<String, dynamic>{'hello': 'world'});
 
-    final DocumentSnapshot doc = await FirestoreCache.getDocument(
-      docRef: dataDocRef,
-      cacheKey: docCacheKey,
-    );
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(dataDocRef);
     expect(doc.exists, true);
   });
 
@@ -29,10 +25,7 @@ void main() {
 
     final DocumentReference dataDocRef =
         firestore.collection('data').document();
-    final DocumentSnapshot doc = await FirestoreCache.getDocument(
-      docRef: dataDocRef,
-      cacheKey: docCacheKey,
-    );
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(dataDocRef);
     expect(doc.exists, false);
   });
 
