@@ -51,10 +51,13 @@ class FirestoreCache {
       snapshot = await query.getDocuments();
     }
 
+    // If there are documents in the snapshot and at least one of the documents
+    // was retrieved from the server, update the latest local cache date.
     if (snapshot.documents.isNotEmpty &&
         snapshot.documents.any(
             (DocumentSnapshot doc) => doc.metadata?.isFromCache == false)) {
-      await _updateCacheKey(localCacheKey);
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
     }
 
     return snapshot;
@@ -82,10 +85,5 @@ class FirestoreCache {
     }
 
     return isFetch;
-  }
-
-  static Future<void> _updateCacheKey(String localCacheKey) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
   }
 }
