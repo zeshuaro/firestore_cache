@@ -22,7 +22,7 @@ Before using the plugin, you will need to create a document on Firestore and cre
 
 ![Firestore Screenshot](images/firestore_screenshot.png)
 
-__PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on this timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from cache.
+__PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on the timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from the cache.
 
 You should also create different timestamp fields for different collections or documents that you are reading.
 
