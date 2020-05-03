@@ -5,27 +5,15 @@ import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FirestoreCache {
-  static Future<DocumentSnapshot> getDocument({
-    @required DocumentReference docRef,
-    @required String cacheKey,
-  }) async {
-    assert(docRef != null && cacheKey != null);
+  static Future<DocumentSnapshot> getDocument(DocumentReference docRef) async {
+    DocumentSnapshot doc = await docRef.get(source: Source.cache);
 
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    final bool cacheIsFetch = prefs.getBool(cacheKey);
-    final bool isFetch = cacheIsFetch == true || cacheIsFetch == null;
-
-    final Source src = isFetch ? Source.serverAndCache : Source.cache;
-    DocumentSnapshot doc = await docRef.get(source: src);
-
-    // If it was triggered to get document from cache but the document does not exist,
-    // which means the document may have been removed from cache,
+    // If the document does not exist, which means the document
+    // may have been removed from cache,
     // we then fallback to default get document behavior.
-    if (src == Source.cache && !doc.exists) {
+    if (!doc.exists) {
       doc = await docRef.get();
     }
-
-    await prefs.setBool(cacheKey, false);
 
     return doc;
   }
