@@ -20,8 +20,11 @@ void main() {
         firestore.collection('data').document();
     await dataDocRef.setData(<String, dynamic>{'hello': 'world'});
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
-    final DocumentSnapshot doc = await firestoreCache.getDocument(dataDocRef);
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(
+      docRef: dataDocRef,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(doc.exists, true);
   });
 
@@ -35,8 +38,11 @@ void main() {
     final DocumentReference dataDocRef =
         firestore.collection('data').document();
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
-    final DocumentSnapshot doc = await firestoreCache.getDocument(dataDocRef);
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(
+      docRef: dataDocRef,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(doc.exists, false);
   });
 
@@ -52,9 +58,12 @@ void main() {
         .collection('data')
         .add(<String, dynamic>{'hello': 'world again'});
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
     final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await firestoreCache.getDocuments(query);
+    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+      query: query,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(snapshot.documents.isNotEmpty, true);
   });
 
@@ -65,9 +74,12 @@ void main() {
     await cacheDocRef
         .setData(<String, dynamic>{cacheKey: DateTime(2020, 1, 2)});
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
     final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await firestoreCache.getDocuments(query);
+    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+      query: query,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(snapshot.documents.isEmpty, true);
   });
 
@@ -80,8 +92,11 @@ void main() {
         firestore.collection('data').document();
     await dataDocRef.setData(<String, dynamic>{'hello': 'world'});
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
-    final DocumentSnapshot doc = await firestoreCache.getDocument(dataDocRef);
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(
+      docRef: dataDocRef,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(doc.exists, true);
   });
 
@@ -95,8 +110,11 @@ void main() {
         firestore.collection('data').document();
     await dataDocRef.setData(<String, dynamic>{'hello': 'world'});
 
-    final firestoreCache = FirestoreCache(cacheDocRef, cacheKey);
-    final DocumentSnapshot doc = await firestoreCache.getDocument(dataDocRef);
+    final DocumentSnapshot doc = await FirestoreCache.getDocument(
+      docRef: dataDocRef,
+      cacheDocRef: cacheDocRef,
+      firestoreCacheKey: cacheKey,
+    );
     expect(doc.exists, true);
   });
 }
