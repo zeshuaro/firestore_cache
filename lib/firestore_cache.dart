@@ -5,6 +5,15 @@ import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FirestoreCache {
+  /// Returns a [Future<DocumentSnapshot>] with read from cache first then server.
+  ///
+  /// This method takes in a [docRef] which is the usual [DocumentReference] object
+  /// on Firestore used for retrieving a single document. It tries to retrieve the
+  /// document from the cache first, and fallback to retrieving from the server if it
+  /// fails to do so.
+  ///
+  /// This method should only be used if the document you are fetching does not
+  /// change over time. Once the document is cached, it will always read from the cache.
   static Future<DocumentSnapshot> getDocument(DocumentReference docRef) async {
     DocumentSnapshot doc = await docRef.get(source: Source.cache);
 
@@ -18,6 +27,14 @@ class FirestoreCache {
     return doc;
   }
 
+  /// Returns a [Future<QuerySnapshot>] with read read from cache first then server.
+  ///
+  /// This method takes in a [query] which is the usual Firestore [Query] object
+  /// used to query a collection, and a [cacheDocRef] which is the [DocumentReference]
+  /// object of the document containing a [firestoreCacheField] field of timestamp.
+  /// You can also pass in [localCacheKey] as the key for storing the last local
+  /// cache date, and [isUpdateCacheDate] to set if it should update the last local
+  /// cache date to current date and time.
   static Future<QuerySnapshot> getDocuments({
     @required Query query,
     @required DocumentReference cacheDocRef,

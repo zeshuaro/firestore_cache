@@ -1,14 +1,42 @@
-# firestore_cache
+# Firestore Cache
 
-A new Flutter package project.
+A Flutter plugin for caching Firestore documents.
+
+This plugin is mainly designed for applications using the `DocumentReference.get()` and `Query.getDocuments()` methods in the `cloud_firestore` plugin, and is implemented with read from cache first then server.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Add this to your package's `pubspec.yaml` file:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  firestore_cache: ^0.1.0
+```
+
+## Usage
+
+Before using the plugin, you will need to create a document on Firestore and create a timestamp field in that document. See the screenshot below for an example:
+
+![Firestore Screenshot](images/firestore_screenshot.png)
+
+__PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on this timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from cache.
+
+You should also create different timestamp fields for different collections or documents that you are reading.
+
+```dart
+import 'package:firestore_cache/firestore_cache.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+// This should be the path of the document that you created
+final DocumentReference cacheDocRef = Firestore.instance.document('status/status');
+
+// This should be the timestamp field in that document
+final String cacheField = 'updatedAt';
+
+final Query query = Firestore.instance.collection('collection');
+final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+    query: query,
+    cacheDocRef: cacheDocRef,
+    firestoreCacheField: cacheField,
+);
+```
