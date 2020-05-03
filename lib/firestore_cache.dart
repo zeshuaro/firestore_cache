@@ -39,8 +39,9 @@ class FirestoreCache {
     assert(query != null && cacheDocRef != null && firestoreCacheKey != null);
     localCacheKey = localCacheKey ?? firestoreCacheKey;
 
-    final Source src =
-        await _getSource(cacheDocRef, firestoreCacheKey, localCacheKey);
+    final bool isFetch =
+        await _isFetchDocuments(cacheDocRef, firestoreCacheKey, localCacheKey);
+    final Source src = isFetch ? Source.serverAndCache : Source.cache;
     QuerySnapshot snapshot = await query.getDocuments(source: src);
 
     // If it was triggered to get documents from cache but the documents do not exist,
@@ -59,25 +60,7 @@ class FirestoreCache {
     return snapshot;
   }
 
-  static Future<Source> _getSource(
-    DocumentReference cacheDocRef,
-    String firestoreCacheKey,
-    String localCacheKey,
-  ) async {
-    Source src;
-    final bool isFetch =
-        await _isFetch(cacheDocRef, firestoreCacheKey, localCacheKey);
-
-    if (isFetch) {
-      src = Source.serverAndCache;
-    } else {
-      src = Source.cache;
-    }
-
-    return src;
-  }
-
-  static Future<bool> _isFetch(
+  static Future<bool> _isFetchDocuments(
     DocumentReference cacheDocRef,
     String firestoreCacheKey,
     String localCacheKey,
