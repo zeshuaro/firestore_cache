@@ -7,27 +7,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 class FirestoreCache {
   static Future<DocumentSnapshot> getDocument({
     @required DocumentReference docRef,
-    @required DocumentReference cacheDocRef,
-    @required String firestoreCacheKey,
-    String localCacheKey,
+    @required String cacheKey,
   }) async {
-    assert(docRef != null && cacheDocRef != null && firestoreCacheKey != null);
-    localCacheKey = localCacheKey ?? firestoreCacheKey;
+    assert(docRef != null && cacheKey != null);
 
-    final Source src =
-        await _getSource(cacheDocRef, firestoreCacheKey, localCacheKey);
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final bool cacheIsFetch = prefs.getBool(cacheKey);
+    final bool isFetch = cacheIsFetch == true || cacheIsFetch == null;
+
+    final Source src = isFetch ? Source.serverAndCache : Source.cache;
     DocumentSnapshot doc = await docRef.get(source: src);
 
     // If it was triggered to get document from cache but the document does not exist,
-    // which means the document may be removed from cache,
+    // which means the document may have been removed from cache,
     // we then fallback to default get document behavior.
     if (src == Source.cache && !doc.exists) {
       doc = await docRef.get();
     }
 
-    if (doc.exists && doc.metadata?.isFromCache == false) {
-      await _updateCacheKey(localCacheKey);
-    }
+    await prefs.setBool(cacheKey, false);
 
     return doc;
   }
@@ -41,8 +39,9 @@ class FirestoreCache {
     assert(query != null && cacheDocRef != null && firestoreCacheKey != null);
     localCacheKey = localCacheKey ?? firestoreCacheKey;
 
-    final Source src =
-        await _getSource(cacheDocRef, firestoreCacheKey, localCacheKey);
+    final bool isFetch =
+        await _isFetchDocuments(cacheDocRef, firestoreCacheKey, localCacheKey);
+    final Source src = isFetch ? Source.serverAndCache : Source.cache;
     QuerySnapshot snapshot = await query.getDocuments(source: src);
 
     // If it was triggered to get documents from cache but the documents do not exist,
@@ -52,34 +51,19 @@ class FirestoreCache {
       snapshot = await query.getDocuments();
     }
 
+    // If there are documents in the snapshot and at least one of the documents
+    // was retrieved from the server, update the latest local cache date.
     if (snapshot.documents.isNotEmpty &&
         snapshot.documents.any(
             (DocumentSnapshot doc) => doc.metadata?.isFromCache == false)) {
-      await _updateCacheKey(localCacheKey);
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
     }
 
     return snapshot;
   }
 
-  static Future<Source> _getSource(
-    DocumentReference cacheDocRef,
-    String firestoreCacheKey,
-    String localCacheKey,
-  ) async {
-    Source src;
-    final bool isFetch =
-        await _isFetch(cacheDocRef, firestoreCacheKey, localCacheKey);
-
-    if (isFetch) {
-      src = Source.serverAndCache;
-    } else {
-      src = Source.cache;
-    }
-
-    return src;
-  }
-
-  static Future<bool> _isFetch(
+  static Future<bool> _isFetchDocuments(
     DocumentReference cacheDocRef,
     String firestoreCacheKey,
     String localCacheKey,
@@ -101,10 +85,5 @@ class FirestoreCache {
     }
 
     return isFetch;
-  }
-
-  static Future<void> _updateCacheKey(String localCacheKey) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
   }
 }
