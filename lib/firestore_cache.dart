@@ -33,14 +33,14 @@ class FirestoreCache {
   static Future<QuerySnapshot> getDocuments({
     @required Query query,
     @required DocumentReference cacheDocRef,
-    @required String firestoreCacheKey,
+    @required String firestoreCacheField,
     String localCacheKey,
   }) async {
-    assert(query != null && cacheDocRef != null && firestoreCacheKey != null);
-    localCacheKey = localCacheKey ?? firestoreCacheKey;
+    assert(query != null && cacheDocRef != null && firestoreCacheField != null);
+    localCacheKey = localCacheKey ?? firestoreCacheField;
 
-    final bool isFetch =
-        await _isFetchDocuments(cacheDocRef, firestoreCacheKey, localCacheKey);
+    final bool isFetch = await _isFetchDocuments(
+        cacheDocRef, firestoreCacheField, localCacheKey);
     final Source src = isFetch ? Source.serverAndCache : Source.cache;
     QuerySnapshot snapshot = await query.getDocuments(source: src);
 
@@ -65,7 +65,7 @@ class FirestoreCache {
 
   static Future<bool> _isFetchDocuments(
     DocumentReference cacheDocRef,
-    String firestoreCacheKey,
+    String firestoreCacheField,
     String localCacheKey,
   ) async {
     bool isFetch = true;
@@ -76,14 +76,37 @@ class FirestoreCache {
       final DateTime cacheDate = DateTime.parse(dateStr);
       final DocumentSnapshot doc = await cacheDocRef.get();
 
-      if (doc.exists && doc.data.containsKey(firestoreCacheKey)) {
-        final DateTime latestDate = doc.data[firestoreCacheKey].toDate();
-        if (latestDate.isBefore(cacheDate)) {
-          isFetch = false;
-        }
+      if (!doc.exists) {
+        throw CacheDocDoesNotExist();
+      } else if (!doc.data.containsKey(firestoreCacheField)) {
+        throw CacheDocFieldDoesNotExist();
+      }
+
+      final DateTime latestDate = doc.data[firestoreCacheField].toDate();
+      if (latestDate.isBefore(cacheDate)) {
+        isFetch = false;
       }
     }
 
     return isFetch;
   }
+}
+
+class CacheDocDoesNotExist implements Exception {
+  final String cause = '''Your cache document does not exist on Firestore, 
+            which means you will always be fetching your documents from the server. 
+            Create your cache document on Firestore first 
+            with your specified field name of a timestamp.''';
+
+  CacheDocDoesNotExist();
+}
+
+class CacheDocFieldDoesNotExist implements Exception {
+  final String cause =
+      '''Your cache document does not contain your specified field, 
+            which means you will always be fetching your documents from the server. 
+            Create your specified filed name with a timestamp 
+            in your cache document on Firestore first.''';
+
+  CacheDocFieldDoesNotExist();
 }

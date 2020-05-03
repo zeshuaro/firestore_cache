@@ -51,7 +51,7 @@ void main() {
     final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
       query: query,
       cacheDocRef: cacheDocRef,
-      firestoreCacheKey: docsCacheKey,
+      firestoreCacheField: docsCacheKey,
     );
     expect(snapshot.documents.isNotEmpty, true);
   });
@@ -67,7 +67,7 @@ void main() {
     final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
       query: query,
       cacheDocRef: cacheDocRef,
-      firestoreCacheKey: docsCacheKey,
+      firestoreCacheField: docsCacheKey,
     );
     expect(snapshot.documents.isEmpty, true);
   });
@@ -86,7 +86,7 @@ void main() {
     final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
       query: query,
       cacheDocRef: cacheDocRef,
-      firestoreCacheKey: docsCacheKey,
+      firestoreCacheField: docsCacheKey,
     );
     expect(snapshot.documents.isNotEmpty, true);
   });
@@ -106,7 +106,7 @@ void main() {
     final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
       query: query,
       cacheDocRef: cacheDocRef,
-      firestoreCacheKey: docsCacheKey,
+      firestoreCacheField: docsCacheKey,
     );
     expect(snapshot.documents.isNotEmpty, true);
   });
