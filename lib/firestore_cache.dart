@@ -31,15 +31,19 @@ class FirestoreCache {
   /// on Firestore used for retrieving a single document. It tries to retrieve the
   /// document from the cache first, and fallback to retrieving from the server if it
   /// fails to do so. It also takes in an optional argument [source] which you can
-  /// force it to fetch the document from the server.
+  /// force it to fetch the document from the server, an [isRefreshEmptyCache] to
+  /// refresh the cached document from the server if it is empty.
   ///
-  /// This method should only be used if the document you are fetching does not
-  /// change over time. Once the document is cached, it will always be read from the cache.
+  /// This method should only be used if the document you are fetching does not change
+  /// over time. Once the document is cached, it will always be read from the cache.
   static Future<DocumentSnapshot> getDocument(DocumentReference docRef,
-      [Source source = Source.cache]) async {
+      [Source source = Source.cache, bool isRefreshEmptyCache = true]) async {
     DocumentSnapshot doc;
     try {
       doc = await docRef.get(source: source);
+      if (isRefreshEmptyCache && doc.data.isEmpty) {
+        doc = await docRef.get();
+      }
     } catch (_) {
       // Document cache is unavailable so we fallback to default get document behavior.
       doc = await docRef.get();
