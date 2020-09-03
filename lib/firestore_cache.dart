@@ -40,8 +40,8 @@ class FirestoreCache {
       [Source source = Source.cache, bool isRefreshEmptyCache = true]) async {
     DocumentSnapshot doc;
     try {
-      doc = await docRef.get(source: source);
-      if (isRefreshEmptyCache && doc.data.isEmpty) {
+      doc = await docRef.get(GetOptions(source: source));
+      if (isRefreshEmptyCache && doc.data().isEmpty) {
         doc = await docRef.get();
       }
     } catch (_) {
@@ -73,21 +73,21 @@ class FirestoreCache {
     final bool isFetch = await _isFetchDocuments(
         cacheDocRef, firestoreCacheField, localCacheKey);
     final Source src = isFetch ? Source.serverAndCache : Source.cache;
-    QuerySnapshot snapshot = await query.getDocuments(source: src);
+    QuerySnapshot snapshot = await query.get(GetOptions(source: src));
 
     // If it is triggered to get documents from cache but the documents do not exist,
     // which means documents may have been removed from cache,
     // we then fallback to default get documents behavior.
-    if (src == Source.cache && snapshot.documents.isEmpty) {
-      snapshot = await query.getDocuments();
+    if (src == Source.cache && snapshot.docs.isEmpty) {
+      snapshot = await query.get();
     }
 
     // If it is set to update cache date, and there are documents in the snapshot, and
     // at least one of the documents was retrieved from the server,
     // update the latest local cache date.
     if (isUpdateCacheDate &&
-        snapshot.documents.isNotEmpty &&
-        snapshot.documents.any(
+        snapshot.docs.isNotEmpty &&
+        snapshot.docs.any(
             (DocumentSnapshot doc) => doc.metadata?.isFromCache == false)) {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
@@ -111,11 +111,11 @@ class FirestoreCache {
 
       if (!doc.exists) {
         throw CacheDocDoesNotExist();
-      } else if (!doc.data.containsKey(firestoreCacheField)) {
+      } else if (!doc.data().containsKey(firestoreCacheField)) {
         throw CacheDocFieldDoesNotExist();
       }
 
-      final DateTime latestDate = doc.data[firestoreCacheField].toDate();
+      final DateTime latestDate = doc.data()[firestoreCacheField].toDate();
       if (latestDate.isBefore(cacheDate)) {
         isFetch = false;
       }
