@@ -34,7 +34,7 @@ import 'package:firestore_cache/firestore_cache.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 // This should be the path of the document that you created
-final DocumentReference cacheDocRef = Firestore.instance.document('status/status');
+final DocumentReference cacheDocRef = Firestore.instance.doc('status/status');
 
 // This should be the timestamp field in that document
 final String cacheField = 'updatedAt';
