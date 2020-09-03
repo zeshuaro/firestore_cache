@@ -10,11 +10,13 @@ This plugin is mainly designed for applications using the `DocumentReference.get
 
 ## Getting Started
 
+__WARNING__ `cloud_firestore 0.14.0` introduced a lot of breaking changes, `firestore_cache 0.2.0` has been update to work with these latest changes. Please use `firestore_cache 0.1.1` for `cloud_firestore` versions prior to `0.14.0`.
+
 Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  firestore_cache: ^0.1.1
+  firestore_cache: ^0.2.0
 ```
 
 ### Usage
@@ -32,7 +34,7 @@ import 'package:firestore_cache/firestore_cache.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 // This should be the path of the document that you created
-final DocumentReference cacheDocRef = Firestore.instance.document('status/status');
+final DocumentReference cacheDocRef = Firestore.instance.doc('status/status');
 
 // This should be the timestamp field in that document
 final String cacheField = 'updatedAt';
@@ -47,4 +49,4 @@ final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
 
 ### Documentation
 
-The documentation of `firestore_cache` lives at [here](https://pub.dev/documentation/firestore_cache/latest/).
+The documentation of `firestore_cache` is available [here](https://pub.dev/documentation/firestore_cache/latest/).
