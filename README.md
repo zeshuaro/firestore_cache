@@ -5,6 +5,7 @@ A Flutter plugin for fetching Firestore documents with read from cache first the
 [![pub package](https://img.shields.io/pub/v/firestore_cache.svg)](https://pub.dartlang.org/packages/firestore_cache)
 [![docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://pub.dev/documentation/firestore_cache/latest/)
 [![MIT License](https://img.shields.io/github/license/zeshuaro/firestore_cache.svg)](https://github.com/zeshuaro/firestore_cache/blob/master/LICENSE)
+[![effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://github.com/tenhobi/effective_dart)
 
 This plugin is mainly designed for applications using the `DocumentReference.get()` and `Query.get()` (`Query.getDocuments()` for `cloud_firestore` versions prior to `0.14.0`) methods in the `cloud_firestore` plugin, and is implemented with read from cache first then server.
 
