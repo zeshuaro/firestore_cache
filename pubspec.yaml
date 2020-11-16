@@ -10,16 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^0.14.0+2
-  shared_preferences: ^0.5.7
-  meta: ^1.1.8
-  firebase_core: ^0.5.0
+  cloud_firestore: ">=0.14.3 <0.15.0"
+  shared_preferences: ">=0.5.0 <2.0.0"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  cloud_firestore_mocks:
-    git:
-      url: https://github.com/sensuikan1973/cloud_firestore_mocks.git
-      ref: support_cloud_firesote_0.14.0
-
+  cloud_firestore_mocks: ^0.5.2
