@@ -1,3 +1,8 @@
+## 0.3.0
+
+  * Updated to support `cloud_firestore: ">=0.16.0 <0.17.0"`
+  * Removed `meta` as a dependency
+
 ## 0.2.0+1
 
   * Updated depencencies version constraints
