@@ -25,8 +25,8 @@ dependencies:
     sdk: flutter
   firestore_cache:
     path: ../
-  cloud_firestore: ^0.14.0+2
-  firebase_core: ^0.5.0
+  cloud_firestore: ^0.16.0
+  firebase_core: ^0.7.0
 
 dev_dependencies:
   flutter_test:
@@ -67,4 +67,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
