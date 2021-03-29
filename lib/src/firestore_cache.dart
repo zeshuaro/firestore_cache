@@ -36,15 +36,16 @@ class FirestoreCache {
   ///
   /// This method should only be used if the document you are fetching does not change
   /// over time. Once the document is cached, it will always be read from the cache.
-  static Future<DocumentSnapshot> getDocument(DocumentReference docRef,
-      [Source source = Source.cache, bool isRefreshEmptyCache = true]) async {
+  static Future<DocumentSnapshot> getDocument(
+    DocumentReference docRef, {
+    Source source = Source.cache,
+    bool isRefreshEmptyCache = true,
+  }) async {
     DocumentSnapshot doc;
     try {
       doc = await docRef.get(GetOptions(source: source));
-      if (isRefreshEmptyCache && doc.data().isEmpty) {
-        doc = await docRef.get();
-      }
-    } catch (_) {
+      if (doc.data() == null && isRefreshEmptyCache) doc = await docRef.get();
+    } on FirebaseException {
       // Document cache is unavailable so we fallback to default get document behavior.
       doc = await docRef.get();
     }
@@ -61,19 +62,21 @@ class FirestoreCache {
   /// cache date, and [isUpdateCacheDate] to set if it should update the last local
   /// cache date to current date and time.
   static Future<QuerySnapshot> getDocuments({
-    @required Query query,
-    @required DocumentReference cacheDocRef,
-    @required String firestoreCacheField,
-    String localCacheKey,
+    required Query query,
+    required DocumentReference cacheDocRef,
+    required String firestoreCacheField,
+    String? localCacheKey,
     bool isUpdateCacheDate = true,
   }) async {
-    assert(query != null && cacheDocRef != null && firestoreCacheField != null);
     localCacheKey = localCacheKey ?? firestoreCacheField;
 
-    final bool isFetch = await _isFetchDocuments(
-        cacheDocRef, firestoreCacheField, localCacheKey);
-    final Source src = isFetch ? Source.serverAndCache : Source.cache;
-    QuerySnapshot snapshot = await query.get(GetOptions(source: src));
+    final isFetch = await isFetchDocuments(
+      cacheDocRef,
+      firestoreCacheField,
+      localCacheKey,
+    );
+    final src = isFetch ? Source.serverAndCache : Source.cache;
+    var snapshot = await query.get(GetOptions(source: src));
 
     // If it is triggered to get documents from cache but the documents do not exist,
     // which means documents may have been removed from cache,
@@ -87,35 +90,36 @@ class FirestoreCache {
     // update the latest local cache date.
     if (isUpdateCacheDate &&
         snapshot.docs.isNotEmpty &&
-        snapshot.docs.any(
-            (DocumentSnapshot doc) => doc.metadata?.isFromCache == false)) {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
+        snapshot.docs.any((doc) => doc.metadata.isFromCache == false)) {
+      var prefs = await SharedPreferences.getInstance();
       await prefs.setString(localCacheKey, DateTime.now().toIso8601String());
     }
 
     return snapshot;
   }
 
-  static Future<bool> _isFetchDocuments(
+  @visibleForTesting
+  static Future<bool> isFetchDocuments(
     DocumentReference cacheDocRef,
     String firestoreCacheField,
     String localCacheKey,
   ) async {
-    bool isFetch = true;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    final String dateStr = prefs.getString(localCacheKey);
+    var isFetch = true;
+    var prefs = await SharedPreferences.getInstance();
+    final dateStr = prefs.getString(localCacheKey);
 
     if (dateStr != null) {
-      final DateTime cacheDate = DateTime.parse(dateStr);
-      final DocumentSnapshot doc = await cacheDocRef.get();
+      final cacheDate = DateTime.parse(dateStr);
+      final doc = await cacheDocRef.get();
+      final data = doc.data();
 
       if (!doc.exists) {
         throw CacheDocDoesNotExist();
-      } else if (!doc.data().containsKey(firestoreCacheField)) {
+      } else if (data == null || !data.containsKey(firestoreCacheField)) {
         throw CacheDocFieldDoesNotExist();
       }
 
-      final DateTime latestDate = doc.data()[firestoreCacheField].toDate();
+      final DateTime latestDate = data[firestoreCacheField].toDate();
       if (latestDate.isBefore(cacheDate)) {
         isFetch = false;
       }
