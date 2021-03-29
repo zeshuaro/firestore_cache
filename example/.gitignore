@@ -43,5 +43,5 @@ app.*.map.json
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-ios/Runner/GoogleService-Info.plist
-android/app/google-services.json
+GoogleService-Info.plist
+google-services.json

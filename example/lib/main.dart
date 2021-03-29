@@ -31,8 +31,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _firestore = FirebaseFirestore.instance;
-  Future<DocumentSnapshot> _futureDoc;
-  Future<QuerySnapshot> _futureSnapshot;
+  late Future<DocumentSnapshot> _futureDoc;
+  late Future<QuerySnapshot> _futureSnapshot;
 
   @override
   void initState() {
@@ -63,15 +63,15 @@ class _MyHomePageState extends State<MyHomePage> {
       future: _futureDoc,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Text(snapshot.error);
-        } else if (!snapshot.hasData) {
-          return CircularProgressIndicator();
+          return Text('${snapshot.error}');
+        } else if (snapshot.hasData) {
+          final doc = snapshot.data!;
+          return Text(
+            '${doc.data()!['userId']} isFromCache: ${doc.metadata.isFromCache}',
+          );
         }
 
-        final DocumentSnapshot doc = snapshot.data;
-
-        return Text(
-            '${doc.data()['userId']} isFromCache: ${doc.metadata.isFromCache}');
+        return CircularProgressIndicator();
       },
     );
   }
@@ -81,39 +81,38 @@ class _MyHomePageState extends State<MyHomePage> {
       future: _futureSnapshot,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Text(snapshot.error);
-        } else if (!snapshot.hasData) {
-          return CircularProgressIndicator();
+          return Text('${snapshot.error}');
+        } else if (snapshot.hasData) {
+          final docs = snapshot.data?.docs;
+          return Expanded(
+            child: ListView(
+              children: docs!.map((DocumentSnapshot doc) {
+                return Text(
+                  '${doc.data()!['postId']} isFromCache: ${doc.metadata.isFromCache}',
+                  textAlign: TextAlign.center,
+                );
+              }).toList(),
+            ),
+          );
         }
 
-        final List<DocumentSnapshot> docs = snapshot.data.docs;
-
-        return Expanded(
-          child: ListView(
-            children: docs.map((DocumentSnapshot doc) {
-              return Text(
-                '${doc.data()['postId']} isFromCache: ${doc.metadata.isFromCache}',
-                textAlign: TextAlign.center,
-              );
-            }).toList(),
-          ),
-        );
+        return CircularProgressIndicator();
       },
     );
   }
 
   Future<DocumentSnapshot> _getDoc() async {
-    final DocumentReference docRef = _firestore.doc('users/user');
-    final DocumentSnapshot doc = await FirestoreCache.getDocument(docRef);
+    final docRef = _firestore.doc('users/user');
+    final doc = await FirestoreCache.getDocument(docRef);
 
     return doc;
   }
 
   Future<QuerySnapshot> _getDocs() async {
-    final DocumentReference cacheDocRef = _firestore.doc('status/status');
-    final String cacheField = 'updatedAt';
-    final Query query = _firestore.collection('posts');
-    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+    final cacheDocRef = _firestore.doc('status/status');
+    final cacheField = 'updatedAt';
+    final query = _firestore.collection('posts');
+    final snapshot = await FirestoreCache.getDocuments(
       query: query,
       cacheDocRef: cacheDocRef,
       firestoreCacheField: cacheField,

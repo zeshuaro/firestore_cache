@@ -1,117 +1,296 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore_mocks/cloud_firestore_mocks.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:firestore_cache/firestore_cache.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'firestore_cache_test.mocks.dart';
+
+@GenerateMocks([
+  Query,
+  QuerySnapshot,
+  QueryDocumentSnapshot,
+  DocumentReference,
+  DocumentSnapshot,
+  SnapshotMetadata,
+])
 void main() {
-  const String docsCacheKey = 'updatedAt';
+  final data = {'firestore': 'cache'};
+  final cacheField = 'updatedAt';
+  final mockCacheDocRef = MockDocumentReference();
+  final mockCacheSnapshot = MockDocumentSnapshot();
 
-  test('Test document exists', () async {
-    SharedPreferences.setMockInitialValues({});
-    final firestore = MockFirestoreInstance();
-    final DocumentReference dataDocRef = firestore.collection('data').doc();
-    await dataDocRef.set(<String, dynamic>{'hello': 'world'});
-
-    final DocumentSnapshot doc = await FirestoreCache.getDocument(dataDocRef);
-    expect(doc.exists, true);
+  when(mockCacheDocRef.get()).thenAnswer((_) {
+    return Future.value(mockCacheSnapshot);
   });
 
-  test('Test document does not exist', () async {
-    SharedPreferences.setMockInitialValues({});
-    final firestore = MockFirestoreInstance();
+  group('testGetDocument', () {
+    final mockDocRef = MockDocumentReference();
+    final mockSnapshot = MockDocumentSnapshot();
+    final mockMetadata = MockSnapshotMetadata();
 
-    final DocumentReference dataDocRef = firestore.collection('data').doc();
-    final DocumentSnapshot doc = await FirestoreCache.getDocument(dataDocRef);
-    expect(doc.exists, false);
-  });
+    when(mockSnapshot.data()).thenReturn(data);
+    when(mockSnapshot.metadata).thenReturn(mockMetadata);
 
-  test('Test documents exists', () async {
-    SharedPreferences.setMockInitialValues({});
-    final firestore = MockFirestoreInstance();
-    final DocumentReference cacheDocRef =
-        firestore.collection('cache').doc('cache');
-    await cacheDocRef
-        .set(<String, dynamic>{docsCacheKey: DateTime(2020, 1, 2)});
+    test('testGetFromServer', () async {
+      when(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(mockSnapshot);
+      });
+      when(mockMetadata.isFromCache).thenReturn(false);
 
-    await firestore.collection('data').add(<String, dynamic>{'hello': 'world'});
-    await firestore
-        .collection('data')
-        .add(<String, dynamic>{'hello': 'world again'});
-
-    final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
-      query: query,
-      cacheDocRef: cacheDocRef,
-      firestoreCacheField: docsCacheKey,
-    );
-    expect(snapshot.docs.isNotEmpty, true);
-  });
-
-  test('Test documents do not exist', () async {
-    SharedPreferences.setMockInitialValues({});
-    final firestore = MockFirestoreInstance();
-    final DocumentReference cacheDocRef =
-        firestore.collection('cache').doc('cache');
-    await cacheDocRef
-        .set(<String, dynamic>{docsCacheKey: DateTime(2020, 1, 2)});
-
-    final Query query = firestore.collection('data');
-    final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
-      query: query,
-      cacheDocRef: cacheDocRef,
-      firestoreCacheField: docsCacheKey,
-    );
-    expect(snapshot.docs.isEmpty, true);
-  });
-
-  test('Test cache collection does not exist', () async {
-    SharedPreferences.setMockInitialValues(
-        {docsCacheKey: DateTime(2020, 1, 1).toIso8601String()});
-    final firestore = MockFirestoreInstance();
-    final DocumentReference cacheDocRef =
-        firestore.collection('cache').doc('cache');
-
-    await firestore.collection('data').add(<String, dynamic>{'hello': 'world'});
-    await firestore
-        .collection('data')
-        .add(<String, dynamic>{'hello': 'world again'});
-
-    final Query query = firestore.collection('data');
-    try {
-      await FirestoreCache.getDocuments(
-        query: query,
-        cacheDocRef: cacheDocRef,
-        firestoreCacheField: docsCacheKey,
+      final doc = await FirestoreCache.getDocument(
+        mockDocRef,
+        source: Source.server,
       );
-    } catch (e) {
-      expect(e, isInstanceOf<CacheDocDoesNotExist>());
-    }
+
+      expect(doc.metadata.isFromCache, false);
+      expect(doc.data(), data);
+    });
+
+    test('testGetFromCache', () async {
+      when(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(mockSnapshot);
+      });
+      when(mockMetadata.isFromCache).thenReturn(true);
+
+      final doc = await FirestoreCache.getDocument(
+        mockDocRef,
+        source: Source.cache,
+      );
+
+      expect(doc.metadata.isFromCache, true);
+      expect(doc.data(), data);
+    });
+
+    test('testGetFromCacheFallbackToServer', () async {
+      final mockDocRef = MockDocumentReference();
+
+      when(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).thenThrow(
+        FirebaseException(plugin: 'test'),
+      );
+      when(mockDocRef.get()).thenAnswer((_) => Future.value(mockSnapshot));
+      when(mockMetadata.isFromCache).thenReturn(false);
+
+      final doc = await FirestoreCache.getDocument(
+        mockDocRef,
+        source: Source.cache,
+      );
+
+      expect(doc.metadata.isFromCache, false);
+      expect(doc.data(), data);
+      verify(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).called(1);
+      verify(mockDocRef.get()).called(1);
+    });
+
+    test('testGetFromCacheNullAndRefresh', () async {
+      final mockDocRef = MockDocumentReference();
+      final mockSnapshotNull = MockDocumentSnapshot();
+
+      when(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(mockSnapshotNull);
+      });
+      when(mockDocRef.get()).thenAnswer((_) {
+        return Future.value(mockSnapshot);
+      });
+      when(mockSnapshotNull.data()).thenReturn(null);
+      when(mockMetadata.isFromCache).thenReturn(false);
+
+      final doc = await FirestoreCache.getDocument(
+        mockDocRef,
+        source: Source.cache,
+        isRefreshEmptyCache: true,
+      );
+
+      expect(doc.metadata.isFromCache, false);
+      expect(doc.data(), data);
+      verify(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).called(1);
+      verify(mockDocRef.get()).called(1);
+    });
+
+    test('testGetFromCacheNullAndNotRefresh', () async {
+      final mockDocRef = MockDocumentReference();
+      final mockSnapshotNull = MockDocumentSnapshot();
+
+      when(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(mockSnapshotNull);
+      });
+      when(mockSnapshotNull.data()).thenReturn(null);
+
+      final doc = await FirestoreCache.getDocument(
+        mockDocRef,
+        source: Source.cache,
+        isRefreshEmptyCache: false,
+      );
+
+      expect(doc.data(), null);
+      verify(mockDocRef.get(argThat(isInstanceOf<GetOptions>()))).called(1);
+      verifyNever(mockDocRef.get());
+    });
   });
 
-  test('Test cache document field does not exist', () async {
-    SharedPreferences.setMockInitialValues(
-        {docsCacheKey: DateTime(2020, 1, 1).toIso8601String()});
-    final firestore = MockFirestoreInstance();
-    final DocumentReference cacheDocRef =
-        firestore.collection('cache').doc('cache');
-    await cacheDocRef.set(<String, dynamic>{'hello': 'world'});
+  group('testGetDocuments', () {
+    final mockQuery = MockQuery();
+    final mockQuerySnapshot = MockQuerySnapshot();
+    final mockQueryMetadata = MockSnapshotMetadata();
+    final mockDocSnapshot = MockQueryDocumentSnapshot();
+    final mockDocMetadata = MockSnapshotMetadata();
 
-    await firestore.collection('data').add(<String, dynamic>{'hello': 'world'});
-    await firestore
-        .collection('data')
-        .add(<String, dynamic>{'hello': 'world again'});
+    when(mockQuerySnapshot.docs).thenReturn([mockDocSnapshot]);
+    when(mockQuerySnapshot.metadata).thenReturn(mockQueryMetadata);
+    when(mockDocSnapshot.data()).thenReturn(data);
+    when(mockDocSnapshot.metadata).thenReturn(mockDocMetadata);
+    when(mockCacheSnapshot.exists).thenReturn(true);
 
-    final Query query = firestore.collection('data');
-    try {
-      await FirestoreCache.getDocuments(
-        query: query,
-        cacheDocRef: cacheDocRef,
-        firestoreCacheField: docsCacheKey,
+    test('testGetUpToDateCache', () async {
+      when(mockQuery.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(mockQuerySnapshot);
+      });
+      when(mockQueryMetadata.isFromCache).thenReturn(true);
+      when(mockDocMetadata.isFromCache).thenReturn(true);
+
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      final updatedAt = now.subtract(Duration(seconds: 1));
+      when(mockCacheSnapshot.data()).thenReturn({
+        cacheField: Timestamp.fromDate(updatedAt),
+      });
+
+      final snapshot = await FirestoreCache.getDocuments(
+        query: mockQuery,
+        cacheDocRef: mockCacheDocRef,
+        firestoreCacheField: cacheField,
       );
-    } catch (e) {
-      expect(e, isInstanceOf<CacheDocFieldDoesNotExist>());
-    }
+      final doc = snapshot.docs.first;
+
+      expect(snapshot.metadata.isFromCache, true);
+      expect(doc.data(), data);
+      expect(doc.metadata.isFromCache, true);
+    });
+
+    test('testGetFromCacheFallbackToServer', () async {
+      final mockQuery = MockQuery();
+      final emptyMockQuerySnapshot = MockQuerySnapshot();
+
+      when(mockQuery.get(argThat(isInstanceOf<GetOptions>()))).thenAnswer((_) {
+        return Future.value(emptyMockQuerySnapshot);
+      });
+      when(mockQuery.get()).thenAnswer((_) => Future.value(mockQuerySnapshot));
+      when(emptyMockQuerySnapshot.docs).thenReturn([]);
+      when(mockQueryMetadata.isFromCache).thenReturn(false);
+      when(mockDocMetadata.isFromCache).thenReturn(false);
+
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      final updatedAt = now.subtract(Duration(seconds: 1));
+      when(mockCacheSnapshot.data()).thenReturn({
+        cacheField: Timestamp.fromDate(updatedAt),
+      });
+
+      final snapshot = await FirestoreCache.getDocuments(
+        query: mockQuery,
+        cacheDocRef: mockCacheDocRef,
+        firestoreCacheField: cacheField,
+      );
+      final doc = snapshot.docs.first;
+
+      expect(snapshot.metadata.isFromCache, false);
+      expect(doc.data(), data);
+      expect(doc.metadata.isFromCache, false);
+      verify(mockQuery.get(argThat(isInstanceOf<GetOptions>()))).called(1);
+      verify(mockQuery.get()).called(1);
+    });
+  });
+
+  group('testIsFetchDocuments', () {
+    test('testLocalCacheDateNull', () async {
+      SharedPreferences.setMockInitialValues({});
+
+      final result = await FirestoreCache.isFetchDocuments(
+        mockCacheDocRef,
+        cacheField,
+        cacheField,
+      );
+
+      expect(result, true);
+    });
+
+    test('testLocalCacheDateUpToDate', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      final updatedAt = now.subtract(Duration(seconds: 1));
+      when(mockCacheSnapshot.data()).thenReturn({
+        cacheField: Timestamp.fromDate(updatedAt),
+      });
+
+      final result = await FirestoreCache.isFetchDocuments(
+        mockCacheDocRef,
+        cacheField,
+        cacheField,
+      );
+
+      expect(result, false);
+    });
+
+    test('testLocalCacheDateOutdated', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      final updatedAt = now.add(Duration(seconds: 1));
+      when(mockCacheSnapshot.data()).thenReturn({
+        cacheField: Timestamp.fromDate(updatedAt),
+      });
+
+      final result = await FirestoreCache.isFetchDocuments(
+        mockCacheDocRef,
+        cacheField,
+        cacheField,
+      );
+
+      expect(result, true);
+    });
+
+    test('testCacheDocRefNotExist', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      when(mockCacheSnapshot.data()).thenReturn({});
+      when(mockCacheSnapshot.exists).thenReturn(false);
+
+      expect(
+        () async => await FirestoreCache.isFetchDocuments(
+          mockCacheDocRef,
+          cacheField,
+          cacheField,
+        ),
+        throwsA(isInstanceOf<CacheDocDoesNotExist>()),
+      );
+    });
+
+    test('testFirebaseCacheFieldNotExist', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      when(mockCacheSnapshot.data()).thenReturn({});
+      when(mockCacheSnapshot.exists).thenReturn(true);
+
+      expect(
+        () async => await FirestoreCache.isFetchDocuments(
+          mockCacheDocRef,
+          cacheField,
+          cacheField,
+        ),
+        throwsA(isInstanceOf<CacheDocFieldDoesNotExist>()),
+      );
+    });
   });
 }
