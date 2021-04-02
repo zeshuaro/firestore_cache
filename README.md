@@ -6,7 +6,7 @@ A Flutter plugin for fetching Firestore documents with read from cache first the
 [![docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://pub.dev/documentation/firestore_cache/latest/)
 [![MIT License](https://img.shields.io/github/license/zeshuaro/firestore_cache.svg)](https://github.com/zeshuaro/firestore_cache/blob/master/LICENSE)
 [![GitHub Actions](https://github.com/zeshuaro/firestore_cache/actions/workflows/analyze_test.yml/badge.svg)](https://github.com/zeshuaro/firestore_cache/actions/workflows/analyze_test.yml)
-[![codecov](https://codecov.io/gh/zeshuaro/firestore_cache/branch/master/graph/badge.svg)](https://codecov.io/gh/zeshuaro/firestore_cache)
+[![codecov](https://codecov.io/gh/zeshuaro/firestore_cache/branch/main/graph/badge.svg)](https://codecov.io/gh/zeshuaro/firestore_cache)
 [![pedantic](https://img.shields.io/badge/style-pedantic-40c4ff.svg)](https://github.com/google/pedantic)
 
 This plugin is mainly designed for applications using the `DocumentReference.get()` and `Query.get()` methods in the `cloud_firestore` plugin, and is implemented with read from cache first then server.
@@ -17,7 +17,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  firestore_cache: ^1.0.0
+  firestore_cache: ^1.0.0+1
 ```
 
 ### Usage
@@ -28,7 +28,7 @@ Before using the plugin, you will need to create a document on Firestore and cre
 
 __PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on the timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from the cache.
 
-You should also create different timestamp fields for different collections or documents that you are reading.
+You should also create different timestamp fields for different collections or documents that you are fetching.
 
 ```dart
 import 'package:firestore_cache/firestore_cache.dart';
