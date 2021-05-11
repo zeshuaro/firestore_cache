@@ -48,11 +48,10 @@ jobs:
         with:
           channel: stable
 
-      - name: Run analyzer and tests 🧪
+      - name: Run tests 🧪
         run: |
           flutter pub get
           flutter packages pub run build_runner build --delete-conflicting-outputs
-          flutter analyze
           flutter test --coverage
 
       - name: Upload coverage report 📡
