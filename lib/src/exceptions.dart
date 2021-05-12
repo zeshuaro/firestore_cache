@@ -1,3 +1,5 @@
+// coverage:ignore-file
+
 /// Exception for cache document does not exist on Firestore
 class CacheDocDoesNotExist implements Exception {
   @override
