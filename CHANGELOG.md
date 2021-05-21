@@ -1,3 +1,8 @@
+## 2.0.0
+
+  * **chore**: Bump `cloud_firestore: ^2.0.0`
+  * **chore**: Bump `shared_preferences: ^2.0.0`
+
 ## 1.0.0+1
 
   * **docs**: Update readme
