@@ -111,7 +111,7 @@ class FirestoreCache {
     if (dateStr != null) {
       final cacheDate = DateTime.parse(dateStr);
       final doc = await cacheDocRef.get();
-      final data = doc.data();
+      final data = doc.data() as Map?;
 
       if (!doc.exists) {
         throw CacheDocDoesNotExist();

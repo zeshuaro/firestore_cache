@@ -4,14 +4,17 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// ignore: subtype_of_sealed_class
 class MockQuery extends Mock implements Query {}
 
 class MockQuerySnapshot extends Mock implements QuerySnapshot {}
 
+// ignore: subtype_of_sealed_class
 class MockQueryDocumentSnapshot extends Mock implements QueryDocumentSnapshot {}
 
 class MockDocumentReference extends Mock implements DocumentReference {}
 
+// ignore: subtype_of_sealed_class
 class MockDocumentSnapshot extends Mock implements DocumentSnapshot {}
 
 class MockSnapshotMetadata extends Mock implements SnapshotMetadata {}
