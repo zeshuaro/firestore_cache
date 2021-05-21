@@ -66,8 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
           return Text('${snapshot.error}');
         } else if (snapshot.hasData) {
           final doc = snapshot.data!;
+          final data = doc.data() as Map?;
+
           return Text(
-            '${doc.data()!['userId']} isFromCache: ${doc.metadata.isFromCache}',
+            '${data!['userId']} isFromCache: ${doc.metadata.isFromCache}',
           );
         }
 
@@ -87,8 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
           return Expanded(
             child: ListView(
               children: docs!.map((DocumentSnapshot doc) {
+                final data = doc.data() as Map?;
                 return Text(
-                  '${doc.data()!['postId']} isFromCache: ${doc.metadata.isFromCache}',
+                  '${data!['postId']} isFromCache: ${doc.metadata.isFromCache}',
                   textAlign: TextAlign.center,
                 );
               }).toList(),
