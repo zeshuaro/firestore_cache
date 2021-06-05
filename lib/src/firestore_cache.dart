@@ -57,7 +57,14 @@ class FirestoreCache {
   ///
   /// This method takes in a [query] which is the usual Firestore [Query] object
   /// used to query a collection, and a [cacheDocRef] which is the [DocumentReference]
-  /// object of the document containing a [firestoreCacheField] field of timestamp.
+  /// object of the document containing a [firestoreCacheField] field
+  /// of [Timestamp] or [String]. If the field is a [String], it must be parsable by
+  /// [DateTime.parse]. Otherwise [FormatException] will be thrown.
+  ///
+  /// If [cacheDocRef] does not exist, [CacheDocDoesNotExist] will be thrown.
+  /// And if [firestoreCacheField] does not exist, [CacheDocFieldDoesNotExist]
+  /// will be thrown.
+  ///
   /// You can also pass in [localCacheKey] as the key for storing the last local
   /// cache date, and [isUpdateCacheDate] to set if it should update the last local
   /// cache date to current date and time.
