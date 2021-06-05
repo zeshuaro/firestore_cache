@@ -5,33 +5,35 @@ import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: subtype_of_sealed_class
-class MockQuery extends Mock implements Query {}
+class MockQuery<Map> extends Mock implements Query<Map> {}
 
-class MockQuerySnapshot extends Mock implements QuerySnapshot {}
-
-// ignore: subtype_of_sealed_class
-class MockQueryDocumentSnapshot extends Mock implements QueryDocumentSnapshot {}
-
-class MockDocumentReference extends Mock implements DocumentReference {}
+class MockQuerySnapshot<Map> extends Mock implements QuerySnapshot<Map> {}
 
 // ignore: subtype_of_sealed_class
-class MockDocumentSnapshot extends Mock implements DocumentSnapshot {}
+class MockQueryDocumentSnapshot<Map> extends Mock
+    implements QueryDocumentSnapshot<Map> {}
+
+class MockDocumentReference<Map> extends Mock
+    implements DocumentReference<Map> {}
+
+// ignore: subtype_of_sealed_class
+class MockDocumentSnapshot<Map> extends Mock implements DocumentSnapshot<Map> {}
 
 class MockSnapshotMetadata extends Mock implements SnapshotMetadata {}
 
 void main() {
   final data = {'firestore': 'cache'};
   final cacheField = 'updatedAt';
-  final mockCacheDocRef = MockDocumentReference();
-  final mockCacheSnapshot = MockDocumentSnapshot();
+  final mockCacheDocRef = MockDocumentReference<Map<String, dynamic>>();
+  final mockCacheSnapshot = MockDocumentSnapshot<Map<String, dynamic>>();
 
   when(() => mockCacheDocRef.get()).thenAnswer((_) {
     return Future.value(mockCacheSnapshot);
   });
 
   group('testGetDocument', () {
-    final mockDocRef = MockDocumentReference();
-    final mockSnapshot = MockDocumentSnapshot();
+    final mockDocRef = MockDocumentReference<Map<String, dynamic>>();
+    final mockSnapshot = MockDocumentSnapshot<Map<String, dynamic>>();
     final mockMetadata = MockSnapshotMetadata();
 
     when(() => mockSnapshot.data()).thenReturn(data);
@@ -74,7 +76,7 @@ void main() {
     });
 
     test('testGetFromCacheFallbackToServer', () async {
-      final mockDocRef = MockDocumentReference();
+      final mockDocRef = MockDocumentReference<Map<String, dynamic>>();
 
       when(() => mockDocRef.get(any())).thenThrow(
         FirebaseException(plugin: 'test'),
@@ -98,8 +100,8 @@ void main() {
     });
 
     test('testGetFromCacheNullAndRefresh', () async {
-      final mockDocRef = MockDocumentReference();
-      final mockSnapshotNull = MockDocumentSnapshot();
+      final mockDocRef = MockDocumentReference<Map<String, dynamic>>();
+      final mockSnapshotNull = MockDocumentSnapshot<Map<String, dynamic>>();
 
       when(() => mockDocRef.get(any())).thenAnswer((_) {
         return Future.value(mockSnapshotNull);
@@ -125,8 +127,8 @@ void main() {
     });
 
     test('testGetFromCacheNullAndNotRefresh', () async {
-      final mockDocRef = MockDocumentReference();
-      final mockSnapshotNull = MockDocumentSnapshot();
+      final mockDocRef = MockDocumentReference<Map<String, dynamic>>();
+      final mockSnapshotNull = MockDocumentSnapshot<Map<String, dynamic>>();
 
       when(() => mockDocRef.get(any())).thenAnswer((_) {
         return Future.value(mockSnapshotNull);
@@ -148,10 +150,10 @@ void main() {
   });
 
   group('testGetDocuments', () {
-    final mockQuery = MockQuery();
-    final mockQuerySnapshot = MockQuerySnapshot();
+    final mockQuery = MockQuery<Map<String, dynamic>>();
+    final mockQuerySnapshot = MockQuerySnapshot<Map<String, dynamic>>();
     final mockQueryMetadata = MockSnapshotMetadata();
-    final mockDocSnapshot = MockQueryDocumentSnapshot();
+    final mockDocSnapshot = MockQueryDocumentSnapshot<Map<String, dynamic>>();
     final mockDocMetadata = MockSnapshotMetadata();
 
     when(() => mockQuerySnapshot.docs).thenReturn([mockDocSnapshot]);
@@ -192,8 +194,8 @@ void main() {
     });
 
     test('testGetFromCacheFallbackToServer', () async {
-      final mockQuery = MockQuery();
-      final emptyMockQuerySnapshot = MockQuerySnapshot();
+      final mockQuery = MockQuery<Map<String, dynamic>>();
+      final emptyMockQuerySnapshot = MockQuerySnapshot<Map<String, dynamic>>();
 
       when(() => mockQuery.get(any())).thenAnswer((_) {
         return Future.value(emptyMockQuerySnapshot);

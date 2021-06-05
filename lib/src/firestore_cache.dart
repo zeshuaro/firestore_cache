@@ -36,12 +36,12 @@ class FirestoreCache {
   ///
   /// This method should only be used if the document you are fetching does not change
   /// over time. Once the document is cached, it will always be read from the cache.
-  static Future<DocumentSnapshot> getDocument(
-    DocumentReference docRef, {
+  static Future<DocumentSnapshot<Map<String, dynamic>>> getDocument(
+    DocumentReference<Map<String, dynamic>> docRef, {
     Source source = Source.cache,
     bool isRefreshEmptyCache = true,
   }) async {
-    DocumentSnapshot doc;
+    DocumentSnapshot<Map<String, dynamic>> doc;
     try {
       doc = await docRef.get(GetOptions(source: source));
       if (doc.data() == null && isRefreshEmptyCache) doc = await docRef.get();
@@ -61,9 +61,9 @@ class FirestoreCache {
   /// You can also pass in [localCacheKey] as the key for storing the last local
   /// cache date, and [isUpdateCacheDate] to set if it should update the last local
   /// cache date to current date and time.
-  static Future<QuerySnapshot> getDocuments({
-    required Query query,
-    required DocumentReference cacheDocRef,
+  static Future<QuerySnapshot<Map<String, dynamic>>> getDocuments({
+    required Query<Map<String, dynamic>> query,
+    required DocumentReference<Map<String, dynamic>> cacheDocRef,
     required String firestoreCacheField,
     String? localCacheKey,
     bool isUpdateCacheDate = true,
@@ -100,7 +100,7 @@ class FirestoreCache {
 
   @visibleForTesting
   static Future<bool> isFetchDocuments(
-    DocumentReference cacheDocRef,
+    DocumentReference<Map<String, dynamic>> cacheDocRef,
     String firestoreCacheField,
     String localCacheKey,
   ) async {
@@ -111,7 +111,7 @@ class FirestoreCache {
     if (dateStr != null) {
       final cacheDate = DateTime.parse(dateStr);
       final doc = await cacheDocRef.get();
-      final data = doc.data() as Map?;
+      final data = doc.data();
 
       if (!doc.exists) {
         throw CacheDocDoesNotExist();
