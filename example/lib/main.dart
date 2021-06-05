@@ -31,8 +31,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _firestore = FirebaseFirestore.instance;
-  late Future<DocumentSnapshot> _futureDoc;
-  late Future<QuerySnapshot> _futureSnapshot;
+  late Future<DocumentSnapshot<Map<String, dynamic>>> _futureDoc;
+  late Future<QuerySnapshot<Map<String, dynamic>>> _futureSnapshot;
 
   @override
   void initState() {
@@ -104,14 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Future<DocumentSnapshot> _getDoc() async {
+  Future<DocumentSnapshot<Map<String, dynamic>>> _getDoc() async {
     final docRef = _firestore.doc('users/user');
     final doc = await FirestoreCache.getDocument(docRef);
 
     return doc;
   }
 
-  Future<QuerySnapshot> _getDocs() async {
+  Future<QuerySnapshot<Map<String, dynamic>>> _getDocs() async {
     final cacheDocRef = _firestore.doc('status/status');
     final cacheField = 'updatedAt';
     final query = _firestore.collection('posts');
