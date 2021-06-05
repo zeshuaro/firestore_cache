@@ -1,3 +1,28 @@
+## 2.1.0
+
+  * **fix**: Fix types mismatch between `firestore_cache` and `cloud_firestore`
+  * **BREAKING**: Add `Map<String, dynamic>` type to `DocumentReference`, `DocumentSnapshot`, `Query` and `QuerySnapshot`
+
+  * **BREAKING**: `getDocument` has been updated with the following function signature:
+    ```dart
+    Future<DocumentSnapshot<Map<String, dynamic>>> getDocument(
+      DocumentReference<Map<String, dynamic>> docRef, {
+      Source source = Source.cache,
+      bool isRefreshEmptyCache = true,
+    });
+    ```
+
+  * **BREAKING**: `getDocuments` has been updated with the following function signature:
+    ```dart
+    Future<QuerySnapshot<Map<String, dynamic>>> getDocuments({
+      required Query<Map<String, dynamic>> query,
+      required DocumentReference<Map<String, dynamic>> cacheDocRef,
+      required String firestoreCacheField,
+      String? localCacheKey,
+      bool isUpdateCacheDate = true,
+    });
+    ```
+
 ## 2.0.0
 
   * **chore**: Bump `cloud_firestore: ^2.0.0`
