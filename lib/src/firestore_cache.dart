@@ -119,8 +119,18 @@ class FirestoreCache {
         throw CacheDocFieldDoesNotExist();
       }
 
-      final DateTime latestDate = data[firestoreCacheField].toDate();
-      if (latestDate.isBefore(cacheDate)) {
+      final serverDateRaw = data[firestoreCacheField];
+      DateTime? serverDate;
+
+      if (serverDateRaw is Timestamp) {
+        serverDate = serverDateRaw.toDate();
+      } else if (serverDateRaw is String) {
+        serverDate = DateTime.tryParse(serverDateRaw);
+      }
+
+      if (serverDate == null) {
+        throw FormatException('Invalid date format', serverDateRaw);
+      } else if (serverDate.isBefore(cacheDate) == true) {
         isFetch = false;
       }
     }

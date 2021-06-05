@@ -284,6 +284,25 @@ void main() {
       expect(result, true);
     });
 
+    test('testServerDateString', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      final updatedAt = now.add(Duration(seconds: 1));
+      when(() => mockCacheSnapshot.data()).thenReturn({
+        cacheField: updatedAt.toIso8601String(),
+      });
+
+      final result = await FirestoreCache.isFetchDocuments(
+        mockCacheDocRef,
+        cacheField,
+        cacheField,
+      );
+
+      expect(result, true);
+    });
+
     test('testCacheDocRefNotExist', () async {
       final now = DateTime.now();
       SharedPreferences.setMockInitialValues({
@@ -317,6 +336,25 @@ void main() {
           cacheField,
         ),
         throwsA(isInstanceOf<CacheDocFieldDoesNotExist>()),
+      );
+    });
+
+    test('testInvalidServerDateFormat', () async {
+      final now = DateTime.now();
+      SharedPreferences.setMockInitialValues({
+        cacheField: now.toIso8601String(),
+      });
+      when(() => mockCacheSnapshot.data()).thenReturn({
+        cacheField: 'invalidDateFormat',
+      });
+
+      expect(
+        () async => await FirestoreCache.isFetchDocuments(
+          mockCacheDocRef,
+          cacheField,
+          cacheField,
+        ),
+        throwsA(isInstanceOf<FormatException>()),
       );
     });
   });
