@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^2.0.0
-  shared_preferences: ^2.0.0
+  cloud_firestore: ^2.2.1
+  shared_preferences: ^2.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.0.0
-  mocktail: ^0.1.2
+  build_runner: ^2.0.4
+  mocktail: ^0.1.4
   pedantic: ^1.11.0
