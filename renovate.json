@@ -2,12 +2,15 @@
   "extends": ["config:base"],
   "ignorePaths": ["example/ios/", "example/android/"],
   "labels": ["dependencies"],
+  "semanticCommits": "enabled",
   "stabilityDays": 3,
   "prCreation": "not-pending",
   "schedule": ["after 6pm every weekday", "every weekend"],
   "timezone": "Australia/Sydney",
   "packageRules": [
     {
+      "groupName": "GitHub Actions",
+      "semanticCommitType": "ci",
       "matchPaths": [".github/workflows/*.yml"],
       "labels": ["github-actions"]
     }
