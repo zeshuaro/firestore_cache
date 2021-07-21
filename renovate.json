@@ -12,7 +12,7 @@
       "groupName": "GitHub Actions",
       "semanticCommitType": "ci",
       "matchPaths": [".github/workflows/*.yml"],
-      "labels": ["github-actions"]
+      "labels": ["ci"]
     }
   ]
 }
