@@ -23,8 +23,8 @@ class MockDocumentSnapshot<Map> extends Mock implements DocumentSnapshot<Map> {}
 class MockSnapshotMetadata extends Mock implements SnapshotMetadata {}
 
 void main() {
+  const cacheField = 'updatedAt';
   final data = {'firestore': 'cache'};
-  final cacheField = 'updatedAt';
   final mockCacheDocRef = MockDocumentReference<Map<String, dynamic>>();
   final mockCacheSnapshot = MockDocumentSnapshot<Map<String, dynamic>>();
 
@@ -174,7 +174,7 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      final updatedAt = now.subtract(Duration(seconds: 1));
+      final updatedAt = now.subtract(const Duration(seconds: 1));
       when(() => mockCacheSnapshot.data()).thenReturn({
         cacheField: Timestamp.fromDate(updatedAt),
       });
@@ -212,7 +212,7 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      final updatedAt = now.subtract(Duration(seconds: 1));
+      final updatedAt = now.subtract(const Duration(seconds: 1));
       when(() => mockCacheSnapshot.data()).thenReturn({
         cacheField: Timestamp.fromDate(updatedAt),
       });
@@ -252,7 +252,7 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      final updatedAt = now.subtract(Duration(seconds: 1));
+      final updatedAt = now.subtract(const Duration(seconds: 1));
       when(() => mockCacheSnapshot.data()).thenReturn({
         cacheField: Timestamp.fromDate(updatedAt),
       });
@@ -271,7 +271,7 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      final updatedAt = now.add(Duration(seconds: 1));
+      final updatedAt = now.add(const Duration(seconds: 1));
       when(() => mockCacheSnapshot.data()).thenReturn({
         cacheField: Timestamp.fromDate(updatedAt),
       });
@@ -290,7 +290,7 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      final updatedAt = now.add(Duration(seconds: 1));
+      final updatedAt = now.add(const Duration(seconds: 1));
       when(() => mockCacheSnapshot.data()).thenReturn({
         cacheField: updatedAt.toIso8601String(),
       });

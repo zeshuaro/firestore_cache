@@ -21,17 +21,17 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-  firestore_cache:
-    path: ../
   cloud_firestore: ^3.0.0
   firebase_core: ^1.0.2
+  firestore_cache:
+    path: ../
+  flutter:
+    sdk: flutter
 
 dev_dependencies:
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
-  pedantic: ^1.11.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
