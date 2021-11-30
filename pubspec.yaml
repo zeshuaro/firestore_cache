@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^2.0.0
+  cloud_firestore: ^3.0.0
   shared_preferences: ^2.0.0
 
 dev_dependencies:

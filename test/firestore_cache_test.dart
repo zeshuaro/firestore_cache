@@ -13,6 +13,7 @@ class MockQuerySnapshot<Map> extends Mock implements QuerySnapshot<Map> {}
 class MockQueryDocumentSnapshot<Map> extends Mock
     implements QueryDocumentSnapshot<Map> {}
 
+// ignore: subtype_of_sealed_class
 class MockDocumentReference<Map> extends Mock
     implements DocumentReference<Map> {}
 
