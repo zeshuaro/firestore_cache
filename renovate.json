@@ -9,10 +9,15 @@
   "timezone": "Australia/Sydney",
   "packageRules": [
     {
+      "groupName": "Dev Dependencies",
+      "matchPaths": ["pubspec.yaml"],
+      "matchDepTypes": ["dev_dependencies"]
+    },
+    {
       "groupName": "GitHub Actions",
       "semanticCommitType": "ci",
       "matchPaths": [".github/workflows/*.yml"],
-      "labels": ["ci"]
+      "addLabels": ["ci"]
     }
   ]
 }
