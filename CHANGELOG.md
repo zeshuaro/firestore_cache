@@ -1,6 +1,10 @@
+## 2.2.0
+
+* **chore**: Update dependency `cloud_firestore: ^3.0.0`
+
 ## 2.1.1
 
-* Add to parse server date string type for the `firestoreCacheField` in `getDocuments`
+* **feat**: Add to parse server date string type for the `firestoreCacheField` in `getDocuments`
 
 ## 2.1.0
 
