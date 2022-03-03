@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,androidstudio,flutter,dart
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,androidstudio,flutter,dart
+# Created by https://www.toptal.com/developers/gitignore/api/dart,macos,flutter,androidstudio,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=dart,macos,flutter,androidstudio,visualstudiocode
 
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -16,6 +16,9 @@ pubspec.lock
 # If you don't generate documentation locally you can remove this line.
 doc/api/
 
+# dotenv environment variables file
+.env*
+
 # Avoid committing generated Javascript files:
 *.dart.js
 *.info.json      # Produced by the --dump-info flag.
@@ -25,12 +28,17 @@ doc/api/
 *.js.deps
 *.js.map
 
+.flutter-plugins
+.flutter-plugins-dependencies
+
+### Dart Patch ###
+# dotenv environment variables file
+.env
+
 ### Flutter ###
 # Flutter/Dart/Pub related
 **/doc/api/
-.flutter-plugins
-.flutter-plugins-dependencies
-.fvm/
+.fvm/flutter_sdk
 .pub-cache/
 .pub/
 coverage/
@@ -117,14 +125,24 @@ Temporary Items
 
 ### VisualStudioCode ###
 .vscode/*
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-*.code-workspace
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 .ionide
+
+# Support for Project snippet scope
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -219,11 +237,6 @@ obj/
 .idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/navEditor.xml
-
-# OS-specific files
-.DS_Store?
-ehthumbs.db
-Thumbs.db
 
 # Legacy Eclipse project files
 .classpath
