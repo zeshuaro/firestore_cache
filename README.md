@@ -5,7 +5,7 @@ A Flutter plugin for fetching Firestore documents with read from cache first the
 [![pub package](https://img.shields.io/pub/v/firestore_cache.svg)](https://pub.dartlang.org/packages/firestore_cache)
 [![docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://pub.dev/documentation/firestore_cache/latest/)
 [![MIT License](https://img.shields.io/github/license/zeshuaro/firestore_cache.svg)](https://github.com/zeshuaro/firestore_cache/blob/master/LICENSE)
-[![GitHub Actions](https://github.com/zeshuaro/firestore_cache/actions/workflows/analyze_test.yml/badge.svg)](https://github.com/zeshuaro/firestore_cache/actions/workflows/analyze_test.yml)
+[![GitHub Actions](https://github.com/zeshuaro/firestore_cache/actions/workflows/github_actions.yml/badge.svg)](https://github.com/zeshuaro/firestore_cache/actions/workflows/github_actions.yml)
 [![codecov](https://codecov.io/gh/zeshuaro/firestore_cache/branch/main/graph/badge.svg)](https://codecov.io/gh/zeshuaro/firestore_cache)
 [![style: flutter_lints](https://img.shields.io/badge/style-flutter__lints-4BC0F5.svg)](https://pub.dev/packages/flutter_lints)
 
