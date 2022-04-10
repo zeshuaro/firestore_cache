@@ -24,24 +24,25 @@ dependencies:
 
 Before using the plugin, you will need to create a document on Firestore and create a timestamp field in that document. See the screenshot below for an example:
 
-![Firestore Screenshot](images/firestore_screenshot.png)
+![Firestore Screenshot](https://github.com/zeshuaro/firestore_cache/raw/main/images/firestore_screenshot.png)
 
-__PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on the timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from the cache.
+__⚠️ PLEASE NOTE__ This plugin does not compare the documents in the cache and the ones in the server to determine if it should fetch data from the server. Instead, it relies on the timestamp field in the document to make that decision. And so your application should implement the logic to update this field if you want to read new data from the server instead of reading it from the cache.
 
 You should also create different timestamp fields for different collections or documents that you are fetching.
 
 ```dart
-import 'package:firestore_cache/firestore_cache.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firestore_cache/firestore_cache.dart';
 
-// This should be the path of the document that you created
-final DocumentReference cacheDocRef = Firestore.instance.doc('status/status');
+// This should be the path of the document containing the timestampe field
+// that you created
+final cacheDocRef = Firestore.instance.doc('status/status');
 
 // This should be the timestamp field in that document
-final String cacheField = 'updatedAt';
+final cacheField = 'updatedAt';
 
-final Query query = Firestore.instance.collection('collection');
-final QuerySnapshot snapshot = await FirestoreCache.getDocuments(
+final query = Firestore.instance.collection('posts');
+final snapshot = await FirestoreCache.getDocuments(
     query: query,
     cacheDocRef: cacheDocRef,
     firestoreCacheField: cacheField,
