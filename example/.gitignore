@@ -45,3 +45,4 @@ app.*.map.json
 
 GoogleService-Info.plist
 google-services.json
+!pubspec.lock

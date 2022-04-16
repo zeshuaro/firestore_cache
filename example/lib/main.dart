@@ -54,7 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            const Text('Get single document'),
             _buildDoc(),
+            const Divider(),
+            const Text('Get collection of documents'),
             _buildDocs(),
           ],
         ),
