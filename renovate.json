@@ -3,16 +3,9 @@
   "ignorePaths": ["example/ios/", "example/android/"],
   "labels": ["dependencies"],
   "semanticCommits": "enabled",
-  "stabilityDays": 3,
-  "prCreation": "not-pending",
   "schedule": ["after 6pm every weekday", "every weekend"],
   "timezone": "Australia/Sydney",
   "packageRules": [
-    {
-      "groupName": "Dev Dependencies",
-      "matchPaths": ["pubspec.yaml"],
-      "matchDepTypes": ["dev_dependencies"]
-    },
     {
       "groupName": "GitHub Actions",
       "semanticCommitType": "ci",
