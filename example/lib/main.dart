@@ -30,10 +30,10 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   final _firestore = FirebaseFirestore.instance;
   late Future<DocumentSnapshot<Map<String, dynamic>>> _futureDoc;
   late Future<QuerySnapshot<Map<String, dynamic>>> _futureSnapshot;
