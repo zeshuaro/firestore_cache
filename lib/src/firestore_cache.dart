@@ -28,6 +28,7 @@ import 'exceptions.dart';
 ///     firestoreCacheField: cacheField,
 /// );
 /// ```
+///
 class FirestoreCache {
   /// Fetch a document with read from cache first then server.
   ///
@@ -43,12 +44,13 @@ class FirestoreCache {
   /// This method should only be used if the document you are fetching does not
   /// change over time. Once the document is cached, it will always be read from
   /// the cache.
-  static Future<DocumentSnapshot<Map<String, dynamic>>> getDocument(
-    DocumentReference<Map<String, dynamic>> docRef, {
+  static Future<DocumentSnapshot<T>> getDocument<T>(
+    DocumentReference<T> docRef, {
     Source source = Source.cache,
     bool isRefreshEmptyCache = true,
   }) async {
-    DocumentSnapshot<Map<String, dynamic>> doc;
+    DocumentSnapshot<T> doc;
+
     try {
       doc = await docRef.get(GetOptions(source: source));
       if (doc.data() == null && isRefreshEmptyCache) doc = await docRef.get();
@@ -77,19 +79,31 @@ class FirestoreCache {
   /// You can also pass in [localCacheKey] as the key for storing the last local
   /// cache date, and [isUpdateCacheDate] to set if it should update the last
   /// local cache date to current date and time.
-  static Future<QuerySnapshot<Map<String, dynamic>>> getDocuments({
-    required Query<Map<String, dynamic>> query,
-    required DocumentReference<Map<String, dynamic>> cacheDocRef,
+  ///
+  /// If you are using firestore collection withConverter then you have to also
+  /// pass toFirestore method to converter
+  static Future<QuerySnapshot<T>> getDocuments<T>({
+    required Query<T> query,
+    required DocumentReference<T> cacheDocRef,
     required String firestoreCacheField,
     String? localCacheKey,
     bool isUpdateCacheDate = true,
+    Map<String, Object?> Function(T value, SetOptions? options)? converter,
   }) async {
+    if (cacheDocRef is! DocumentReference<Map<String, dynamic>>) {
+      assert(
+        converter != null,
+        "converter should not be null if cacheDocRef's collection is initiated with withConverter method ",
+      );
+    }
+
     localCacheKey = localCacheKey ?? firestoreCacheField;
 
     final isFetch = await isFetchDocuments(
       cacheDocRef,
       firestoreCacheField,
       localCacheKey,
+      converter: converter,
     );
     final src = isFetch ? Source.serverAndCache : Source.cache;
     var snapshot = await query.get(GetOptions(source: src));
@@ -115,11 +129,12 @@ class FirestoreCache {
   }
 
   @visibleForTesting
-  static Future<bool> isFetchDocuments(
-    DocumentReference<Map<String, dynamic>> cacheDocRef,
+  static Future<bool> isFetchDocuments<T>(
+    DocumentReference<T> cacheDocRef,
     String firestoreCacheField,
-    String localCacheKey,
-  ) async {
+    String localCacheKey, {
+    Map<String, Object?> Function(T value, SetOptions? options)? converter,
+  }) async {
     var isFetch = true;
     final prefs = await SharedPreferences.getInstance();
     final dateStr = prefs.getString(localCacheKey);
@@ -129,13 +144,28 @@ class FirestoreCache {
       final doc = await cacheDocRef.get();
       final data = doc.data();
 
-      if (!doc.exists) {
+      if (!doc.exists || data == null) {
         throw CacheDocDoesNotExist();
-      } else if (data == null || !data.containsKey(firestoreCacheField)) {
-        throw CacheDocFieldDoesNotExist();
       }
 
-      final serverDateRaw = data[firestoreCacheField];
+      final dynamic serverDateRaw;
+
+      if (doc is DocumentSnapshot<Map<String, dynamic>>) {
+        if (!(data as Map).containsKey(firestoreCacheField)) {
+          throw CacheDocFieldDoesNotExist();
+        }
+
+        serverDateRaw = data[firestoreCacheField];
+      } else {
+        final newData = converter!(data, null);
+
+        if (!(newData).containsKey(firestoreCacheField)) {
+          throw CacheDocFieldDoesNotExist();
+        }
+
+        serverDateRaw = newData[firestoreCacheField];
+      }
+
       DateTime? serverDate;
 
       if (serverDateRaw is Timestamp) {
