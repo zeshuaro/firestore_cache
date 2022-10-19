@@ -7,8 +7,12 @@
   "timezone": "Australia/Sydney",
   "packageRules": [
     {
-      "groupName": "GitHub Actions",
-      "semanticCommitType": "ci",
+      "groupName": "Firebase dependencies",
+      "matchPaths": ["**/pubspec.yaml"],
+      "matchPackagePrefixes": ["firebase_", "cloud_firestore"]
+    },
+    {
+      "groupName": "GitHub Actions dependencies",
       "matchPaths": [".github/workflows/*.yml"],
       "addLabels": ["ci"]
     }
