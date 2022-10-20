@@ -1,3 +1,7 @@
+## 2.3.0
+
+* **chore**: Updated `cloud_firestore: ^4.0.0`
+
 ## 2.2.1
 
 * **docs**: Updated readme and documentation
