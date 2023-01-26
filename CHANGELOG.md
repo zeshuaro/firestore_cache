@@ -1,3 +1,7 @@
+## 2.3.0+1
+
+* **docs(license)**: update copyright year to 2023
+
 ## 2.3.0
 
 * **chore**: Updated `cloud_firestore: ^4.0.0`
