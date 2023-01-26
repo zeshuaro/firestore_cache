@@ -1,20 +1,9 @@
 {
-  "extends": ["config:base"],
-  "ignorePaths": ["example/ios/", "example/android/"],
-  "labels": ["dependencies"],
-  "semanticCommits": "enabled",
-  "schedule": ["after 6pm every weekday", "every weekend"],
-  "timezone": "Australia/Sydney",
-  "packageRules": [
-    {
-      "groupName": "Firebase dependencies",
-      "matchPaths": ["**/pubspec.yaml"],
-      "matchPackagePrefixes": ["firebase_", "cloud_firestore"]
-    },
-    {
-      "groupName": "GitHub Actions dependencies",
-      "matchPaths": [".github/workflows/*.yml"],
-      "addLabels": ["ci"]
-    }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>zeshuaro/renovate-configs",
+    "github>zeshuaro/renovate-configs:package",
+    "github>zeshuaro/renovate-configs:dart",
+    "github>zeshuaro/renovate-configs:flutterIgnorePaths"
   ]
 }
