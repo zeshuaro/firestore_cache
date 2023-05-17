@@ -31,7 +31,7 @@ jobs:
           flutter test --coverage
 
       - name: Upload coverage report 📡
-        uses: codecov/codecov-action@v3.1.3
+        uses: codecov/codecov-action@v3.1.4
 
   lint:
     name: Lint
