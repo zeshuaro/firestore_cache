@@ -17,7 +17,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  firestore_cache: ^2.3.0+1
+  firestore_cache: ^2.3.1
 ```
 
 ### Usage
