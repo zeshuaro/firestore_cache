@@ -23,14 +23,15 @@ jobs:
         uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
 
       - name: Get project Flutter version 🏷️
+        id: fvm-config
         uses: kuhnroyal/flutter-fvm-config-action@v1
 
       - name: Setup Flutter 💻
         uses: subosito/flutter-action@v2.10.0
         with:
-          channel: ${{ env.FLUTTER_CHANNEL }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
           cache: true
-          cache-key: ${{ runner.os }}-flutter-${{ env.FLUTTER_CHANNEL }}
+          cache-key: ${{ runner.os }}-flutter-${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
 
       - name: Run tests 🧪
         run: |
@@ -49,14 +50,15 @@ jobs:
         uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
 
       - name: Get project Flutter version 🏷️
+        id: fvm-config
         uses: kuhnroyal/flutter-fvm-config-action@v1
 
       - name: Setup Flutter 💻
         uses: subosito/flutter-action@v2.10.0
         with:
-          channel: ${{ env.FLUTTER_CHANNEL }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
           cache: true
-          cache-key: ${{ runner.os }}-flutter-${{ env.FLUTTER_CHANNEL }}
+          cache-key: ${{ runner.os }}-flutter-${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
 
       - name: Run linting 🧪
         run: |

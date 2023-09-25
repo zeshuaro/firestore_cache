@@ -1,0 +1,8 @@
+name: Pull request actions
+
+on:
+  pull_request_target:
+
+jobs:
+  pull-request:
+    uses: zeshuaro/github-actions-workflows/.github/workflows/pull-request.yml@c885847467754cd1256fedf9bebd190fe0aadd25
