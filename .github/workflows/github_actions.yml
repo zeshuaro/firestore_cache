@@ -5,7 +5,14 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * SUN"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+    
 jobs:
   test:
     name: Test
@@ -84,3 +91,42 @@ jobs:
             echo The score $PERCENTAGE is too low, it must be at least $MIN_SCORE 
             exit 1
           fi
+
+  semantic-release:
+    name: Semantic release
+    runs-on: ubuntu-latest
+    needs: [test, lint, analyze]
+    if: ${{ (github.ref == 'refs/heads/main') && (contains(fromJSON('["workflow_dispatch", "schedule"]'), github.event_name)) }}
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Get project Flutter version 🏷️
+        id: fvm-config
+        uses: kuhnroyal/flutter-fvm-config-action@v1.2.0
+
+      - name: Setup Flutter 💻
+        uses: subosito/flutter-action@v2.10.0
+        with:
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
+          cache: true
+          cache-key: ${{ runner.os }}-flutter-${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
+
+      - name: Setup Node 💻
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+
+      - name: Install dependencies 📦
+        run: yarn
+
+      - name: Release 🚀
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
