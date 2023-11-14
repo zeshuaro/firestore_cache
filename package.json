@@ -6,9 +6,6 @@
   "repository": "https://github.com/zeshuaro/firestore_cache",
   "author": "Joshua Tang <zeshuaro@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": ">=18.18.1"
-  },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
