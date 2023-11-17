@@ -24,7 +24,7 @@ jobs:
 
       - name: Get project Flutter version 🏷️
         id: fvm-config
-        uses: kuhnroyal/flutter-fvm-config-action@v1
+        uses: kuhnroyal/flutter-fvm-config-action@v2
 
       - name: Setup Flutter 💻
         uses: subosito/flutter-action@v2.12.0
@@ -51,7 +51,7 @@ jobs:
 
       - name: Get project Flutter version 🏷️
         id: fvm-config
-        uses: kuhnroyal/flutter-fvm-config-action@v1
+        uses: kuhnroyal/flutter-fvm-config-action@v2
 
       - name: Setup Flutter 💻
         uses: subosito/flutter-action@v2.12.0
