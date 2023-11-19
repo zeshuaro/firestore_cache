@@ -1,3 +1,16 @@
+## [2.4.1](https://github.com/zeshuaro/firestore_cache/compare/v2.4.0...v2.4.1) (2023-11-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.13.0 ([#201](https://github.com/zeshuaro/firestore_cache/issues/201)) ([daf07c6](https://github.com/zeshuaro/firestore_cache/commit/daf07c63d5f31c6879fb81c779f471501c78f101))
+* **deps:** update dependency shared_preferences to ^2.2.2 ([#202](https://github.com/zeshuaro/firestore_cache/issues/202)) ([67a5723](https://github.com/zeshuaro/firestore_cache/commit/67a57230858e2b05ce20184a024d279f720fe6be))
+
+
+### Continuous Integration
+
+* **deps:** update kuhnroyal/flutter-fvm-config-action action to v2 ([#203](https://github.com/zeshuaro/firestore_cache/issues/203)) ([0d8a5cc](https://github.com/zeshuaro/firestore_cache/commit/0d8a5cc161438ca90f40202517dd20aa303d61ee))
+
 ## [2.4.0](https://github.com/zeshuaro/firestore_cache/compare/v2.3.1...v2.4.0) (2023-11-16)
 
 
