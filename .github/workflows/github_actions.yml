@@ -63,6 +63,7 @@ jobs:
       - name: Run linting 🧪
         run: |
           flutter pub get
+          dart format --output=none --set-exit-if-changed .
           flutter analyze
 
   semantic-release:
