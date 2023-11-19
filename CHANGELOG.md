@@ -1,3 +1,16 @@
+## [2.5.0](https://github.com/zeshuaro/firestore_cache/compare/v2.4.1...v2.5.0) (2023-11-19)
+
+
+### Features
+
+* specify minimum flutter version `>=3.13.9` ([#207](https://github.com/zeshuaro/firestore_cache/issues/207)) ([3d7b1f5](https://github.com/zeshuaro/firestore_cache/commit/3d7b1f55a33f718bcac647b8031b79058d73ac63))
+
+
+### Continuous Integration
+
+* add to run linting on example app ([#206](https://github.com/zeshuaro/firestore_cache/issues/206)) ([cac7ebf](https://github.com/zeshuaro/firestore_cache/commit/cac7ebfd5a5290c6ecb7203cc965ea54b77205a7))
+* remove analyze job from main workflow ([#205](https://github.com/zeshuaro/firestore_cache/issues/205)) ([6cea2de](https://github.com/zeshuaro/firestore_cache/commit/6cea2deb8e959cd4e63762945f09b2a2cab9d646))
+
 ## [2.4.1](https://github.com/zeshuaro/firestore_cache/compare/v2.4.0...v2.4.1) (2023-11-19)
 
 
