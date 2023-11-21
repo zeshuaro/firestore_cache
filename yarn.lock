@@ -1406,7 +1406,7 @@ globby@^14.0.0:
     slash "^5.1.0"
     unicorn-magic "^0.1.0"
 
-google-auth-library@^9.0.0:
+google-auth-library@^9.2.0:
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-9.2.0.tgz#16c14a775b3a9a1be53b7428ddbd9d2c3599836b"
   integrity sha512-1oV3p0JhNEhVbj26eF3FAJcv9MXXQt4S0wcvKZaDbl4oHq5V3UJoSbsGZGQNcjoCdhW4kDSwOs11wLlHog3fgQ==
@@ -2895,16 +2895,16 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.3.3.tgz#d6930890279a769104fa9c044a6f987be3b3133d"
-  integrity sha512-ko67AJaPLrIYJyc/0Q9YVQeUykX2APpOj+MTaFmy6KMZcdfTuKeIWr8ahsFlmHFzH84UuOGnYduNHQSQ9zCeHQ==
+semantic-release-pub@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.4.0.tgz#da96bbfae83d30a9826a4a174ef0e9f3f0d5f08e"
+  integrity sha512-xmrvtCDotLkbsBgh7TIOd42Tbj0VZKOOIN1GylBserlBrBXh5iOrQLUkYAqE92GXUDRJgqGbFUShYe5i5nNZrw==
   dependencies:
     "@semantic-release/error" "^4.0.0"
     execa "^8.0.1"
-    google-auth-library "^9.0.0"
-    yaml "^2.3.2"
-    zod "^3.22.2"
+    google-auth-library "^9.2.0"
+    yaml "^2.3.4"
+    zod "^3.22.4"
 
 semantic-release-replace-plugin@1.2.7:
   version "1.2.7"
@@ -3479,7 +3479,7 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^2.3.2:
+yaml@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.4.tgz#53fc1d514be80aabf386dc6001eb29bf3b7523b2"
   integrity sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==
@@ -3502,7 +3502,7 @@ yargs@^17.5.1, yargs@^17.7.2:
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
 
-zod@^3.22.2:
+zod@^3.22.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
