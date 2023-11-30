@@ -7,7 +7,7 @@ import 'exceptions.dart';
 /// FirestoreCache is a Flutter plugin for fetching Firestore documents with
 /// read from cache first then server.
 ///
-/// Before using this plugin, you will need to do some inital setup on
+/// Before using this plugin, you will need to do some initial setup on
 /// Firestore. Then you can use this sample code to fetch documents:
 ///
 /// ```dart
