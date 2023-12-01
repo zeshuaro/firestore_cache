@@ -1,3 +1,33 @@
+## [2.7.0](https://github.com/zeshuaro/firestore_cache/compare/v2.6.0...v2.7.0) (2023-12-01)
+
+
+### Features
+
+* **sdk:** update dependency dart to >=3.2.1 <4.0.0 ([#215](https://github.com/zeshuaro/firestore_cache/issues/215)) ([71f52b3](https://github.com/zeshuaro/firestore_cache/commit/71f52b3c67357e6d6d339208d5f7f04aa9109e8e))
+* **sdk:** update dependency flutter to >=3.16.1 ([#220](https://github.com/zeshuaro/firestore_cache/issues/220)) ([f36f063](https://github.com/zeshuaro/firestore_cache/commit/f36f06324d65bcf2fcd5a224e3564355495c0855))
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.13.2 ([#222](https://github.com/zeshuaro/firestore_cache/issues/222)) ([85f5482](https://github.com/zeshuaro/firestore_cache/commit/85f54822f66b690acf67a270c483783aea86c3ff))
+
+
+### Documentation
+
+* add funding ([#223](https://github.com/zeshuaro/firestore_cache/issues/223)) ([c67b53c](https://github.com/zeshuaro/firestore_cache/commit/c67b53c7fe5a824810463d7312e3338e5b37ade6))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#218](https://github.com/zeshuaro/firestore_cache/issues/218)) ([2cae96c](https://github.com/zeshuaro/firestore_cache/commit/2cae96c06234990cfee0faa623ba1f2ab7a6581b))
+* **example/deps:** lock file maintenance example dependencies ([#219](https://github.com/zeshuaro/firestore_cache/issues/219)) ([9225a61](https://github.com/zeshuaro/firestore_cache/commit/9225a615044e5f2cd7f50c60d06bd6b3328b4aaf))
+* fix typos ([#225](https://github.com/zeshuaro/firestore_cache/issues/225)) ([afe058e](https://github.com/zeshuaro/firestore_cache/commit/afe058ea8cd8c3e428cc00e71b55acb934692761))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 9c504ac ([#224](https://github.com/zeshuaro/firestore_cache/issues/224)) ([1deadb7](https://github.com/zeshuaro/firestore_cache/commit/1deadb7bba45f25b78f73be71aaf224ca73bef16))
+
 ## [2.6.0](https://github.com/zeshuaro/firestore_cache/compare/v2.5.0...v2.6.0) (2023-11-26)
 
 
