@@ -1,3 +1,17 @@
+## [2.8.0](https://github.com/zeshuaro/firestore_cache/compare/v2.7.0...v2.8.0) (2023-12-03)
+
+
+### Features
+
+* **sdk:** update dependency dart to >=3.2.2 <4.0.0 ([#221](https://github.com/zeshuaro/firestore_cache/issues/221)) ([97c7928](https://github.com/zeshuaro/firestore_cache/commit/97c792887213fa4989d7930494e3bbe4c0d86501))
+* **sdk:** update dependency flutter to >=3.16.2 ([#226](https://github.com/zeshuaro/firestore_cache/issues/226)) ([1d04229](https://github.com/zeshuaro/firestore_cache/commit/1d0422994c385e471a922de73d22171cc8a64933))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 8ca89b8 ([#227](https://github.com/zeshuaro/firestore_cache/issues/227)) ([0149373](https://github.com/zeshuaro/firestore_cache/commit/0149373003db3b705bba821f9876b93a067dfbff))
+* **deps:** update zeshuaro/github-actions-workflows digest to b9c8d75 ([#228](https://github.com/zeshuaro/firestore_cache/issues/228)) ([bbd1245](https://github.com/zeshuaro/firestore_cache/commit/bbd12456ebcec9631255871b338b7a2373a78868))
+
 ## [2.7.0](https://github.com/zeshuaro/firestore_cache/compare/v2.6.0...v2.7.0) (2023-12-01)
 
 
