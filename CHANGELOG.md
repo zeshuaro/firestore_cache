@@ -1,3 +1,22 @@
+## [2.11.0](https://github.com/zeshuaro/firestore_cache/compare/v2.10.0...v2.11.0) (2023-12-24)
+
+
+### Features
+
+* **sdk:** update dependency flutter to >=3.16.5 ([#252](https://github.com/zeshuaro/firestore_cache/issues/252)) ([d7ab098](https://github.com/zeshuaro/firestore_cache/commit/d7ab098276bd613b004d666a1243617b2bbb5d1f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.13.6 ([#251](https://github.com/zeshuaro/firestore_cache/issues/251)) ([1e7c52b](https://github.com/zeshuaro/firestore_cache/commit/1e7c52b508855cc428fdffeddf74acf784ecd436))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#249](https://github.com/zeshuaro/firestore_cache/issues/249)) ([d2f7e1d](https://github.com/zeshuaro/firestore_cache/commit/d2f7e1d09fe200face4605774f718d8c3f22243b))
+* **deps:** update dependency mocktail to v1.0.2 ([#253](https://github.com/zeshuaro/firestore_cache/issues/253)) ([c3799be](https://github.com/zeshuaro/firestore_cache/commit/c3799becf1c7c8e6854d0a2fb7a230c9e7ca2e98))
+* **example/deps:** lock file maintenance example dependencies ([#250](https://github.com/zeshuaro/firestore_cache/issues/250)) ([9ba6079](https://github.com/zeshuaro/firestore_cache/commit/9ba6079f513e3698da2d951b48baabf42518b24d))
+
 ## [2.10.0](https://github.com/zeshuaro/firestore_cache/compare/v2.9.0...v2.10.0) (2023-12-17)
 
 
