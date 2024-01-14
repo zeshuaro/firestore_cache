@@ -1,3 +1,50 @@
+## [2.11.1](https://github.com/zeshuaro/firestore_cache/compare/v2.11.0...v2.11.1) (2024-01-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.14.0 ([#275](https://github.com/zeshuaro/firestore_cache/issues/275)) ([764ff2e](https://github.com/zeshuaro/firestore_cache/commit/764ff2e42e592a2e9e230afdafcd4af051eab256))
+* **sdk:** update dependency dart to >=3.2.4 <4.0.0 ([#255](https://github.com/zeshuaro/firestore_cache/issues/255)) ([e478aa1](https://github.com/zeshuaro/firestore_cache/commit/e478aa13042183444fceeca16ee0e670e34b05b1))
+* **sdk:** update dependency flutter to >=3.16.6 ([#272](https://github.com/zeshuaro/firestore_cache/issues/272)) ([66e87aa](https://github.com/zeshuaro/firestore_cache/commit/66e87aa037ac769bd55fa04ef7b7bb80dc5f2031))
+* **sdk:** update dependency flutter to >=3.16.7 ([#274](https://github.com/zeshuaro/firestore_cache/issues/274)) ([88276b3](https://github.com/zeshuaro/firestore_cache/commit/88276b3d0eb685831c3b3008020040ea8d65b765))
+
+
+### Documentation
+
+* **license:** update copyright year to 2024 ([#260](https://github.com/zeshuaro/firestore_cache/issues/260)) ([51c56ae](https://github.com/zeshuaro/firestore_cache/commit/51c56aee28e317dd16fa85f72bf1bed6bf6dd692))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#256](https://github.com/zeshuaro/firestore_cache/issues/256)) ([377439a](https://github.com/zeshuaro/firestore_cache/commit/377439a85a4f85cbde3843b4499071c77fc9aad2))
+* **deps:** lock file maintenance ([#259](https://github.com/zeshuaro/firestore_cache/issues/259)) ([56e7c40](https://github.com/zeshuaro/firestore_cache/commit/56e7c4045532ec7d1ebfcc8ce750b5cf94710d34))
+* **deps:** lock file maintenance ([#266](https://github.com/zeshuaro/firestore_cache/issues/266)) ([7421f3c](https://github.com/zeshuaro/firestore_cache/commit/7421f3cfd3188bfb4d4e371e5d2e1927bfd2ee78))
+* **deps:** update dependency semantic-release-pub to v0.7.0 ([#270](https://github.com/zeshuaro/firestore_cache/issues/270)) ([5f82ee7](https://github.com/zeshuaro/firestore_cache/commit/5f82ee797181c089cf900c0ba019a2ac80f667a4))
+* **example/deps:** lock file maintenance ([#267](https://github.com/zeshuaro/firestore_cache/issues/267)) ([9e2e97f](https://github.com/zeshuaro/firestore_cache/commit/9e2e97ffd8ce024a46c844d3cbc7cd9a7ffa962f))
+* **example/deps:** lock file maintenance example dependencies ([#257](https://github.com/zeshuaro/firestore_cache/issues/257)) ([e433d59](https://github.com/zeshuaro/firestore_cache/commit/e433d5936c109b633fd67347cf6a03a423488619))
+* **node:** update dependency node to v20.11.0 ([#271](https://github.com/zeshuaro/firestore_cache/issues/271)) ([4686dc5](https://github.com/zeshuaro/firestore_cache/commit/4686dc58f195825fb79848438e189ed8880f7e6b))
+* **vscode:** add `settings.json` ([#283](https://github.com/zeshuaro/firestore_cache/issues/283)) ([17ab9e3](https://github.com/zeshuaro/firestore_cache/commit/17ab9e3f0baa104de51330fe0f4b9fd64274c811))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 04a2125 ([#263](https://github.com/zeshuaro/firestore_cache/issues/263)) ([206f3d7](https://github.com/zeshuaro/firestore_cache/commit/206f3d75647bc967b345e414d08284ca92d84f8e))
+* **deps:** update zeshuaro/github-actions-workflows digest to 1a5d202 ([#279](https://github.com/zeshuaro/firestore_cache/issues/279)) ([1d8877f](https://github.com/zeshuaro/firestore_cache/commit/1d8877f963e138aaa8e3e1c182541d127db52535))
+* **deps:** update zeshuaro/github-actions-workflows digest to 1b78c32 ([#269](https://github.com/zeshuaro/firestore_cache/issues/269)) ([e7d19ba](https://github.com/zeshuaro/firestore_cache/commit/e7d19bab95c36591dacdcf9704a4ff3234fd3cba))
+* **deps:** update zeshuaro/github-actions-workflows digest to 29c0760 ([#261](https://github.com/zeshuaro/firestore_cache/issues/261)) ([59f63e8](https://github.com/zeshuaro/firestore_cache/commit/59f63e870f26b32cf051851c2c7b81cd2c22608f))
+* **deps:** update zeshuaro/github-actions-workflows digest to 558806b ([#282](https://github.com/zeshuaro/firestore_cache/issues/282)) ([33bbf1f](https://github.com/zeshuaro/firestore_cache/commit/33bbf1f19ea519e5be009f6779eafc9dac00a186))
+* **deps:** update zeshuaro/github-actions-workflows digest to 6f3f4e9 ([#258](https://github.com/zeshuaro/firestore_cache/issues/258)) ([7214b19](https://github.com/zeshuaro/firestore_cache/commit/7214b19b80f28c2abae4d3783eafc1279f67f648))
+* **deps:** update zeshuaro/github-actions-workflows digest to 7b25428 ([#276](https://github.com/zeshuaro/firestore_cache/issues/276)) ([19640af](https://github.com/zeshuaro/firestore_cache/commit/19640af0e03e06bdda395c20d3c4dc78dd431473))
+* **deps:** update zeshuaro/github-actions-workflows digest to 8050038 ([#262](https://github.com/zeshuaro/firestore_cache/issues/262)) ([9e509a6](https://github.com/zeshuaro/firestore_cache/commit/9e509a63547321b660628cd4f823a0d8e2083b21))
+* **deps:** update zeshuaro/github-actions-workflows digest to b4bf0b4 ([#273](https://github.com/zeshuaro/firestore_cache/issues/273)) ([b41b6e1](https://github.com/zeshuaro/firestore_cache/commit/b41b6e164e40383b1fb9f24c344fb1bc93f49053))
+* **deps:** update zeshuaro/github-actions-workflows digest to b8a4973 ([#265](https://github.com/zeshuaro/firestore_cache/issues/265)) ([97be0f7](https://github.com/zeshuaro/firestore_cache/commit/97be0f790fb081c7ca5b6abd6e98c9763c1e45a3))
+* **github-actions:** use shared flutter package workflow ([#281](https://github.com/zeshuaro/firestore_cache/issues/281)) ([c9fea9b](https://github.com/zeshuaro/firestore_cache/commit/c9fea9be87dfa65b5fb9de4385c69dc3bf3c7d45))
+* **release:** use github app token ([#277](https://github.com/zeshuaro/firestore_cache/issues/277)) ([163789f](https://github.com/zeshuaro/firestore_cache/commit/163789ffb1dc1e0626e6a97e52ba72197445dc04))
+* **scheduled:** provide `PAT` to workflow ([#268](https://github.com/zeshuaro/firestore_cache/issues/268)) ([5538ff3](https://github.com/zeshuaro/firestore_cache/commit/5538ff3ce71e5d5782da96830fbd7eb66506323a))
+* **scheduled:** use github app id and private key ([#278](https://github.com/zeshuaro/firestore_cache/issues/278)) ([e438146](https://github.com/zeshuaro/firestore_cache/commit/e43814667d727486789a24d52c63b76f9ad0b026))
+* separate `pull_request` and `pull_request_target` actions ([#264](https://github.com/zeshuaro/firestore_cache/issues/264)) ([0f616c7](https://github.com/zeshuaro/firestore_cache/commit/0f616c7efe92c3fef15e947b1e67eb4289d514bd))
+* **update-license:** remove unused workflow ([#280](https://github.com/zeshuaro/firestore_cache/issues/280)) ([c069710](https://github.com/zeshuaro/firestore_cache/commit/c069710a9ebfbea73e1efd84fe5bdaf387df9496))
+
 ## [2.11.0](https://github.com/zeshuaro/firestore_cache/compare/v2.10.0...v2.11.0) (2023-12-24)
 
 
