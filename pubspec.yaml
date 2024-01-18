@@ -6,7 +6,7 @@ homepage: https://github.com/zeshuaro/firestore_cache
 
 environment:
   sdk: ">=3.2.5 <4.0.0"
-  flutter: ">=3.16.7"
+  flutter: ">=3.16.8"
 
 dependencies:
   cloud_firestore: ^4.14.0
