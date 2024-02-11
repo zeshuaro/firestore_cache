@@ -1,3 +1,33 @@
+## [2.11.4](https://github.com/zeshuaro/firestore_cache/compare/v2.11.3...v2.11.4) (2024-02-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.15.0 ([#312](https://github.com/zeshuaro/firestore_cache/issues/312)) ([c15a4c2](https://github.com/zeshuaro/firestore_cache/commit/c15a4c20d3e80210593fb45c43107234dfad17a1))
+* **deps:** update dependency cloud_firestore to ^4.15.1 ([#313](https://github.com/zeshuaro/firestore_cache/issues/313)) ([d939e57](https://github.com/zeshuaro/firestore_cache/commit/d939e57dec7751d5cb80d26aecd5c29d0db38161))
+* **deps:** update dependency cloud_firestore to ^4.15.2 ([#314](https://github.com/zeshuaro/firestore_cache/issues/314)) ([597d4d5](https://github.com/zeshuaro/firestore_cache/commit/597d4d5d372117dee26c0e927d63690d0090a447))
+* **deps:** update dependency cloud_firestore to ^4.15.3 ([#316](https://github.com/zeshuaro/firestore_cache/issues/316)) ([0df9c00](https://github.com/zeshuaro/firestore_cache/commit/0df9c00bc29b641e88ea14c42bcf73e7185cb8b9))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#303](https://github.com/zeshuaro/firestore_cache/issues/303)) ([1b4aa5c](https://github.com/zeshuaro/firestore_cache/commit/1b4aa5c7c5a50d1fff6e64167d23c6c89a5caf7d))
+* **deps:** lock file maintenance ([#308](https://github.com/zeshuaro/firestore_cache/issues/308)) ([889b67f](https://github.com/zeshuaro/firestore_cache/commit/889b67f8cf8508e5863ae5235746a242bdea9458))
+* **deps:** update dependency semantic-release to v23.0.1 ([#317](https://github.com/zeshuaro/firestore_cache/issues/317)) ([bb340b0](https://github.com/zeshuaro/firestore_cache/commit/bb340b0f0cef6974332089a36fd667b1af50228d))
+* **deps:** update dependency semantic-release to v23.0.2 ([#318](https://github.com/zeshuaro/firestore_cache/issues/318)) ([5a0fd63](https://github.com/zeshuaro/firestore_cache/commit/5a0fd63b0274ec6a64d369abf69682586efe6072))
+* **deps:** update dependency semantic-release-pub to v0.8.1 ([#311](https://github.com/zeshuaro/firestore_cache/issues/311)) ([075e0b1](https://github.com/zeshuaro/firestore_cache/commit/075e0b17190be32d8e0b3566294ce1f2d8f935b3))
+* **example/deps:** lock file maintenance ([#304](https://github.com/zeshuaro/firestore_cache/issues/304)) ([746d630](https://github.com/zeshuaro/firestore_cache/commit/746d6304278c96f0127913d7a4079794b3cbff31))
+* **example/deps:** lock file maintenance ([#309](https://github.com/zeshuaro/firestore_cache/issues/309)) ([c1cb890](https://github.com/zeshuaro/firestore_cache/commit/c1cb8907a77042a8fae222ba276da3f0a17ca09f))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 1b71369 ([#307](https://github.com/zeshuaro/firestore_cache/issues/307)) ([6d15bf4](https://github.com/zeshuaro/firestore_cache/commit/6d15bf42380b48163d026ccc9a194ea81c79467b))
+* **deps:** update zeshuaro/github-actions-workflows digest to 76add60 ([#305](https://github.com/zeshuaro/firestore_cache/issues/305)) ([dae7105](https://github.com/zeshuaro/firestore_cache/commit/dae7105f1db532cc3c887f452672bce8716c838b))
+* **deps:** update zeshuaro/github-actions-workflows digest to 8a9940e ([#310](https://github.com/zeshuaro/firestore_cache/issues/310)) ([a8d1cd9](https://github.com/zeshuaro/firestore_cache/commit/a8d1cd9cceb8a023205586dc1816ce5548929d5b))
+* **deps:** update zeshuaro/github-actions-workflows digest to 97519e9 ([#315](https://github.com/zeshuaro/firestore_cache/issues/315)) ([7997f48](https://github.com/zeshuaro/firestore_cache/commit/7997f48320d35ea4e8f5b3044d7a2eef759fd0f4))
+* **github-actions:** add codecov token ([#306](https://github.com/zeshuaro/firestore_cache/issues/306)) ([1810773](https://github.com/zeshuaro/firestore_cache/commit/1810773c8858c59de282265baa398e899162064c))
+
 ## [2.11.3](https://github.com/zeshuaro/firestore_cache/compare/v2.11.2...v2.11.3) (2024-01-28)
 
 
