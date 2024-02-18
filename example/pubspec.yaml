@@ -21,8 +21,8 @@ environment:
   sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
-  cloud_firestore: ^4.15.3
-  firebase_core: ^2.25.3
+  cloud_firestore: ^4.15.4
+  firebase_core: ^2.25.4
   firestore_cache:
     path: ../
   flutter:
