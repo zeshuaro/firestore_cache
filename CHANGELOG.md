@@ -1,3 +1,30 @@
+## [2.12.0](https://github.com/zeshuaro/firestore_cache/compare/v2.11.4...v2.12.0) (2024-02-18)
+
+
+### Features
+
+* **sdk:** update dependency flutter to >=3.19.0 ([#326](https://github.com/zeshuaro/firestore_cache/issues/326)) ([58537fb](https://github.com/zeshuaro/firestore_cache/commit/58537fbc5ac48117988e3d0f981ba92a0cbfc261))
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.15.4 ([#324](https://github.com/zeshuaro/firestore_cache/issues/324)) ([9bccd35](https://github.com/zeshuaro/firestore_cache/commit/9bccd358b82b2745bca279b6629c6f5f2344e2ba))
+* **sdk:** update dependency dart to >=3.3.0 <4.0.0 ([#327](https://github.com/zeshuaro/firestore_cache/issues/327)) ([0f4b401](https://github.com/zeshuaro/firestore_cache/commit/0f4b4010f87ceafd5f9b8137992a69dd24038eaa))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#319](https://github.com/zeshuaro/firestore_cache/issues/319)) ([58c0344](https://github.com/zeshuaro/firestore_cache/commit/58c03446eb8f7cb1ef5b821d701a22fb1c02e841))
+* **deps:** update dependency semantic-release-pub to v0.8.2 ([#323](https://github.com/zeshuaro/firestore_cache/issues/323)) ([119851e](https://github.com/zeshuaro/firestore_cache/commit/119851e2b16a09fb9d276ccd269f4176dcfc5cb3))
+* **example/deps:** lock file maintenance example dependencies ([#320](https://github.com/zeshuaro/firestore_cache/issues/320)) ([684d191](https://github.com/zeshuaro/firestore_cache/commit/684d1918eda8d534ff78ddc4707ac5917fb7aff4))
+* **node:** update dependency node to v20.11.1 ([#325](https://github.com/zeshuaro/firestore_cache/issues/325)) ([74a826d](https://github.com/zeshuaro/firestore_cache/commit/74a826d59e60df809f385006e1ea47f3fcd5bef5))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 830822f ([#322](https://github.com/zeshuaro/firestore_cache/issues/322)) ([eb58a1b](https://github.com/zeshuaro/firestore_cache/commit/eb58a1be673fc0c71f6a151d0a36ff0dac84c5c1))
+* **deps:** update zeshuaro/github-actions-workflows digest to f28cdb4 ([#321](https://github.com/zeshuaro/firestore_cache/issues/321)) ([f368871](https://github.com/zeshuaro/firestore_cache/commit/f368871f5e18cadc36aa824336504345dcfe9e66))
+
 ## [2.11.4](https://github.com/zeshuaro/firestore_cache/compare/v2.11.3...v2.11.4) (2024-02-11)
 
 
