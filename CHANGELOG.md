@@ -1,3 +1,25 @@
+## [2.12.2](https://github.com/zeshuaro/firestore_cache/compare/v2.12.1...v2.12.2) (2024-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.15.5 ([#334](https://github.com/zeshuaro/firestore_cache/issues/334)) ([49cbedc](https://github.com/zeshuaro/firestore_cache/commit/49cbedc9ccaea1d0c34bcd9a462096e374c122f3))
+* **example/deps:** update dependency cloud_firestore to ^4.15.5 ([#335](https://github.com/zeshuaro/firestore_cache/issues/335)) ([dad3313](https://github.com/zeshuaro/firestore_cache/commit/dad331318d140a77f11133c8602c19325d6d18ce))
+* **sdk:** update dependency flutter to >=3.19.2 ([#337](https://github.com/zeshuaro/firestore_cache/issues/337)) ([c3e43bf](https://github.com/zeshuaro/firestore_cache/commit/c3e43bf22aebca04c73eca5c2cabf8cf34e96555))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#333](https://github.com/zeshuaro/firestore_cache/issues/333)) ([1f81033](https://github.com/zeshuaro/firestore_cache/commit/1f81033424234634e731bf6a3494f608473dbaac))
+
+
+### Continuous Integration
+
+* **deps:** update subosito/flutter-action action to v2.13.0 ([#339](https://github.com/zeshuaro/firestore_cache/issues/339)) ([71ca7a9](https://github.com/zeshuaro/firestore_cache/commit/71ca7a9e2bb250c6a65d5e6b3c422802c80d5800))
+* **deps:** update zeshuaro/github-actions-workflows digest to 56379c9 ([#338](https://github.com/zeshuaro/firestore_cache/issues/338)) ([2653441](https://github.com/zeshuaro/firestore_cache/commit/265344157bb24f9b416aface5df5775f8debd443))
+* **deps:** update zeshuaro/github-actions-workflows digest to a5f4945 ([#336](https://github.com/zeshuaro/firestore_cache/issues/336)) ([48ba23e](https://github.com/zeshuaro/firestore_cache/commit/48ba23e13eeeecf7e7bf2ad1a0e4af8dd314fe14))
+* **deps:** update zeshuaro/github-actions-workflows digest to d758501 ([#340](https://github.com/zeshuaro/firestore_cache/issues/340)) ([b2cb256](https://github.com/zeshuaro/firestore_cache/commit/b2cb256567f6125a5750932f498a1e9350312b10))
+
 ## [2.12.1](https://github.com/zeshuaro/firestore_cache/compare/v2.12.0...v2.12.1) (2024-02-25)
 
 
