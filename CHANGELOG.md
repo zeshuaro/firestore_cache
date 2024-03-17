@@ -1,3 +1,21 @@
+## [2.12.4](https://github.com/zeshuaro/firestore_cache/compare/v2.12.3...v2.12.4) (2024-03-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.15.7 ([#350](https://github.com/zeshuaro/firestore_cache/issues/350)) ([6d664d6](https://github.com/zeshuaro/firestore_cache/commit/6d664d6b56191b793deb4a143f221a3f386e70f2))
+* **deps:** update dependency cloud_firestore to ^4.15.8 ([#353](https://github.com/zeshuaro/firestore_cache/issues/353)) ([0ebb81f](https://github.com/zeshuaro/firestore_cache/commit/0ebb81f22cd10074b1a9fe223b1ed41e1817659f))
+* **example/deps:** update dependency cloud_firestore to ^4.15.7 ([#351](https://github.com/zeshuaro/firestore_cache/issues/351)) ([f33eebd](https://github.com/zeshuaro/firestore_cache/commit/f33eebdb235dc593360de6eb4767a5b503c2e38e))
+* **example/deps:** update dependency cloud_firestore to ^4.15.8 ([#354](https://github.com/zeshuaro/firestore_cache/issues/354)) ([30e489e](https://github.com/zeshuaro/firestore_cache/commit/30e489eea06f4c8690a3d4cf8446e702845e98d0))
+* **example/deps:** update dependency firebase_core to ^2.26.0 ([#352](https://github.com/zeshuaro/firestore_cache/issues/352)) ([45b9ff3](https://github.com/zeshuaro/firestore_cache/commit/45b9ff30ffb508492299d31c2aae50227a2a4953))
+* **example/deps:** update dependency firebase_core to ^2.27.0 ([#355](https://github.com/zeshuaro/firestore_cache/issues/355)) ([47ee954](https://github.com/zeshuaro/firestore_cache/commit/47ee954fe02c467f392799fa6b73a067edcb9403))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#348](https://github.com/zeshuaro/firestore_cache/issues/348)) ([08fa31e](https://github.com/zeshuaro/firestore_cache/commit/08fa31e3e9aa644665b54c527c2dc847853b2253))
+* **deps:** update dependency semantic-release-pub to v0.8.5 ([#349](https://github.com/zeshuaro/firestore_cache/issues/349)) ([f8032b9](https://github.com/zeshuaro/firestore_cache/commit/f8032b97c4f6708d360881e2b626b254d9d864fb))
+
 ## [2.12.3](https://github.com/zeshuaro/firestore_cache/compare/v2.12.2...v2.12.3) (2024-03-10)
 
 
