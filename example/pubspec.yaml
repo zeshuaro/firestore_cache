@@ -21,7 +21,7 @@ environment:
   sdk: ">=3.3.3 <4.0.0"
 
 dependencies:
-  cloud_firestore: ^4.15.9
+  cloud_firestore: ^4.15.10
   firebase_core: ^2.27.1
   firestore_cache:
     path: ../
