@@ -1,3 +1,26 @@
+## [2.12.9](https://github.com/zeshuaro/firestore_cache/compare/v2.12.8...v2.12.9) (2024-04-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.16.1 ([#399](https://github.com/zeshuaro/firestore_cache/issues/399)) ([37fe3a9](https://github.com/zeshuaro/firestore_cache/commit/37fe3a94a70a13d9e2aae2be4cdd6f764e92be73))
+* **deps:** update dependency shared_preferences to ^2.2.3 ([#406](https://github.com/zeshuaro/firestore_cache/issues/406)) ([cad7bfc](https://github.com/zeshuaro/firestore_cache/commit/cad7bfca2f788b51b1f4d7cc426679fae8eb7c3d))
+* **example/deps:** update dependency cloud_firestore to ^4.16.1 ([#400](https://github.com/zeshuaro/firestore_cache/issues/400)) ([9f850b3](https://github.com/zeshuaro/firestore_cache/commit/9f850b31ec06911b5853eeeda66ecd651941e816))
+* **example/deps:** update dependency firebase_core to ^2.29.0 ([#403](https://github.com/zeshuaro/firestore_cache/issues/403)) ([af5cf02](https://github.com/zeshuaro/firestore_cache/commit/af5cf02b3bb949b75b8b1eb59f3c0bb586073415))
+* **sdk:** update dependency dart to >=3.3.4 <4.0.0 ([#404](https://github.com/zeshuaro/firestore_cache/issues/404)) ([127b53f](https://github.com/zeshuaro/firestore_cache/commit/127b53fba3206b246f233031b30cbe1bb9cbf9be))
+* **sdk:** update dependency flutter to >=3.19.6 ([#405](https://github.com/zeshuaro/firestore_cache/issues/405)) ([f82d29d](https://github.com/zeshuaro/firestore_cache/commit/f82d29dc5c77b303174eacc4e9cb0a7e9a5e7ef7))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#398](https://github.com/zeshuaro/firestore_cache/issues/398)) ([008b04d](https://github.com/zeshuaro/firestore_cache/commit/008b04d5f9133cf2bfa6649cac1997ef3d64a9b3))
+* **deps:** update dependency semantic-release-pub to v0.8.9 ([#402](https://github.com/zeshuaro/firestore_cache/issues/402)) ([11c10cd](https://github.com/zeshuaro/firestore_cache/commit/11c10cdd4a3755e607abe043f9b410bff4743a4c))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 4dbef80 ([#401](https://github.com/zeshuaro/firestore_cache/issues/401)) ([514d9a1](https://github.com/zeshuaro/firestore_cache/commit/514d9a1473892c7588f9989a8e8421a760af50a9))
+
 ## [2.12.8](https://github.com/zeshuaro/firestore_cache/compare/v2.12.7...v2.12.8) (2024-04-14)
 
 
