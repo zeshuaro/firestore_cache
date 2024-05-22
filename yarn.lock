@@ -1280,7 +1280,7 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-execa@^8.0.0, execa@^8.0.1:
+execa@^8.0.0:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-8.0.1.tgz#51f6a5943b580f963c3ca9c6321796db8cc39b8c"
   integrity sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==
@@ -1295,7 +1295,7 @@ execa@^8.0.0, execa@^8.0.1:
     signal-exit "^4.1.0"
     strip-final-newline "^3.0.0"
 
-execa@^9.0.0:
+execa@^9.0.0, execa@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-9.1.0.tgz#c42845d2b079642b8e07d9de81db13cdb91e7a9b"
   integrity sha512-lSgHc4Elo2m6bUDhc3Hl/VxvUDJdQWI40RZ4KMY9bKRc+hgMOT7II/JjbNDhI8VnMtrCb7U/fhpJIkLORZozWw==
@@ -1591,7 +1591,7 @@ globby@^14.0.0:
     slash "^5.1.0"
     unicorn-magic "^0.1.0"
 
-google-auth-library@^9.9.0:
+google-auth-library@^9.10.0:
   version "9.10.0"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-9.10.0.tgz#c9fb940923f7ff2569d61982ee1748578c0bbfd4"
   integrity sha512-ol+oSa5NbcGdDqA+gZ3G3mev59OHBZksBTxY/tYwjtcp1H/scAFwJfSQU9/1RALoyZ7FslNbke8j4i3ipwlyuQ==
@@ -3299,14 +3299,14 @@ safe-regex-test@^1.0.3:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.8.13:
-  version "0.8.13"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.8.13.tgz#a6764ee8b3e2a68a3c3fd32dd72eb951fdd2c162"
-  integrity sha512-J9AdM+MttL0IvpnI9PMKTmAVKxnbOBVSrDL0bANvZ07tJVYuzQ3vMzmj2+Ur2Ocum/alWKTwcBCTZvvu3ABDjQ==
+semantic-release-pub@0.8.14:
+  version "0.8.14"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.8.14.tgz#233d339d73dc249d72fc95fb0282842e8837c8e4"
+  integrity sha512-WIMXs4V5e4OTKVbkPZm6DBXkPclGybSDA8uxc0mBjmb3QFFx8rtIYTEm7i0c0rw2lqVCXb9OJyu2VaHVInkrjw==
   dependencies:
     "@semantic-release/error" "^4.0.0"
-    execa "^8.0.1"
-    google-auth-library "^9.9.0"
+    execa "^9.1.0"
+    google-auth-library "^9.10.0"
     yaml "^2.4.2"
     zod "^3.23.8"
 
