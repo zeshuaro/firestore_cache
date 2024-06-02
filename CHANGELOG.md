@@ -1,3 +1,18 @@
+## [2.13.1](https://github.com/zeshuaro/firestore_cache/compare/v2.13.0...v2.13.1) (2024-06-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.17.4 ([#452](https://github.com/zeshuaro/firestore_cache/issues/452)) ([c808674](https://github.com/zeshuaro/firestore_cache/commit/c8086745eb4c4997bed1d77a08b6841962f19bf1))
+* **example/deps:** update dependency cloud_firestore to ^4.17.4 ([#453](https://github.com/zeshuaro/firestore_cache/issues/453)) ([d23d550](https://github.com/zeshuaro/firestore_cache/commit/d23d550e646b9686c59421387a68d36418415a78))
+* **example/deps:** update dependency firebase_core to ^2.31.1 ([#454](https://github.com/zeshuaro/firestore_cache/issues/454)) ([bd88ff1](https://github.com/zeshuaro/firestore_cache/commit/bd88ff1e7c9295d9ea8e4ded154fbbe8b98e75c6))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#451](https://github.com/zeshuaro/firestore_cache/issues/451)) ([46a90ab](https://github.com/zeshuaro/firestore_cache/commit/46a90ab1a3ba92ed06580b04a7c3885c54f088e7))
+* **node:** update dependency node to v20.14.0 ([#455](https://github.com/zeshuaro/firestore_cache/issues/455)) ([c5d2fb0](https://github.com/zeshuaro/firestore_cache/commit/c5d2fb01326cf2a5e74aac9fd75cd09533df4fa0))
+
 ## [2.13.0](https://github.com/zeshuaro/firestore_cache/compare/v2.12.11...v2.13.0) (2024-05-26)
 
 
