@@ -1,3 +1,26 @@
+## [2.13.2](https://github.com/zeshuaro/firestore_cache/compare/v2.13.1...v2.13.2) (2024-06-09)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^4.17.5 ([#460](https://github.com/zeshuaro/firestore_cache/issues/460)) ([bd54186](https://github.com/zeshuaro/firestore_cache/commit/bd5418689dc821a49ae196518b064348128d743d))
+* **example/deps:** update dependency cloud_firestore to ^4.17.5 ([#462](https://github.com/zeshuaro/firestore_cache/issues/462)) ([b325bea](https://github.com/zeshuaro/firestore_cache/commit/b325bea6862f70642f5c07244e23d3c1a99c7d3e))
+* **example/deps:** update dependency firebase_core to ^2.32.0 ([#463](https://github.com/zeshuaro/firestore_cache/issues/463)) ([9f31cf4](https://github.com/zeshuaro/firestore_cache/commit/9f31cf452ad90b449e9cd7bc1c8f16e4055d3071))
+* **sdk:** update dependency dart to >=3.4.3 <4.0.0 ([#456](https://github.com/zeshuaro/firestore_cache/issues/456)) ([c3718c8](https://github.com/zeshuaro/firestore_cache/commit/c3718c85dbd99453edfcb762ba3accfa27e67ad7))
+* **sdk:** update dependency flutter to >=3.22.2 ([#465](https://github.com/zeshuaro/firestore_cache/issues/465)) ([0e129a9](https://github.com/zeshuaro/firestore_cache/commit/0e129a95e8106ad933f5fa21dca680441f0b7f38))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#457](https://github.com/zeshuaro/firestore_cache/issues/457)) ([e5c0b0a](https://github.com/zeshuaro/firestore_cache/commit/e5c0b0a64e03ca11b8c9a0ce3558f43a34641ff7))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v8 ([#450](https://github.com/zeshuaro/firestore_cache/issues/450)) ([bd2e85e](https://github.com/zeshuaro/firestore_cache/commit/bd2e85e74f0a7d40cdce11362493c53f06653eba))
+* **deps:** update dependency semantic-release to v24 ([#458](https://github.com/zeshuaro/firestore_cache/issues/458)) ([f4c7a58](https://github.com/zeshuaro/firestore_cache/commit/f4c7a581d892ea9f32aada293bbf469f3596947e))
+* **deps:** update dependency semantic-release-pub to v0.8.15 ([#461](https://github.com/zeshuaro/firestore_cache/issues/461)) ([d76827c](https://github.com/zeshuaro/firestore_cache/commit/d76827cb9cbd90ef3da505551711d0c09a562866))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 4093639 ([#459](https://github.com/zeshuaro/firestore_cache/issues/459)) ([934b1d7](https://github.com/zeshuaro/firestore_cache/commit/934b1d7e103d193917ea823c3ccdd39c7a98fe64))
+* **deps:** update zeshuaro/github-actions-workflows digest to 7d17fef ([#464](https://github.com/zeshuaro/firestore_cache/issues/464)) ([024368c](https://github.com/zeshuaro/firestore_cache/commit/024368c6f357ba894be1048a4825083438c9bbe3))
+* **deps:** update zeshuaro/github-actions-workflows digest to f2467fb ([#466](https://github.com/zeshuaro/firestore_cache/issues/466)) ([eb980dc](https://github.com/zeshuaro/firestore_cache/commit/eb980dc33b8cbe4897727759d97c5d68db5a6353))
+
 ## [2.13.1](https://github.com/zeshuaro/firestore_cache/compare/v2.13.0...v2.13.1) (2024-06-02)
 
 
