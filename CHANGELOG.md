@@ -1,3 +1,22 @@
+## [2.13.3](https://github.com/zeshuaro/firestore_cache/compare/v2.13.2...v2.13.3) (2024-06-16)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to v5 ([#469](https://github.com/zeshuaro/firestore_cache/issues/469)) ([81bd80c](https://github.com/zeshuaro/firestore_cache/commit/81bd80c6687f7b45b4b056643f0c789aa41bc427))
+* **example/deps:** update dependency cloud_firestore to ^5.0.1 ([#471](https://github.com/zeshuaro/firestore_cache/issues/471)) ([73dc809](https://github.com/zeshuaro/firestore_cache/commit/73dc809a38d09a689b87b759cfb9a07c2f1aa382))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#467](https://github.com/zeshuaro/firestore_cache/issues/467)) ([139358f](https://github.com/zeshuaro/firestore_cache/commit/139358f6a8cbca525c5f5fd2face535a03808dea))
+* **deps:** update dependency build_runner to v2.4.11 ([#473](https://github.com/zeshuaro/firestore_cache/issues/473)) ([f41eb41](https://github.com/zeshuaro/firestore_cache/commit/f41eb4185f8b932b149235da6125c2c32b930d8e))
+* **deps:** update dependency semantic-release-pub to v0.8.16 ([#470](https://github.com/zeshuaro/firestore_cache/issues/470)) ([25d0871](https://github.com/zeshuaro/firestore_cache/commit/25d0871fa14bcf11916034b060ce802b752f51fd))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 214a3ef ([#472](https://github.com/zeshuaro/firestore_cache/issues/472)) ([9b05e44](https://github.com/zeshuaro/firestore_cache/commit/9b05e447153ea7187bff3d5f337189d481ad83cb))
+* **deps:** update zeshuaro/github-actions-workflows digest to 3e23531 ([#475](https://github.com/zeshuaro/firestore_cache/issues/475)) ([54102dd](https://github.com/zeshuaro/firestore_cache/commit/54102ddc2808cb8d1d94a5fd012947e1c05258aa))
+* **deps:** update zeshuaro/github-actions-workflows digest to cc09c79 ([#468](https://github.com/zeshuaro/firestore_cache/issues/468)) ([36effd1](https://github.com/zeshuaro/firestore_cache/commit/36effd13803ada9385e8cfe9744ab9fe38e8547a))
+
 ## [2.13.2](https://github.com/zeshuaro/firestore_cache/compare/v2.13.1...v2.13.2) (2024-06-09)
 
 ### Bug Fixes
