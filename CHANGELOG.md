@@ -1,3 +1,23 @@
+## [2.13.4](https://github.com/zeshuaro/firestore_cache/compare/v2.13.3...v2.13.4) (2024-06-23)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.0.1 ([#480](https://github.com/zeshuaro/firestore_cache/issues/480)) ([59a0acb](https://github.com/zeshuaro/firestore_cache/commit/59a0acbf4bdd4afa406bf6b37bc54219a2d67395))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#477](https://github.com/zeshuaro/firestore_cache/issues/477)) ([b905529](https://github.com/zeshuaro/firestore_cache/commit/b905529c0175c3e2439b5e2b372578babbf28229))
+* **deps:** update dependency mocktail to v1.0.4 ([#478](https://github.com/zeshuaro/firestore_cache/issues/478)) ([8f7ecbe](https://github.com/zeshuaro/firestore_cache/commit/8f7ecbec000218703371e33fa3745ff7ece06116))
+* **deps:** update dependency semantic-release-pub to v0.8.17 ([#479](https://github.com/zeshuaro/firestore_cache/issues/479)) ([b8f6423](https://github.com/zeshuaro/firestore_cache/commit/b8f6423ac14cd997559d5204e4dff445f31dd6f1))
+* **example/deps:** update dependency firebase_core to ^3.1.0 ([#481](https://github.com/zeshuaro/firestore_cache/issues/481)) ([b029c8f](https://github.com/zeshuaro/firestore_cache/commit/b029c8fcb7fa19f6979614aca3f3179b2ea519d4))
+* **node:** update dependency node to v20.15.0 ([#483](https://github.com/zeshuaro/firestore_cache/issues/483)) ([a18638c](https://github.com/zeshuaro/firestore_cache/commit/a18638c4fbc89e4200062f904a68c022537f7d7c))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 25964ef ([#484](https://github.com/zeshuaro/firestore_cache/issues/484)) ([116b6f8](https://github.com/zeshuaro/firestore_cache/commit/116b6f8450d477dc4c9ce9bb34dfd61571060f87))
+* **deps:** update zeshuaro/github-actions-workflows digest to 3f0fb38 ([#482](https://github.com/zeshuaro/firestore_cache/issues/482)) ([2175815](https://github.com/zeshuaro/firestore_cache/commit/21758154e48dfd18e591e32eaafe52a494c9f9c4))
+* **deps:** update zeshuaro/github-actions-workflows digest to d4191e5 ([#485](https://github.com/zeshuaro/firestore_cache/issues/485)) ([8fe4385](https://github.com/zeshuaro/firestore_cache/commit/8fe4385f223a18ba78017f1d482109611a65450b))
+
 ## [2.13.3](https://github.com/zeshuaro/firestore_cache/compare/v2.13.2...v2.13.3) (2024-06-16)
 
 ### Bug Fixes
