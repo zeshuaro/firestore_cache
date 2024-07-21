@@ -127,7 +127,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "2.13.5"
+    version: "2.13.6"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -291,10 +291,10 @@ packages:
     dependency: transitive
     description:
       name: shared_preferences_platform_interface
-      sha256: "22e2ecac9419b4246d7c22bfbbda589e3acf5c0351137d87dd2939d984d37c3b"
+      sha256: "034650b71e73629ca08a0bd789fd1d83cc63c2d1e405946f7cef7bc37432f93a"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.2"
+    version: "2.4.0"
   shared_preferences_web:
     dependency: transitive
     description:
