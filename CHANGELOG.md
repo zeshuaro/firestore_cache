@@ -1,3 +1,14 @@
+## [2.14.1](https://github.com/zeshuaro/firestore_cache/compare/v2.14.0...v2.14.1) (2024-08-18)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.2.1 ([#526](https://github.com/zeshuaro/firestore_cache/issues/526)) ([43e1a9f](https://github.com/zeshuaro/firestore_cache/commit/43e1a9f1c9e91a73e344c69d3b46306744d1ef24))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#524](https://github.com/zeshuaro/firestore_cache/issues/524)) ([1e3da41](https://github.com/zeshuaro/firestore_cache/commit/1e3da41c6170c46f25b1bfa3a75575208548b981))
+* **example/deps:** update dependency cloud_firestore to ^5.2.1 ([#525](https://github.com/zeshuaro/firestore_cache/issues/525)) ([edd571c](https://github.com/zeshuaro/firestore_cache/commit/edd571c5d3ad87bb8c959d4260172975a17ab9b8))
+
 ## [2.14.0](https://github.com/zeshuaro/firestore_cache/compare/v2.13.6...v2.14.0) (2024-08-11)
 
 ### Features
