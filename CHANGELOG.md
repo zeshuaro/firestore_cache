@@ -1,3 +1,19 @@
+## [2.14.4](https://github.com/zeshuaro/firestore_cache/compare/v2.14.3...v2.14.4) (2024-09-15)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.4.0 ([#556](https://github.com/zeshuaro/firestore_cache/issues/556)) ([fc551f9](https://github.com/zeshuaro/firestore_cache/commit/fc551f9ecd8b462095dfae4f84eff596d4834fff))
+* **sdk:** update dependency dart to >=3.5.3 <4.0.0 ([#558](https://github.com/zeshuaro/firestore_cache/issues/558)) ([45ba157](https://github.com/zeshuaro/firestore_cache/commit/45ba157f5bb4ecd7d6c0756f1ff7c33e3b63b659))
+* **sdk:** update dependency flutter to v3.24.3 ([#559](https://github.com/zeshuaro/firestore_cache/issues/559)) ([28f081d](https://github.com/zeshuaro/firestore_cache/commit/28f081d4740dba1b579bec5290e07234918190a1))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#553](https://github.com/zeshuaro/firestore_cache/issues/553)) ([d805e78](https://github.com/zeshuaro/firestore_cache/commit/d805e78dcb8f76a96b8b6187d076002927422358))
+* **deps:** update dependency semantic-release to v24.1.1 ([#560](https://github.com/zeshuaro/firestore_cache/issues/560)) ([390e553](https://github.com/zeshuaro/firestore_cache/commit/390e553769e9d7f4300616a70dbaa020ebaaaad8))
+* **deps:** update dependency semantic-release-pub to v0.8.26 ([#554](https://github.com/zeshuaro/firestore_cache/issues/554)) ([938bd41](https://github.com/zeshuaro/firestore_cache/commit/938bd41df1b2a3f5a8ca5046b16d61946262ab31))
+* **example/deps:** update dependency cloud_firestore to ^5.4.0 ([#555](https://github.com/zeshuaro/firestore_cache/issues/555)) ([64ec78c](https://github.com/zeshuaro/firestore_cache/commit/64ec78ccae1885b996e4f26550b13dc9b2d3c33f))
+* **example/deps:** update dependency dart to >=3.5.3 <4.0.0 ([#557](https://github.com/zeshuaro/firestore_cache/issues/557)) ([562fb67](https://github.com/zeshuaro/firestore_cache/commit/562fb67cbc5e4c0e99e3e4d20b9cde406fd0b040))
+
 ## [2.14.3](https://github.com/zeshuaro/firestore_cache/compare/v2.14.2...v2.14.3) (2024-09-08)
 
 ### Bug Fixes
