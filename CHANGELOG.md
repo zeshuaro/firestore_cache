@@ -1,3 +1,23 @@
+## [2.14.7](https://github.com/zeshuaro/firestore_cache/compare/v2.14.6...v2.14.7) (2024-10-06)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.4.3 ([#578](https://github.com/zeshuaro/firestore_cache/issues/578)) ([7a82ae3](https://github.com/zeshuaro/firestore_cache/commit/7a82ae31bb9835ac461db341eff670c974711afe))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#572](https://github.com/zeshuaro/firestore_cache/issues/572)) ([777e0da](https://github.com/zeshuaro/firestore_cache/commit/777e0da9a198aca1eacdb68f9ba505e445caebf0))
+* **deps:** update dependency semantic-release to v24.1.2 ([#574](https://github.com/zeshuaro/firestore_cache/issues/574)) ([8f87a02](https://github.com/zeshuaro/firestore_cache/commit/8f87a028a02551930f0fe81424bb05f75debf478))
+* **example/deps:** update dependency cloud_firestore to ^5.4.3 ([#577](https://github.com/zeshuaro/firestore_cache/issues/577)) ([38d348c](https://github.com/zeshuaro/firestore_cache/commit/38d348c0aabf6a074403166a4cdbc8bc60753fd1))
+* **example/deps:** update dependency firebase_core to ^3.6.0 ([#579](https://github.com/zeshuaro/firestore_cache/issues/579)) ([90d7840](https://github.com/zeshuaro/firestore_cache/commit/90d7840ccde7b1accc5918e4bd1a2523091e6d10))
+* **node:** update dependency node to v20.18.0 ([#580](https://github.com/zeshuaro/firestore_cache/issues/580)) ([8d1b4af](https://github.com/zeshuaro/firestore_cache/commit/8d1b4aff0236987854d627a85783a1f6170d8f47))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 478b37c ([#581](https://github.com/zeshuaro/firestore_cache/issues/581)) ([b4fc597](https://github.com/zeshuaro/firestore_cache/commit/b4fc5974f29b28255592881ea59d796143d215b9))
+* **deps:** update zeshuaro/github-actions-workflows digest to 768eef4 ([#573](https://github.com/zeshuaro/firestore_cache/issues/573)) ([f3d54ba](https://github.com/zeshuaro/firestore_cache/commit/f3d54ba792c2d42fd9c6ce0b90c44178f04c5e47))
+* **deps:** update zeshuaro/github-actions-workflows digest to ce6c1c5 ([#575](https://github.com/zeshuaro/firestore_cache/issues/575)) ([8c46c69](https://github.com/zeshuaro/firestore_cache/commit/8c46c69c137bf81a3a31b27fc44aa6065a440525))
+
 ## [2.14.6](https://github.com/zeshuaro/firestore_cache/compare/v2.14.5...v2.14.6) (2024-09-29)
 
 ### Bug Fixes
