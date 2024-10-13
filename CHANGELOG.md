@@ -1,3 +1,20 @@
+## [2.14.8](https://github.com/zeshuaro/firestore_cache/compare/v2.14.7...v2.14.8) (2024-10-13)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.4.4 ([#587](https://github.com/zeshuaro/firestore_cache/issues/587)) ([7ceb494](https://github.com/zeshuaro/firestore_cache/commit/7ceb49407117360076970f2aca14acf607fbdae6))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#582](https://github.com/zeshuaro/firestore_cache/issues/582)) ([369d88d](https://github.com/zeshuaro/firestore_cache/commit/369d88da9c8677f1943c1e8f19d9014630c254c8))
+* **deps:** update dependency build_runner to v2.4.13 ([#583](https://github.com/zeshuaro/firestore_cache/issues/583)) ([4ba63f7](https://github.com/zeshuaro/firestore_cache/commit/4ba63f743476775c7a199914a5956af8ed4480f4))
+* **deps:** update dependency semantic-release-pub to v0.8.28 ([#585](https://github.com/zeshuaro/firestore_cache/issues/585)) ([d1e37fe](https://github.com/zeshuaro/firestore_cache/commit/d1e37fe40fcdafb704f66490e2cf1b8900ba2c72))
+* **example/deps:** update dependency cloud_firestore to ^5.4.4 ([#586](https://github.com/zeshuaro/firestore_cache/issues/586)) ([7f99478](https://github.com/zeshuaro/firestore_cache/commit/7f99478996b123c5f19d6fc2e6c5ec4b2e6702ab))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 9faa626 ([#584](https://github.com/zeshuaro/firestore_cache/issues/584)) ([7a8e0be](https://github.com/zeshuaro/firestore_cache/commit/7a8e0bec22e009becf9e543e787f62a5fd4512b2))
+
 ## [2.14.7](https://github.com/zeshuaro/firestore_cache/compare/v2.14.6...v2.14.7) (2024-10-06)
 
 ### Bug Fixes
