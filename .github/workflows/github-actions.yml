@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   flutter-package:
-    uses: zeshuaro/github-actions-workflows/.github/workflows/flutter-package.yml@b28005a98c7f7f21424227cbf4a28dfcd513882e
+    uses: zeshuaro/github-actions-workflows/.github/workflows/flutter-package.yml@d138fda72f2fa74f8b3dbb0d8e9a86311f06b46f
     with:
       release: ${{ (github.ref == 'refs/heads/main') && (contains(fromJSON('["workflow_dispatch", "schedule"]'), github.event_name)) }}
     secrets:
