@@ -9,7 +9,7 @@ environment:
   flutter: ">=3.24.5"
 
 dependencies:
-  cloud_firestore: ^5.4.5
+  cloud_firestore: ^5.5.0
   flutter:
     sdk: flutter
   shared_preferences: ^2.3.3
