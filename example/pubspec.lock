@@ -127,7 +127,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "2.14.10"
+    version: "2.14.11"
   flutter:
     dependency: "direct main"
     description: flutter
