@@ -1410,7 +1410,7 @@ globby@^14.0.0:
     slash "^5.1.0"
     unicorn-magic "^0.1.0"
 
-google-auth-library@^9.14.2:
+google-auth-library@^9.15.0:
   version "9.15.0"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-9.15.0.tgz#1b009c08557929c881d72f953f17e839e91b009b"
   integrity sha512-7ccSEJFDFO7exFbO6NRyC+xH8/mZ1GZGG2xxx9iHxZWcjUjJpjWxIMw3cofAKcueZ6DATiukmmprD7yavQHOyQ==
@@ -2986,15 +2986,15 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.9.0.tgz#e9df29578a06c0cfc1bfb34155675dbe937afa16"
-  integrity sha512-sFHIuMTIn3uEsfz3jct4Md7H9Xdx+wEwY3ZZRBf9PRcP5qjTtgLKmRsXQFnoZYRwcSUh2+cAKepzo5h74Z+Z4Q==
+semantic-release-pub@0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.9.1.tgz#fcf9e863052412683533559c689c55bddc5025c8"
+  integrity sha512-Oai8PX4Us8h96/k4/JWfOBMTe+wpG/1aH9PyMJG6Z1ZyoiX8C9RGl2UYz2kuPDuwFn8Oc6M/kU2rgfu8xMgjmQ==
   dependencies:
     "@semantic-release/error" "^4.0.0"
     execa "^9.5.1"
-    google-auth-library "^9.14.2"
-    yaml "^2.6.0"
+    google-auth-library "^9.15.0"
+    yaml "^2.6.1"
     zod "^3.23.8"
 
 semantic-release-replace-plugin@1.2.7:
@@ -3649,7 +3649,7 @@ yallist@^5.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-5.0.0.tgz#00e2de443639ed0d78fd87de0d27469fbcffb533"
   integrity sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==
 
-yaml@^2.6.0:
+yaml@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.6.1.tgz#42f2b1ba89203f374609572d5349fb8686500773"
   integrity sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==
