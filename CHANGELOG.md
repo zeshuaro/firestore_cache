@@ -1,3 +1,17 @@
+## [2.15.2](https://github.com/zeshuaro/firestore_cache/compare/v2.15.1...v2.15.2) (2024-12-29)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.6.0 ([#650](https://github.com/zeshuaro/firestore_cache/issues/650)) ([7c2ce4c](https://github.com/zeshuaro/firestore_cache/commit/7c2ce4c11a9bc211e58be00024b773dfb238c620))
+* **deps:** update dependency shared_preferences to ^2.3.4 ([#647](https://github.com/zeshuaro/firestore_cache/issues/647)) ([9e6f6cc](https://github.com/zeshuaro/firestore_cache/commit/9e6f6cc10a5d4638072bff80d289ef77facfde35))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#645](https://github.com/zeshuaro/firestore_cache/issues/645)) ([83cea8a](https://github.com/zeshuaro/firestore_cache/commit/83cea8abeb8e14eca046349dfba27400e3c82e3f))
+* **deps:** update dependency build_runner to v2.4.14 ([#646](https://github.com/zeshuaro/firestore_cache/issues/646)) ([0a071c2](https://github.com/zeshuaro/firestore_cache/commit/0a071c23b42fcc9f81c62337604914a502ad8107))
+* **example/deps:** update dependency cloud_firestore to ^5.6.0 ([#648](https://github.com/zeshuaro/firestore_cache/issues/648)) ([3b931b0](https://github.com/zeshuaro/firestore_cache/commit/3b931b08e20787f8858a7d44fd89449d6e544acd))
+* **example/deps:** update dependency firebase_core to ^3.9.0 ([#649](https://github.com/zeshuaro/firestore_cache/issues/649)) ([1f1398d](https://github.com/zeshuaro/firestore_cache/commit/1f1398d6395cfaae8f6fe1a41b159da82998ebf0))
+
 ## [2.15.1](https://github.com/zeshuaro/firestore_cache/compare/v2.15.0...v2.15.1) (2024-12-22)
 
 ### Bug Fixes
