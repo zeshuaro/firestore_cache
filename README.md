@@ -42,7 +42,7 @@ You should also create different timestamp fields for different collections or d
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firestore_cache/firestore_cache.dart';
 
-// This should be the path of the document containing the timestampe field
+// This should be the path of the document containing the timestamp field
 // that you created
 final cacheDocRef = Firestore.instance.doc('status/status');
 
