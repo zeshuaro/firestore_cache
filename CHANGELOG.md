@@ -1,3 +1,24 @@
+## [2.15.3](https://github.com/zeshuaro/firestore_cache/compare/v2.15.2...v2.15.3) (2025-01-12)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.3.5 ([#659](https://github.com/zeshuaro/firestore_cache/issues/659)) ([44f6155](https://github.com/zeshuaro/firestore_cache/commit/44f61552d9d3fbf9084f7d9035afceaccbdd6665))
+
+### Documentation
+
+* **license:** update copyright year to 2025 ([#654](https://github.com/zeshuaro/firestore_cache/issues/654)) ([2a810e1](https://github.com/zeshuaro/firestore_cache/commit/2a810e10ceffdc2adfcb40402c0f3fcc09a58e50))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#652](https://github.com/zeshuaro/firestore_cache/issues/652)) ([774e71a](https://github.com/zeshuaro/firestore_cache/commit/774e71a2cff48ad15cf58c7e8a42ebfe9ebf0b2c))
+* **deps:** update dependency semantic-release to v24.2.1 ([#653](https://github.com/zeshuaro/firestore_cache/issues/653)) ([f8cd61a](https://github.com/zeshuaro/firestore_cache/commit/f8cd61a38c419f106cea56f4e558be3d83eda141))
+* **deps:** update dependency semantic-release-pub to v0.9.4 ([#655](https://github.com/zeshuaro/firestore_cache/issues/655)) ([76134f4](https://github.com/zeshuaro/firestore_cache/commit/76134f4e405ea2ef8594df7b8fd8c2a2686d1644))
+* **node:** update node.js to v22.13.0 ([#658](https://github.com/zeshuaro/firestore_cache/issues/658)) ([489cd54](https://github.com/zeshuaro/firestore_cache/commit/489cd5497d168f5d2c3350ef010062276e6e83e5))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 0e99264 ([#651](https://github.com/zeshuaro/firestore_cache/issues/651)) ([78806fd](https://github.com/zeshuaro/firestore_cache/commit/78806fd509d4525875ea5893cff15eade2c682a5))
+
 ## [2.15.2](https://github.com/zeshuaro/firestore_cache/compare/v2.15.1...v2.15.2) (2024-12-29)
 
 ### Bug Fixes
