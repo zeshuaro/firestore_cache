@@ -1,3 +1,19 @@
+## [2.15.4](https://github.com/zeshuaro/firestore_cache/compare/v2.15.3...v2.15.4) (2025-01-19)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.6.1 ([#664](https://github.com/zeshuaro/firestore_cache/issues/664)) ([39b9d24](https://github.com/zeshuaro/firestore_cache/commit/39b9d24c83e36a93eed1d621f4a3c8cb85df8537))
+* **sdk:** update dependency dart to >=3.6.1 <4.0.0 ([#657](https://github.com/zeshuaro/firestore_cache/issues/657)) ([b84605d](https://github.com/zeshuaro/firestore_cache/commit/b84605d002ca7cdf950ee261f118863d2f215e85))
+* **sdk:** update dependency flutter to v3.27.2 ([#661](https://github.com/zeshuaro/firestore_cache/issues/661)) ([54b0147](https://github.com/zeshuaro/firestore_cache/commit/54b01477599d75c7c8019e18e2664b36b5524b33))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#660](https://github.com/zeshuaro/firestore_cache/issues/660)) ([ea925ed](https://github.com/zeshuaro/firestore_cache/commit/ea925ed6a0b1a3a5052273586283654e769d7279))
+* **deps:** update dependency semantic-release-pub to v0.9.5 ([#662](https://github.com/zeshuaro/firestore_cache/issues/662)) ([61ab7ee](https://github.com/zeshuaro/firestore_cache/commit/61ab7eee7d01b2f8896fa12d49903804405ecf68))
+* **example/deps:** update dependency cloud_firestore to ^5.6.1 ([#663](https://github.com/zeshuaro/firestore_cache/issues/663)) ([4d46190](https://github.com/zeshuaro/firestore_cache/commit/4d46190ac3e6ae52e2cf170a259f6a82dffddaff))
+* **example/deps:** update dependency dart to >=3.6.1 <4.0.0 ([#656](https://github.com/zeshuaro/firestore_cache/issues/656)) ([73ee917](https://github.com/zeshuaro/firestore_cache/commit/73ee91708856c99badc4a2535b0315439db55c05))
+* **example/deps:** update dependency firebase_core to ^3.10.0 ([#665](https://github.com/zeshuaro/firestore_cache/issues/665)) ([0b7db63](https://github.com/zeshuaro/firestore_cache/commit/0b7db63c7912bf82466eecd7007a0a570dd71edf))
+
 ## [2.15.3](https://github.com/zeshuaro/firestore_cache/compare/v2.15.2...v2.15.3) (2025-01-12)
 
 ### Bug Fixes
