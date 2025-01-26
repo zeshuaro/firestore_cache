@@ -1,3 +1,18 @@
+## [2.15.5](https://github.com/zeshuaro/firestore_cache/compare/v2.15.4...v2.15.5) (2025-01-26)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.27.3 ([#668](https://github.com/zeshuaro/firestore_cache/issues/668)) ([179729a](https://github.com/zeshuaro/firestore_cache/commit/179729a27ae0b18365d17d39483ae7cad2f1ef4f))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#666](https://github.com/zeshuaro/firestore_cache/issues/666)) ([f2c2ae3](https://github.com/zeshuaro/firestore_cache/commit/f2c2ae3f9d7b94604c95319f5ab479a66173e707))
+* **node:** update node.js to v22.13.1 ([#667](https://github.com/zeshuaro/firestore_cache/issues/667)) ([5a75934](https://github.com/zeshuaro/firestore_cache/commit/5a7593466d6d9460613ffcc49b9d3a753a81e7bd))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to e40c850 ([#669](https://github.com/zeshuaro/firestore_cache/issues/669)) ([84428f5](https://github.com/zeshuaro/firestore_cache/commit/84428f51568ae5c48df793e16f9c593432ecaf67))
+
 ## [2.15.4](https://github.com/zeshuaro/firestore_cache/compare/v2.15.3...v2.15.4) (2025-01-19)
 
 ### Bug Fixes
