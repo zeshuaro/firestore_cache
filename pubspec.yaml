@@ -12,7 +12,7 @@ dependencies:
   cloud_firestore: ^5.6.2
   flutter:
     sdk: flutter
-  shared_preferences: ^2.3.5
+  shared_preferences: ^2.4.0
 
 dev_dependencies:
   build_runner: 2.4.14
