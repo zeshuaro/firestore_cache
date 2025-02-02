@@ -1,3 +1,23 @@
+## [2.15.6](https://github.com/zeshuaro/firestore_cache/compare/v2.15.5...v2.15.6) (2025-02-02)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.6.2 ([#678](https://github.com/zeshuaro/firestore_cache/issues/678)) ([9dbfd79](https://github.com/zeshuaro/firestore_cache/commit/9dbfd79103b33f364c9082417f9741baf369996e))
+* **deps:** update dependency shared_preferences to ^2.4.0 ([#680](https://github.com/zeshuaro/firestore_cache/issues/680)) ([6eb306d](https://github.com/zeshuaro/firestore_cache/commit/6eb306d63d9e4fb6885b0dc832ed0c5d9c5dbb44))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#671](https://github.com/zeshuaro/firestore_cache/issues/671)) ([6491ae7](https://github.com/zeshuaro/firestore_cache/commit/6491ae70f464394899b33bcc677348de8b658e2a))
+* **deps:** update dependency semantic-release-pub to v0.9.6 ([#672](https://github.com/zeshuaro/firestore_cache/issues/672)) ([73b2304](https://github.com/zeshuaro/firestore_cache/commit/73b23040e9e7e104192a468a54d8e222fa84a6b9))
+* **example/deps:** update dependency cloud_firestore to ^5.6.2 ([#673](https://github.com/zeshuaro/firestore_cache/issues/673)) ([715399b](https://github.com/zeshuaro/firestore_cache/commit/715399be104747da08b00bd16d066b1d8753c827))
+* **example/deps:** update dependency firebase_core to ^3.10.1 ([#677](https://github.com/zeshuaro/firestore_cache/issues/677)) ([b4e6461](https://github.com/zeshuaro/firestore_cache/commit/b4e6461d0baf3679c419f3e38d4a7d594b708ff2))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 10565a3 ([#670](https://github.com/zeshuaro/firestore_cache/issues/670)) ([89fe522](https://github.com/zeshuaro/firestore_cache/commit/89fe5226c8e11fa29708d33be85df40f2218683b))
+* **deps:** update zeshuaro/github-actions-workflows digest to bf22f76 ([#676](https://github.com/zeshuaro/firestore_cache/issues/676)) ([97734ae](https://github.com/zeshuaro/firestore_cache/commit/97734aed648726ae519f97f3dae34a75ff1ef569))
+* **deps:** update zeshuaro/github-actions-workflows digest to dbd5e86 ([#674](https://github.com/zeshuaro/firestore_cache/issues/674)) ([6703b35](https://github.com/zeshuaro/firestore_cache/commit/6703b35d658b0fb517e02c8869f2b5e0b5c66869))
+
 ## [2.15.5](https://github.com/zeshuaro/firestore_cache/compare/v2.15.4...v2.15.5) (2025-01-26)
 
 ### Bug Fixes
