@@ -1,3 +1,18 @@
+## [2.15.7](https://github.com/zeshuaro/firestore_cache/compare/v2.15.6...v2.15.7) (2025-02-09)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.5.1 ([#685](https://github.com/zeshuaro/firestore_cache/issues/685)) ([dafb498](https://github.com/zeshuaro/firestore_cache/commit/dafb498b16e428e9670dc5b279c70666c61bb8eb))
+* **sdk:** update dependency dart to >=3.6.2 <4.0.0 ([#679](https://github.com/zeshuaro/firestore_cache/issues/679)) ([1841a0d](https://github.com/zeshuaro/firestore_cache/commit/1841a0d087ee1cac1e8d845a4a27b98cca999fc8))
+* **sdk:** update dependency flutter to v3.27.4 ([#684](https://github.com/zeshuaro/firestore_cache/issues/684)) ([90444b3](https://github.com/zeshuaro/firestore_cache/commit/90444b3a3787ab69efb54f6db634d7588621fa04))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#682](https://github.com/zeshuaro/firestore_cache/issues/682)) ([0c136e8](https://github.com/zeshuaro/firestore_cache/commit/0c136e874abb5393a118293e183ff585502403f8))
+* **deps:** update dependency semantic-release-pub to v0.10.0 ([#681](https://github.com/zeshuaro/firestore_cache/issues/681)) ([9706957](https://github.com/zeshuaro/firestore_cache/commit/9706957f6d6ae97c63ca1455f0ab77c8452b2c77))
+* **deps:** update dependency semantic-release-pub to v0.10.1 ([#683](https://github.com/zeshuaro/firestore_cache/issues/683)) ([c4658b4](https://github.com/zeshuaro/firestore_cache/commit/c4658b48acbf0ed0305ca17295a0c7ec3bbf0496))
+* **example/deps:** update dependency dart to >=3.6.2 <4.0.0 ([#675](https://github.com/zeshuaro/firestore_cache/issues/675)) ([36ab0b8](https://github.com/zeshuaro/firestore_cache/commit/36ab0b846d89891b18eee8c1cd2ad33a5347c558))
+
 ## [2.15.6](https://github.com/zeshuaro/firestore_cache/compare/v2.15.5...v2.15.6) (2025-02-02)
 
 ### Bug Fixes
