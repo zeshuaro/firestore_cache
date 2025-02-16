@@ -1,3 +1,26 @@
+## [2.16.0](https://github.com/zeshuaro/firestore_cache/compare/v2.15.7...v2.16.0) (2025-02-16)
+
+### Features
+
+* **sdk:** update dependency flutter to v3.29.0 ([#694](https://github.com/zeshuaro/firestore_cache/issues/694)) ([109479c](https://github.com/zeshuaro/firestore_cache/commit/109479c4b16d46a30bb328f15515d0ecf06de613))
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.6.3 ([#692](https://github.com/zeshuaro/firestore_cache/issues/692)) ([d58f84d](https://github.com/zeshuaro/firestore_cache/commit/d58f84d1f562a3f8a1493bb13931d96ef3490b39))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#686](https://github.com/zeshuaro/firestore_cache/issues/686)) ([92394bf](https://github.com/zeshuaro/firestore_cache/commit/92394bfe7c2857f58eda78d8594e9872910d43b8))
+* **deps:** update dependency semantic-release to v24.2.2 ([#690](https://github.com/zeshuaro/firestore_cache/issues/690)) ([025994a](https://github.com/zeshuaro/firestore_cache/commit/025994ad7d82fe04393815800af21fd6cbe6cb49))
+* **example/deps:** update dependency cloud_firestore to ^5.6.3 ([#691](https://github.com/zeshuaro/firestore_cache/issues/691)) ([f86104d](https://github.com/zeshuaro/firestore_cache/commit/f86104d2580e1e3b90c6a0d5064b18dc1979fd0e))
+* **example/deps:** update dependency firebase_core to ^3.11.0 ([#693](https://github.com/zeshuaro/firestore_cache/issues/693)) ([248dbc4](https://github.com/zeshuaro/firestore_cache/commit/248dbc49f37505f0e5f3476dacaa93bd6efde0ea))
+* **node:** update node.js to v22.14.0 ([#687](https://github.com/zeshuaro/firestore_cache/issues/687)) ([87b9717](https://github.com/zeshuaro/firestore_cache/commit/87b97179f160970262af36f2b3f1aa59b62abe3c))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to aec288d ([#695](https://github.com/zeshuaro/firestore_cache/issues/695)) ([6bf1b91](https://github.com/zeshuaro/firestore_cache/commit/6bf1b91331b87bf74174d9fd21decae1ed49beef))
+* **deps:** update zeshuaro/github-actions-workflows digest to b2dbc93 ([#696](https://github.com/zeshuaro/firestore_cache/issues/696)) ([2b7a8f8](https://github.com/zeshuaro/firestore_cache/commit/2b7a8f852d2325b5dbc25c011353b224b458a908))
+
 ## [2.15.7](https://github.com/zeshuaro/firestore_cache/compare/v2.15.6...v2.15.7) (2025-02-09)
 
 ### Bug Fixes
