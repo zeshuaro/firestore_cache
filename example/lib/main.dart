@@ -95,13 +95,14 @@ class MyHomePageState extends State<MyHomePage> {
           final docs = snapshot.data?.docs;
           return Expanded(
             child: ListView(
-              children: docs!.map((DocumentSnapshot doc) {
-                final data = doc.data() as Map?;
-                return Text(
-                  '${data!['postId']} isFromCache: ${doc.metadata.isFromCache}',
-                  textAlign: TextAlign.center,
-                );
-              }).toList(),
+              children:
+                  docs!.map((DocumentSnapshot doc) {
+                    final data = doc.data() as Map?;
+                    return Text(
+                      '${data!['postId']} isFromCache: ${doc.metadata.isFromCache}',
+                      textAlign: TextAlign.center,
+                    );
+                  }).toList(),
             ),
           );
         }
