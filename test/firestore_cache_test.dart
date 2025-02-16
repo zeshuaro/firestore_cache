@@ -79,9 +79,9 @@ void main() {
     test('testGetFromCacheFallbackToServer', () async {
       final mockDocRef = MockDocumentReference<Map<String, dynamic>>();
 
-      when(() => mockDocRef.get(any())).thenThrow(
-        FirebaseException(plugin: 'test'),
-      );
+      when(
+        () => mockDocRef.get(any()),
+      ).thenThrow(FirebaseException(plugin: 'test'));
       when(() => mockDocRef.get()).thenAnswer((_) {
         return Future.value(mockSnapshot);
       });
@@ -175,9 +175,9 @@ void main() {
         cacheField: now.toIso8601String(),
       });
       final updatedAt = now.subtract(const Duration(seconds: 1));
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: Timestamp.fromDate(updatedAt),
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: Timestamp.fromDate(updatedAt)});
 
       final snapshot = await FirestoreCache.getDocuments(
         query: mockQuery,
@@ -213,9 +213,9 @@ void main() {
         cacheField: now.toIso8601String(),
       });
       final updatedAt = now.subtract(const Duration(seconds: 1));
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: Timestamp.fromDate(updatedAt),
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: Timestamp.fromDate(updatedAt)});
 
       final snapshot = await FirestoreCache.getDocuments(
         query: mockQuery,
@@ -253,9 +253,9 @@ void main() {
         cacheField: now.toIso8601String(),
       });
       final updatedAt = now.subtract(const Duration(seconds: 1));
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: Timestamp.fromDate(updatedAt),
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: Timestamp.fromDate(updatedAt)});
 
       final result = await FirestoreCache.isFetchDocuments(
         mockCacheDocRef,
@@ -272,9 +272,9 @@ void main() {
         cacheField: now.toIso8601String(),
       });
       final updatedAt = now.add(const Duration(seconds: 1));
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: Timestamp.fromDate(updatedAt),
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: Timestamp.fromDate(updatedAt)});
 
       final result = await FirestoreCache.isFetchDocuments(
         mockCacheDocRef,
@@ -291,9 +291,9 @@ void main() {
         cacheField: now.toIso8601String(),
       });
       final updatedAt = now.add(const Duration(seconds: 1));
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: updatedAt.toIso8601String(),
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: updatedAt.toIso8601String()});
 
       final result = await FirestoreCache.isFetchDocuments(
         mockCacheDocRef,
@@ -345,9 +345,9 @@ void main() {
       SharedPreferences.setMockInitialValues({
         cacheField: now.toIso8601String(),
       });
-      when(() => mockCacheSnapshot.data()).thenReturn({
-        cacheField: 'invalidDateFormat',
-      });
+      when(
+        () => mockCacheSnapshot.data(),
+      ).thenReturn({cacheField: 'invalidDateFormat'});
 
       expect(
         () async => await FirestoreCache.isFetchDocuments(
