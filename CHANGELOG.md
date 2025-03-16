@@ -1,3 +1,19 @@
+## [2.16.4](https://github.com/zeshuaro/firestore_cache/compare/v2.16.3...v2.16.4) (2025-03-16)
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.7.2 <4.0.0 ([#709](https://github.com/zeshuaro/firestore_cache/issues/709)) ([4689f7c](https://github.com/zeshuaro/firestore_cache/commit/4689f7c0cf196e06f0304ed02f7c7addca4f637b))
+* **sdk:** update dependency flutter to v3.29.2 ([#721](https://github.com/zeshuaro/firestore_cache/issues/721)) ([dbe17d0](https://github.com/zeshuaro/firestore_cache/commit/dbe17d0583f2ce83a2f5950ab7853464dc2a4a77))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#719](https://github.com/zeshuaro/firestore_cache/issues/719)) ([e57c101](https://github.com/zeshuaro/firestore_cache/commit/e57c1015c4997d69846a2598ef4e3c9fc4cbb4b8))
+* **example/deps:** update dependency dart to >=3.7.2 <4.0.0 ([#708](https://github.com/zeshuaro/firestore_cache/issues/708)) ([713ac1c](https://github.com/zeshuaro/firestore_cache/commit/713ac1cee3e43405bd747c028f135aa634e90ae4))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to af0b8e7 ([#720](https://github.com/zeshuaro/firestore_cache/issues/720)) ([923cd6f](https://github.com/zeshuaro/firestore_cache/commit/923cd6f3f0a2381afe7fded357ad6758b750a8a1))
+
 ## [2.16.3](https://github.com/zeshuaro/firestore_cache/compare/v2.16.2...v2.16.3) (2025-03-09)
 
 ### Bug Fixes
