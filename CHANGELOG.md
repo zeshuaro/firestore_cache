@@ -1,3 +1,23 @@
+## [2.16.5](https://github.com/zeshuaro/firestore_cache/compare/v2.16.4...v2.16.5) (2025-04-06)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.5.3 ([#729](https://github.com/zeshuaro/firestore_cache/issues/729)) ([8a47838](https://github.com/zeshuaro/firestore_cache/commit/8a478381a77a7d5df3e80be70a89144a8a06b31e))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#722](https://github.com/zeshuaro/firestore_cache/issues/722)) ([7a7c989](https://github.com/zeshuaro/firestore_cache/commit/7a7c9891ea85c8c31ed14529d0307d734a2d4512))
+* **deps:** lock file maintenance ([#723](https://github.com/zeshuaro/firestore_cache/issues/723)) ([3038fba](https://github.com/zeshuaro/firestore_cache/commit/3038fba185dd4c9cba2280e646ae09a44779b057))
+* **deps:** lock file maintenance ([#727](https://github.com/zeshuaro/firestore_cache/issues/727)) ([7b0a2ba](https://github.com/zeshuaro/firestore_cache/commit/7b0a2baf2443eecefae681f86a715a139173750a))
+
+### Continuous Integration
+
+* **deps:** update subosito/flutter-action action to v2.19.0 ([#724](https://github.com/zeshuaro/firestore_cache/issues/724)) ([e255611](https://github.com/zeshuaro/firestore_cache/commit/e255611cb6e0161020b70b031aaf8ad841c66b09))
+* **deps:** update zeshuaro/github-actions-workflows digest to 27ee334 ([#728](https://github.com/zeshuaro/firestore_cache/issues/728)) ([4389f0c](https://github.com/zeshuaro/firestore_cache/commit/4389f0cc6bcd62303f1d371dc73400c0df14ff30))
+* **deps:** update zeshuaro/github-actions-workflows digest to 478aa3f ([#726](https://github.com/zeshuaro/firestore_cache/issues/726)) ([355db0d](https://github.com/zeshuaro/firestore_cache/commit/355db0d664a44059919b857a3ec16dde034189ba))
+* **deps:** update zeshuaro/github-actions-workflows digest to 8b39c98 ([#730](https://github.com/zeshuaro/firestore_cache/issues/730)) ([7128adf](https://github.com/zeshuaro/firestore_cache/commit/7128adf465e2aab4e6500b55404c41add797c899))
+* **deps:** update zeshuaro/github-actions-workflows digest to aa3c43b ([#725](https://github.com/zeshuaro/firestore_cache/issues/725)) ([ad68930](https://github.com/zeshuaro/firestore_cache/commit/ad6893011783076eb51d3615c5b4228e6af987dc))
+
 ## [2.16.4](https://github.com/zeshuaro/firestore_cache/compare/v2.16.3...v2.16.4) (2025-03-16)
 
 ### Bug Fixes
