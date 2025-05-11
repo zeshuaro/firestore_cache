@@ -1,7 +1,7 @@
 name: firestore_cache
 description: A Flutter plugin for fetching Firestore documents with read from
   cache first then server
-version: 2.16.7
+version: 2.16.8
 homepage: https://github.com/zeshuaro/firestore_cache
 
 environment:
