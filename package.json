@@ -9,7 +9,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "conventional-changelog-conventionalcommits": "8.0.0",
+    "conventional-changelog-conventionalcommits": "9.0.0",
     "semantic-release": "24.2.4",
     "semantic-release-pub": "0.10.6",
     "semantic-release-replace-plugin": "1.2.7"
