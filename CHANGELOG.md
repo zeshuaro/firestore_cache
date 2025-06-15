@@ -1,3 +1,18 @@
+## [2.17.3](https://github.com/zeshuaro/firestore_cache/compare/v2.17.2...v2.17.3) (2025-06-15)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.3 ([#778](https://github.com/zeshuaro/firestore_cache/issues/778)) ([35af6b0](https://github.com/zeshuaro/firestore_cache/commit/35af6b074935cc6be78203b9617a229d509fb872))
+* **sdk:** update dependency flutter to v3.32.4 ([#779](https://github.com/zeshuaro/firestore_cache/issues/779)) ([af6b79d](https://github.com/zeshuaro/firestore_cache/commit/af6b79d0b0e374029d293ad736c66d09da07dce2))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency semantic-release-pub to v0.10.9 ([#777](https://github.com/zeshuaro/firestore_cache/issues/777)) ([a199f49](https://github.com/zeshuaro/firestore_cache/commit/a199f4972ba947c4949faa9023a9691c9dd15139))
+
+### Continuous Integration
+
+* **deps:** update subosito/flutter-action action to v2.20.0 ([#776](https://github.com/zeshuaro/firestore_cache/issues/776)) ([5641e14](https://github.com/zeshuaro/firestore_cache/commit/5641e141ab6fbce0508195701d206ff151cbd467))
+
 ## [2.17.2](https://github.com/zeshuaro/firestore_cache/compare/v2.17.1...v2.17.2) (2025-06-08)
 
 ### Bug Fixes
