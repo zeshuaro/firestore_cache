@@ -1,3 +1,23 @@
+## [2.17.5](https://github.com/zeshuaro/firestore_cache/compare/v2.17.4...v2.17.5) (2025-06-29)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.5 ([#791](https://github.com/zeshuaro/firestore_cache/issues/791)) ([cbb79be](https://github.com/zeshuaro/firestore_cache/commit/cbb79bef97a6bc68b0fe34b77ae80a1e49325611))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#785](https://github.com/zeshuaro/firestore_cache/issues/785)) ([2be57a1](https://github.com/zeshuaro/firestore_cache/commit/2be57a11e21609d8f2f4503886bfe6a476a99188))
+* **deps:** update dependency build_runner to v2.5.0 ([#786](https://github.com/zeshuaro/firestore_cache/issues/786)) ([2789e83](https://github.com/zeshuaro/firestore_cache/commit/2789e834561318d2cb3b5c06e8ca0d7d3544f22b))
+* **deps:** update dependency build_runner to v2.5.1 ([#787](https://github.com/zeshuaro/firestore_cache/issues/787)) ([cf51112](https://github.com/zeshuaro/firestore_cache/commit/cf5111204df70c699507b9af95388d1a13bac5d2))
+* **deps:** update dependency build_runner to v2.5.2 ([#790](https://github.com/zeshuaro/firestore_cache/issues/790)) ([475e1e8](https://github.com/zeshuaro/firestore_cache/commit/475e1e86460d5580802536f388e7c4827eb93a86))
+* **deps:** update dependency build_runner to v2.5.3 ([#792](https://github.com/zeshuaro/firestore_cache/issues/792)) ([007ac73](https://github.com/zeshuaro/firestore_cache/commit/007ac73038ae86fc83d2c9b6b67a9d9cd388a5c8))
+* **deps:** update dependency semantic-release-pub to v0.10.11 ([#788](https://github.com/zeshuaro/firestore_cache/issues/788)) ([b3d7025](https://github.com/zeshuaro/firestore_cache/commit/b3d7025e6914bf79f63b72d93b74f6acbaaf5b97))
+* **node:** update node.js to v22.17.0 ([#789](https://github.com/zeshuaro/firestore_cache/issues/789)) ([5ae8dc6](https://github.com/zeshuaro/firestore_cache/commit/5ae8dc6e93e67a67a448fc62b9560a3fa3028e9d))
+
+### Continuous Integration
+
+* **deps:** update subosito/flutter-action action to v2.21.0 ([#793](https://github.com/zeshuaro/firestore_cache/issues/793)) ([34e25a2](https://github.com/zeshuaro/firestore_cache/commit/34e25a2a0e15e938b6d23c586ae12c35ba0639dc))
+
 ## [2.17.4](https://github.com/zeshuaro/firestore_cache/compare/v2.17.3...v2.17.4) (2025-06-22)
 
 ### Bug Fixes
