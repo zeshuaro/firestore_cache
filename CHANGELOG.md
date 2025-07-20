@@ -1,3 +1,17 @@
+## [2.17.7](https://github.com/zeshuaro/firestore_cache/compare/v2.17.6...v2.17.7) (2025-07-20)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.7 ([#813](https://github.com/zeshuaro/firestore_cache/issues/813)) ([7763dbd](https://github.com/zeshuaro/firestore_cache/commit/7763dbd96f96509f3ab524f209e933e1962cfede))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#806](https://github.com/zeshuaro/firestore_cache/issues/806)) ([a53493f](https://github.com/zeshuaro/firestore_cache/commit/a53493fb80ceeb518f1381e37def5b48d82dd7ef))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#807](https://github.com/zeshuaro/firestore_cache/issues/807)) ([e016c1b](https://github.com/zeshuaro/firestore_cache/commit/e016c1b2831fa2d4f6408b617ea1a88d441ab4bc))
+* **deps:** update dependency semantic-release to v24.2.7 ([#808](https://github.com/zeshuaro/firestore_cache/issues/808)) ([8d63bb0](https://github.com/zeshuaro/firestore_cache/commit/8d63bb0bf4353c7d255c70f47292fa9fb0a59626))
+* **deps:** update dependency semantic-release-pub to v0.10.14 ([#809](https://github.com/zeshuaro/firestore_cache/issues/809)) ([44dcfea](https://github.com/zeshuaro/firestore_cache/commit/44dcfeab99f4209d5f5100ad6a5519f3512cd4e2))
+* **node:** update node.js to v22.17.1 ([#811](https://github.com/zeshuaro/firestore_cache/issues/811)) ([073504e](https://github.com/zeshuaro/firestore_cache/commit/073504e7336b0b46f58b662cc09c1de480813052))
+
 ## [2.17.6](https://github.com/zeshuaro/firestore_cache/compare/v2.17.5...v2.17.6) (2025-07-13)
 
 ### Bug Fixes
