@@ -1,6 +1,6 @@
 {
   "name": "firestore_cache",
-  "version": "2.17.7",
+  "version": "2.17.8",
   "description": "A Flutter plugin for fetching Firestore documents with read from cache first then server",
   "main": "index.js",
   "repository": "https://github.com/zeshuaro/firestore_cache",
