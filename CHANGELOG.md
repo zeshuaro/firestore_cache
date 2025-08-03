@@ -1,3 +1,15 @@
+## [2.17.9](https://github.com/zeshuaro/firestore_cache/compare/v2.17.8...v2.17.9) (2025-08-03)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^5.6.12 ([#820](https://github.com/zeshuaro/firestore_cache/issues/820)) ([578a529](https://github.com/zeshuaro/firestore_cache/commit/578a52971e833753d084063016499b502fd1a13c))
+
+### Miscellaneous Chores
+
+* **example/deps:** update dependency cloud_firestore to ^5.6.12 ([#818](https://github.com/zeshuaro/firestore_cache/issues/818)) ([f206b76](https://github.com/zeshuaro/firestore_cache/commit/f206b7674b561ec28c048d691558277aa2fb5820))
+* **example/deps:** update dependency firebase_core to ^3.15.2 ([#819](https://github.com/zeshuaro/firestore_cache/issues/819)) ([f217ec4](https://github.com/zeshuaro/firestore_cache/commit/f217ec4b586cd9cd3d69be68b5f0a6f8b9e7743a))
+* **node:** update node.js to v22.18.0 ([#821](https://github.com/zeshuaro/firestore_cache/issues/821)) ([5000e23](https://github.com/zeshuaro/firestore_cache/commit/5000e2393b1b9db16bff73377d024feb1eb463e0))
+
 ## [2.17.8](https://github.com/zeshuaro/firestore_cache/compare/v2.17.7...v2.17.8) (2025-07-27)
 
 ### Bug Fixes
