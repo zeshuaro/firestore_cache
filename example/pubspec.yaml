@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.8.3 <4.0.0"
+  sdk: ">=3.9.2 <4.0.0"
 
 dependencies:
   cloud_firestore: 6.0.0
