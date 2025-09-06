@@ -4,20 +4,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// ignore: subtype_of_sealed_class
+// ignore: subtype_of_sealed_class, avoid_types_as_parameter_names
 class MockQuery<Map> extends Mock implements Query<Map> {}
 
+// ignore: avoid_types_as_parameter_names
 class MockQuerySnapshot<Map> extends Mock implements QuerySnapshot<Map> {}
 
-// ignore: subtype_of_sealed_class
+// ignore: subtype_of_sealed_class, avoid_types_as_parameter_names
 class MockQueryDocumentSnapshot<Map> extends Mock
     implements QueryDocumentSnapshot<Map> {}
 
-// ignore: subtype_of_sealed_class
+// ignore: subtype_of_sealed_class, avoid_types_as_parameter_names
 class MockDocumentReference<Map> extends Mock
     implements DocumentReference<Map> {}
 
-// ignore: subtype_of_sealed_class
+// ignore: subtype_of_sealed_class, avoid_types_as_parameter_names
 class MockDocumentSnapshot<Map> extends Mock implements DocumentSnapshot<Map> {}
 
 class MockSnapshotMetadata extends Mock implements SnapshotMetadata {}
