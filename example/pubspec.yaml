@@ -22,7 +22,7 @@ environment:
 
 dependencies:
   cloud_firestore: 6.0.2
-  firebase_core: 4.1.1
+  firebase_core: 4.2.0
   firestore_cache:
     path: ../
   flutter:
