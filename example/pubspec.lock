@@ -117,17 +117,17 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-      sha256: ecde2def458292404a4fcd3731ee4992fd631a0ec359d2d67c33baa8da5ec8ae
+      sha256: ff18fabb0ad0ed3595d2f2c85007ecc794aadecdff5b3bb1460b7ee47cded398
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.0"
+    version: "3.3.0"
   firestore_cache:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "2.18.3"
+    version: "2.18.4"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -398,4 +398,4 @@ packages:
     version: "1.1.0"
 sdks:
   dart: ">=3.9.2 <4.0.0"
-  flutter: ">=3.35.6"
+  flutter: ">=3.35.7"
