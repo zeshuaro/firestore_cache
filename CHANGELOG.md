@@ -1,3 +1,28 @@
+## [2.18.5](https://github.com/zeshuaro/firestore_cache/compare/v2.18.4...v2.18.5) (2025-11-16)
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to v6.1.0 ([#904](https://github.com/zeshuaro/firestore_cache/issues/904)) ([375f726](https://github.com/zeshuaro/firestore_cache/commit/375f726ff74eebbc6de760b5d958f5fb2dce8a10))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#900](https://github.com/zeshuaro/firestore_cache/issues/900)) ([d11e795](https://github.com/zeshuaro/firestore_cache/commit/d11e79522a670a1293d46e12ff42dcd3b0703303))
+* **deps:** update dependency build_runner to v2.10.0 ([#893](https://github.com/zeshuaro/firestore_cache/issues/893)) ([d4c66d3](https://github.com/zeshuaro/firestore_cache/commit/d4c66d38325a719cb9bd7095daec7dea05bc0d4e))
+* **deps:** update dependency build_runner to v2.10.1 ([#897](https://github.com/zeshuaro/firestore_cache/issues/897)) ([38e85f8](https://github.com/zeshuaro/firestore_cache/commit/38e85f88fc9fc3ad049be273f377e9763230ffc7))
+* **deps:** update dependency semantic-release-pub to v0.10.26 ([#894](https://github.com/zeshuaro/firestore_cache/issues/894)) ([d30cfca](https://github.com/zeshuaro/firestore_cache/commit/d30cfca4782938b53770f42d9c2a5f86f1197042))
+* **deps:** update dependency semantic-release-pub to v0.11.0 ([#899](https://github.com/zeshuaro/firestore_cache/issues/899)) ([8c86179](https://github.com/zeshuaro/firestore_cache/commit/8c86179d5fa990f082e8109b54ea053cec0c8f74))
+* **example/deps:** update dependency cloud_firestore to v6.1.0 ([#902](https://github.com/zeshuaro/firestore_cache/issues/902)) ([44efb35](https://github.com/zeshuaro/firestore_cache/commit/44efb35c90b9cc5a43d6a64411f1e54640bddd3a))
+* **example/deps:** update dependency firebase_core to v4.2.1 ([#901](https://github.com/zeshuaro/firestore_cache/issues/901)) ([3137d67](https://github.com/zeshuaro/firestore_cache/commit/3137d67a48f575a61f8c8cc98677436879a8d14b))
+* **node:** update node.js to v22.21.1 ([#895](https://github.com/zeshuaro/firestore_cache/issues/895)) ([080d6a4](https://github.com/zeshuaro/firestore_cache/commit/080d6a4067756c17b35277a9274774bf60afcf19))
+* **node:** update node.js to v24 ([#896](https://github.com/zeshuaro/firestore_cache/issues/896)) ([2f9e446](https://github.com/zeshuaro/firestore_cache/commit/2f9e4465b688e0b83b2a5460a9138975dcc11ccf))
+* **node:** update node.js to v24.11.1 ([#903](https://github.com/zeshuaro/firestore_cache/issues/903)) ([15e2c89](https://github.com/zeshuaro/firestore_cache/commit/15e2c8984e5967f1581801becef5291728113ea5))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 1ea5fa5 ([#907](https://github.com/zeshuaro/firestore_cache/issues/907)) ([b813e28](https://github.com/zeshuaro/firestore_cache/commit/b813e28a2ca00796e263db381b46987a4e4a9996))
+* **deps:** update zeshuaro/github-actions-workflows digest to 40090c2 ([#909](https://github.com/zeshuaro/firestore_cache/issues/909)) ([d047c02](https://github.com/zeshuaro/firestore_cache/commit/d047c02840e0faef7fd0e9a6b557d94af8911972))
+* **deps:** update zeshuaro/github-actions-workflows digest to aba8a1b ([#898](https://github.com/zeshuaro/firestore_cache/issues/898)) ([3a52491](https://github.com/zeshuaro/firestore_cache/commit/3a52491ba83b9c69c1a6bab3d3f96b95c98b9a07))
+
 ## [2.18.4](https://github.com/zeshuaro/firestore_cache/compare/v2.18.3...v2.18.4) (2025-10-26)
 
 ### Bug Fixes
