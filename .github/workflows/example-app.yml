@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Get project Flutter version 🏷️
         id: fvm-config
