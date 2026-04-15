@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@actions/core@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-2.0.3.tgz#b05e8cf407ab393e5d10282357a74e1ee2315eee"
-  integrity sha512-Od9Thc3T1mQJYddvVPM4QGiLUewdh+3txmDYHHxoNdkqysR1MbCT+rFOtNUxYAz+7+6RIsqipVahY2GJqGPyxA==
-  dependencies:
-    "@actions/exec" "^2.0.0"
-    "@actions/http-client" "^3.0.2"
-
 "@actions/core@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@actions/core/-/core-3.0.0.tgz#89cb07c119e9b46a649ad5f355e77de9b3108cf8"
@@ -18,27 +10,12 @@
     "@actions/exec" "^3.0.0"
     "@actions/http-client" "^4.0.0"
 
-"@actions/exec@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/exec/-/exec-2.0.0.tgz#35e829723389f80e362ec2cc415697ec74362ad8"
-  integrity sha512-k8ngrX2voJ/RIN6r9xB82NVqKpnMRtxDoiO+g3olkIUpQNqjArXrCQceduQZCQj3P3xm32pChRLqRrtXTlqhIw==
-  dependencies:
-    "@actions/io" "^2.0.0"
-
 "@actions/exec@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@actions/exec/-/exec-3.0.0.tgz#8c3464d20f0aa4068707757021d7e3c01a7ee203"
   integrity sha512-6xH/puSoNBXb72VPlZVm7vQ+svQpFyA96qdDBvhB8eNZOE8LtPf9L4oAsfzK/crCL8YZ+19fKYVnM63Sl+Xzlw==
   dependencies:
     "@actions/io" "^3.0.2"
-
-"@actions/http-client@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-3.0.2.tgz#3db9c83af9d29d51ac8c30b45bc17f7014beb1b2"
-  integrity sha512-JP38FYYpyqvUsz+Igqlc/JG6YO9PaKuvqjM3iGvaLqFnJ7TFmcLyy2IDrY0bI0qCQug8E9K+elv5ZNfw62ZJzA==
-  dependencies:
-    tunnel "^0.0.6"
-    undici "^6.23.0"
 
 "@actions/http-client@^4.0.0":
   version "4.0.0"
@@ -47,11 +24,6 @@
   dependencies:
     tunnel "^0.0.6"
     undici "^6.23.0"
-
-"@actions/io@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/io/-/io-2.0.0.tgz#3ad1271ba3cd515324f2215e8d4c1c0c3864d65b"
-  integrity sha512-Jv33IN09XLO+0HS79aaODsvIRyduiF7NY/F6LYeK5oeUmrsz7aFdRphQjFoESF4jS7lMauDOttKALcpapVDIAg==
 
 "@actions/io@^3.0.2":
   version "3.0.2"
@@ -2768,16 +2740,16 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.11.12:
-  version "0.11.12"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.11.12.tgz#c057ea2d04be49ab2d3d5f9c803d7476946eb5c0"
-  integrity sha512-Fpe8pGC9Cak4XCaENegZSiVI4kVqYsHZg1GFg1eeyG7J7o1wnwU5ngvdO/lBbD5TeaZfmxASwPOlSP6qFe4zaQ==
+semantic-release-pub@0.11.13:
+  version "0.11.13"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.11.13.tgz#bc7d9cb73f441c6832be93080d72d64e263412f9"
+  integrity sha512-acWN5K2SPc3S6XobBq65Ngpg4OnF5qQ5GGDyXafOuNjAQnrir6bI01bwDXSa6zcUu1TGk8xKMV8D9CypgvUETA==
   dependencies:
-    "@actions/core" "^2.0.3"
+    "@actions/core" "^3.0.0"
     "@semantic-release/error" "^4.0.0"
     execa "^9.6.1"
     google-auth-library "^10.6.2"
-    yaml "^2.8.2"
+    yaml "^2.8.3"
     zod "^4.3.6"
 
 semantic-release-replace-plugin@1.2.7:
@@ -3361,7 +3333,7 @@ yallist@^5.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-5.0.0.tgz#00e2de443639ed0d78fd87de0d27469fbcffb533"
   integrity sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==
 
-yaml@^2.8.2:
+yaml@^2.8.3:
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.8.3.tgz#a0d6bd2efb3dd03c59370223701834e60409bd7d"
   integrity sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==
