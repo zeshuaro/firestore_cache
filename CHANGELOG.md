@@ -1,3 +1,32 @@
+## [2.19.0](https://github.com/zeshuaro/firestore_cache/compare/v2.18.7...v2.19.0) (2026-04-19)
+
+### Features
+
+* **sdk:** update dependency flutter to v3.41.6 ([#998](https://github.com/zeshuaro/firestore_cache/issues/998)) ([b009255](https://github.com/zeshuaro/firestore_cache/commit/b009255f7279c64bb88272f33aa59a7539c82c3c))
+
+### Bug Fixes
+
+* **deps:** update dependency cloud_firestore to ^6.2.0 ([#936](https://github.com/zeshuaro/firestore_cache/issues/936)) ([7896fda](https://github.com/zeshuaro/firestore_cache/commit/7896fda3109b5dcc49704da3f2e7f4a53d791da3))
+* **deps:** update dependency shared_preferences to ^2.5.5 ([#994](https://github.com/zeshuaro/firestore_cache/issues/994)) ([12037cc](https://github.com/zeshuaro/firestore_cache/commit/12037ccda42f33725507b94113b562425c06503d))
+* **sdk:** update dependency dart to >=3.11.5 <4.0.0 ([#999](https://github.com/zeshuaro/firestore_cache/issues/999)) ([0a0d874](https://github.com/zeshuaro/firestore_cache/commit/0a0d8748fd86569b7c20fbc34f2a315a6ed1a5d2))
+* **sdk:** update dependency dart to >=3.9.4 <4.0.0 ([#995](https://github.com/zeshuaro/firestore_cache/issues/995)) ([3ec87ad](https://github.com/zeshuaro/firestore_cache/commit/3ec87ad107f0b60796301fb543ae80f2ab0427e8))
+* **sdk:** update dependency flutter to v3.41.7 ([#1003](https://github.com/zeshuaro/firestore_cache/issues/1003)) ([613592b](https://github.com/zeshuaro/firestore_cache/commit/613592b9a17cea64036054b3fdf25cfedc06f9bd))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#992](https://github.com/zeshuaro/firestore_cache/issues/992)) ([1c9b44f](https://github.com/zeshuaro/firestore_cache/commit/1c9b44f508e7a61e27d0da47b2abad89d5d513c3))
+* **deps:** lock file maintenance ([#993](https://github.com/zeshuaro/firestore_cache/issues/993)) ([6d16297](https://github.com/zeshuaro/firestore_cache/commit/6d16297dfff0772c0ef16a29c8b4c57cf24a8732))
+* **deps:** update dependency build_runner to v2.13.1 ([#996](https://github.com/zeshuaro/firestore_cache/issues/996)) ([efadd7e](https://github.com/zeshuaro/firestore_cache/commit/efadd7e99aae971f3ada27f62d31534b5680e90c))
+* **deps:** update dependency mocktail to v1.0.5 ([#1002](https://github.com/zeshuaro/firestore_cache/issues/1002)) ([8a70d3b](https://github.com/zeshuaro/firestore_cache/commit/8a70d3bdf76318261a5f3a1bbc134e8537d39e3a))
+* **deps:** update dependency semantic-release-pub to v0.11.13 ([#1000](https://github.com/zeshuaro/firestore_cache/issues/1000)) ([ac3e776](https://github.com/zeshuaro/firestore_cache/commit/ac3e77695ca7591e907299268a419646a53d1d76))
+* **example/deps:** update dependency dart to >=3.11.5 <4.0.0 ([#905](https://github.com/zeshuaro/firestore_cache/issues/905)) ([9cc0fbb](https://github.com/zeshuaro/firestore_cache/commit/9cc0fbbe4578f65be64999c1364cb1bd3d7cae38))
+* **example/deps:** update dependency dart to >=3.9.4 <4.0.0 ([#857](https://github.com/zeshuaro/firestore_cache/issues/857)) ([6df9cad](https://github.com/zeshuaro/firestore_cache/commit/6df9cadb538fa7362c07e70e8c9a67ace015fa94))
+* **node:** update node.js to v24.15.0 ([#1001](https://github.com/zeshuaro/firestore_cache/issues/1001)) ([a290e3e](https://github.com/zeshuaro/firestore_cache/commit/a290e3e35fc194314fcfa60dfce2e4e9045852d9))
+
+### Continuous Integration
+
+* **deps:** update subosito/flutter-action action to v2.23.0 ([#997](https://github.com/zeshuaro/firestore_cache/issues/997)) ([f3e2acd](https://github.com/zeshuaro/firestore_cache/commit/f3e2acd36ffab6b83859bce03e7aacdd7d73fae7))
+
 ## [2.18.7](https://github.com/zeshuaro/firestore_cache/compare/v2.18.6...v2.18.7) (2026-04-12)
 
 ### Bug Fixes
