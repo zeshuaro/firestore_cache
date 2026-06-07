@@ -1,3 +1,23 @@
+## [2.20.1](https://github.com/zeshuaro/firestore_cache/compare/v2.20.0...v2.20.1) (2026-06-07)
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.12.1 <4.0.0 ([#1045](https://github.com/zeshuaro/firestore_cache/issues/1045)) ([9e15060](https://github.com/zeshuaro/firestore_cache/commit/9e1506036f52f146960a6564f176a59a0d0b7bc5))
+* **sdk:** update dependency flutter to v3.44.1 ([#1049](https://github.com/zeshuaro/firestore_cache/issues/1049)) ([bcf5630](https://github.com/zeshuaro/firestore_cache/commit/bcf56302af82342105c102fced19dd49e7dc8997))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1043](https://github.com/zeshuaro/firestore_cache/issues/1043)) ([e9611ac](https://github.com/zeshuaro/firestore_cache/commit/e9611ac8a06055fa1cad1b23d971a2d2430b6d20))
+* **deps:** lock file maintenance ([#1048](https://github.com/zeshuaro/firestore_cache/issues/1048)) ([6370599](https://github.com/zeshuaro/firestore_cache/commit/637059935e408840542bb02669c228896c133f38))
+* **deps:** update dependency semantic-release-pub to v0.12.0 ([#1046](https://github.com/zeshuaro/firestore_cache/issues/1046)) ([8c9fd39](https://github.com/zeshuaro/firestore_cache/commit/8c9fd391531d09642f021453228428e05e9a2341))
+* **example/deps:** update dependency dart to >=3.12.1 <4.0.0 ([#1044](https://github.com/zeshuaro/firestore_cache/issues/1044)) ([fb6b1ea](https://github.com/zeshuaro/firestore_cache/commit/fb6b1eaa850f93a40f17d6fae45cb60b570e774e))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 803ca28 ([#1042](https://github.com/zeshuaro/firestore_cache/issues/1042)) ([f92432a](https://github.com/zeshuaro/firestore_cache/commit/f92432a7ecd6aac50aaff18a7e71aa6844ca30d7))
+* **deps:** update zeshuaro/github-actions-workflows digest to dca8343 ([#1047](https://github.com/zeshuaro/firestore_cache/issues/1047)) ([c2c5975](https://github.com/zeshuaro/firestore_cache/commit/c2c5975b47c5429a2379cb91303478807f61c948))
+* **deps:** update zeshuaro/github-actions-workflows digest to e2bd453 ([#1050](https://github.com/zeshuaro/firestore_cache/issues/1050)) ([920f9b8](https://github.com/zeshuaro/firestore_cache/commit/920f9b88c5c5cb78b5094576f4b33947a440e339))
+
 ## [2.20.0](https://github.com/zeshuaro/firestore_cache/compare/v2.19.2...v2.20.0) (2026-05-24)
 
 ### Features
