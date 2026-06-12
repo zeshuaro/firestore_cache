@@ -2754,10 +2754,10 @@ semantic-release-replace-plugin@1.2.7:
     lodash-es "^4.17.21"
     replace-in-file "^7.0.1"
 
-semantic-release@25.0.4:
-  version "25.0.4"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-25.0.4.tgz#66358690f503bfe1583ba60ad63f74a66ed117f8"
-  integrity sha512-GeYqMPlv2BdLw/kNSjrDk8sl4yfc/sTE3szNP/X+1EXQpdhk7+oG5gEGh3tDk8onJm/oGaS6NWNEth9mGC0FGA==
+semantic-release@25.0.5:
+  version "25.0.5"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-25.0.5.tgz#67be786556e40e8e81c591a12f38877f1eee6052"
+  integrity sha512-mn61SUJwtM8ThrWn2WmgLVpwVJeG/hPSupua1psdMoufmwRIPyvRLkRkL0JDXkP67OntlLWUYnBnfVc8EDO3/g==
   dependencies:
     "@semantic-release/commit-analyzer" "^13.0.1"
     "@semantic-release/error" "^4.0.0"
