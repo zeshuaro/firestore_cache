@@ -1,3 +1,21 @@
+## [2.20.2](https://github.com/zeshuaro/firestore_cache/compare/v2.20.1...v2.20.2) (2026-06-14)
+
+### Bug Fixes
+
+* **sdk:** update dart sdk minor patch version to >=3.12.2 <4.0.0 ([#1054](https://github.com/zeshuaro/firestore_cache/issues/1054)) ([a8bfae6](https://github.com/zeshuaro/firestore_cache/commit/a8bfae6d97a5c304b153e18155c0d6f54dd9e518))
+* **sdk:** update flutter sdk patch version to v3.44.2 ([#1055](https://github.com/zeshuaro/firestore_cache/issues/1055)) ([2dde8c8](https://github.com/zeshuaro/firestore_cache/commit/2dde8c807f096614dd2ce2650b1c32fd7eb5cbc4))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1051](https://github.com/zeshuaro/firestore_cache/issues/1051)) ([3e1512a](https://github.com/zeshuaro/firestore_cache/commit/3e1512a93becd5db1f55fe61ee04074ffd73135b))
+* **deps:** update semantic-release monorepo to v25.0.4 ([#1056](https://github.com/zeshuaro/firestore_cache/issues/1056)) ([08ab627](https://github.com/zeshuaro/firestore_cache/commit/08ab627fb499705c83df98c50c16920ccb7c5d30))
+* **deps:** update semantic-release monorepo to v25.0.5 ([#1057](https://github.com/zeshuaro/firestore_cache/issues/1057)) ([e0d9c4b](https://github.com/zeshuaro/firestore_cache/commit/e0d9c4b63725af884dad45e9f5567db71ffe8e06))
+* **example/deps:** update dependency dart to >=3.12.2 <4.0.0 ([#1053](https://github.com/zeshuaro/firestore_cache/issues/1053)) ([929ed01](https://github.com/zeshuaro/firestore_cache/commit/929ed01b875b652d57652ff76b1a6d425e9761d0))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to de5b773 ([#1052](https://github.com/zeshuaro/firestore_cache/issues/1052)) ([25f9fdc](https://github.com/zeshuaro/firestore_cache/commit/25f9fdc749e54f383c9fef2c4b314195efbfe6c3))
+
 ## [2.20.1](https://github.com/zeshuaro/firestore_cache/compare/v2.20.0...v2.20.1) (2026-06-07)
 
 ### Bug Fixes
