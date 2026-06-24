@@ -2740,10 +2740,10 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.0.tgz#3ab81d977107e4ede7d46cce81449d9b8076814f"
-  integrity sha512-T7Ve8GjX5tMAnbT1u+4BHWtsmJiW+NDANzk/v+C4cA+s9WGa+eNNqAHs2DV3AtGC+g9Sc+n7V1j4TelGfpSx8w==
+semantic-release-pub@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.1.tgz#7e5124ca0abddbbe2449403d479e04fd0206d015"
+  integrity sha512-YhmkDAajIOzIE5O1kC6kS+8qBKbUAFOu0ynWuPdzg2mcukCr/XfDXG9Zl5l6Matd4O4LoXNTw0rAq/cGUF4jIA==
   dependencies:
     "@actions/core" "^3.0.1"
     "@semantic-release/error" "^4.0.0"
