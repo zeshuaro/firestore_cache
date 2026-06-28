@@ -1,3 +1,24 @@
+## [2.20.3](https://github.com/zeshuaro/firestore_cache/compare/v2.20.2...v2.20.3) (2026-06-28)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.44.4 ([#1067](https://github.com/zeshuaro/firestore_cache/issues/1067)) ([024d0cd](https://github.com/zeshuaro/firestore_cache/commit/024d0cd0702adf02220a62e10e747677c3111b51))
+* **sdk:** update flutter sdk patch version ([#1063](https://github.com/zeshuaro/firestore_cache/issues/1063)) ([ee1a23f](https://github.com/zeshuaro/firestore_cache/commit/ee1a23f524f65b48d1a6f1ca4f4c49d2235d8485))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1058](https://github.com/zeshuaro/firestore_cache/issues/1058)) ([a19a44f](https://github.com/zeshuaro/firestore_cache/commit/a19a44f5811a18d45392aaba64045255e92ea6d8))
+* **deps:** lock file maintenance ([#1062](https://github.com/zeshuaro/firestore_cache/issues/1062)) ([f2e3cd1](https://github.com/zeshuaro/firestore_cache/commit/f2e3cd1180b8b400706beb2a0de0048bbe7113af))
+* **deps:** update dependency semantic-release-pub to v0.13.0 ([#1059](https://github.com/zeshuaro/firestore_cache/issues/1059)) ([a54ba89](https://github.com/zeshuaro/firestore_cache/commit/a54ba8990fdd7c5800e5069a6dc92e9353e74d30))
+* **deps:** update dependency semantic-release-pub to v0.13.1 ([#1064](https://github.com/zeshuaro/firestore_cache/issues/1064)) ([d0cf47c](https://github.com/zeshuaro/firestore_cache/commit/d0cf47ce741b0d195d689b129dd3f5ef5687a340))
+* **node:** update node chore ([#1065](https://github.com/zeshuaro/firestore_cache/issues/1065)) ([0bf1756](https://github.com/zeshuaro/firestore_cache/commit/0bf1756ec74c7c29f93e671944a33c1057275e9d))
+* **node:** update node chore to v24.17.0 ([#1060](https://github.com/zeshuaro/firestore_cache/issues/1060)) ([1ea8246](https://github.com/zeshuaro/firestore_cache/commit/1ea8246b1df8e77274af24edc9bdce4cd3d1da39))
+
+### Continuous Integration
+
+* **deps:** update actions/cache action to v6 ([#1066](https://github.com/zeshuaro/firestore_cache/issues/1066)) ([f0220bd](https://github.com/zeshuaro/firestore_cache/commit/f0220bd942d6d753bc4e80629ed917231ec502b0))
+* **deps:** update actions/checkout action to v7 ([#1061](https://github.com/zeshuaro/firestore_cache/issues/1061)) ([7a160b8](https://github.com/zeshuaro/firestore_cache/commit/7a160b890ede63983b4698d91631f186a3b5fef0))
+
 ## [2.20.2](https://github.com/zeshuaro/firestore_cache/compare/v2.20.1...v2.20.2) (2026-06-14)
 
 ### Bug Fixes
