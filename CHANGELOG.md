@@ -1,3 +1,20 @@
+## [2.20.4](https://github.com/zeshuaro/firestore_cache/compare/v2.20.3...v2.20.4) (2026-07-12)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.44.5 ([#1073](https://github.com/zeshuaro/firestore_cache/issues/1073)) ([1d19f4c](https://github.com/zeshuaro/firestore_cache/commit/1d19f4c95d02f846ff1f4785cc323550f3efb6ad))
+* **sdk:** update dependency flutter to v3.44.6 ([#1074](https://github.com/zeshuaro/firestore_cache/issues/1074)) ([b71f2bb](https://github.com/zeshuaro/firestore_cache/commit/b71f2bb782f9e5d96b8309b44899a71e52463352))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1068](https://github.com/zeshuaro/firestore_cache/issues/1068)) ([4575326](https://github.com/zeshuaro/firestore_cache/commit/4575326204c565da64c9f1600e6c68b592183a21))
+* **deps:** lock file maintenance ([#1072](https://github.com/zeshuaro/firestore_cache/issues/1072)) ([daa78f1](https://github.com/zeshuaro/firestore_cache/commit/daa78f199bc5aa0d3928a957dc612f0fdd392280))
+* **deps:** update dependency semantic-release-pub to v0.13.2 ([#1071](https://github.com/zeshuaro/firestore_cache/issues/1071)) ([25a7a82](https://github.com/zeshuaro/firestore_cache/commit/25a7a826e373f7e453edca457e171a11954aa223))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 41d124c ([#1070](https://github.com/zeshuaro/firestore_cache/issues/1070)) ([1246b8c](https://github.com/zeshuaro/firestore_cache/commit/1246b8cb09559ed776918fc69273184130a76303))
+
 ## [2.20.3](https://github.com/zeshuaro/firestore_cache/compare/v2.20.2...v2.20.3) (2026-06-28)
 
 ### Bug Fixes
