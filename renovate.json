@@ -9,5 +9,12 @@
     "github>zeshuaro/renovate-configs:javascript",
     "github>zeshuaro/renovate-configs:nodeVersion",
     "github>zeshuaro/renovate-configs:nodeChore"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Firebase dependencies",
+      "matchFileNames": ["**/pubspec.yaml"],
+      "matchPackageNames": ["firebase_{/,}**", "cloud_firestore{/,}**"]
+    }
   ]
 }
