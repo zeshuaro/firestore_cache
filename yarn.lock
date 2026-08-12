@@ -1086,7 +1086,7 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 
-execa@^10.0.0:
+execa@^10.0.0, execa@^10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-10.0.1.tgz#7e5ed6cc9d5ac2cc4160036c624934137f0750ff"
   integrity sha512-ge98qjkRK4IB7tL7Ju/6qmm5LHoH1eEMt5FNZrz3f4UIYhF28lggX20z3FaX1sgc67msLEn0N0BscOs29iuwyw==
@@ -2697,14 +2697,14 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.3.tgz#35c735b811c397892f309c13fa464cbd21663dfb"
-  integrity sha512-R1OvOTPlCVfo/37tbMQwq5AlUKB14ZaTFAS3rJtymqsNXPR+SURr/BwoP4XEZk58XnFA+2dVCaPAuWNK4sTVNA==
+semantic-release-pub@0.13.4:
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.4.tgz#7946c43f6b570582a036b998e8400da1d23181ae"
+  integrity sha512-fC6yPo8kIrz5pUtBB6VGP2pS/ES7T6dD7AUzPRE87KeKohJGozq/qzP8E3dPLqkN+OUPiJngzcCY+BHDqxZVMg==
   dependencies:
     "@actions/core" "^3.0.1"
     "@semantic-release/error" "^4.0.0"
-    execa "^10.0.0"
+    execa "^10.0.1"
     google-auth-library "^10.9.1"
     yaml "^2.9.0"
     zod "^4.4.3"
