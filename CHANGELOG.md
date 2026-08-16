@@ -1,3 +1,5 @@
+## [2.21.0](https://github.com/zeshuaro/firestore_cache/compare/v2.20.7...v2.21.0) (2026-08-16)
+
 ## [2.20.7](https://github.com/zeshuaro/firestore_cache/compare/v2.20.6...v2.20.7) (2026-08-09)
 
 ## [2.20.6](https://github.com/zeshuaro/firestore_cache/compare/v2.20.5...v2.20.6) (2026-08-02)
