@@ -1,3 +1,17 @@
+## [2.21.3](https://github.com/zeshuaro/firestore_cache/compare/v2.21.2...v2.21.3) (2026-09-27)
+
+### Bug Fixes
+
+* **deps:** update firebase dependencies ([#1130](https://github.com/zeshuaro/firestore_cache/issues/1130)) ([f5b7e7d](https://github.com/zeshuaro/firestore_cache/commit/f5b7e7d96714b0f62bde6c88e638f764aad82f6d))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency semantic-release-pub to v0.13.6 ([#1129](https://github.com/zeshuaro/firestore_cache/issues/1129)) ([579d0db](https://github.com/zeshuaro/firestore_cache/commit/579d0db58fdb6f1f141b904e383860a3ca547761))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 92fcccd ([#1131](https://github.com/zeshuaro/firestore_cache/issues/1131)) ([6c5e4e3](https://github.com/zeshuaro/firestore_cache/commit/6c5e4e316bd74bfd4bf851c35c25a1e72466f29d))
+
 ## [2.21.2](https://github.com/zeshuaro/firestore_cache/compare/v2.21.1...v2.21.2) (2026-09-20)
 
 ### Bug Fixes
