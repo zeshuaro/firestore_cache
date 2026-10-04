@@ -1,3 +1,14 @@
+## [2.21.4](https://github.com/zeshuaro/firestore_cache/compare/v2.21.3...v2.21.4) (2026-10-04)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.47.6 ([#1134](https://github.com/zeshuaro/firestore_cache/issues/1134)) ([6b2cc96](https://github.com/zeshuaro/firestore_cache/commit/6b2cc960ed16617dcb7b00dbc9f55224eaf321f4))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1132](https://github.com/zeshuaro/firestore_cache/issues/1132)) ([faa6be8](https://github.com/zeshuaro/firestore_cache/commit/faa6be85af9f785be4748f71c2d1fac4b82676f6))
+* **example/deps:** update dependency dart to >=3.13.5 <4.0.0 ([#1133](https://github.com/zeshuaro/firestore_cache/issues/1133)) ([37ade79](https://github.com/zeshuaro/firestore_cache/commit/37ade795e5c65fc7d695264c630cc25e8e44f5c6))
+
 ## [2.21.3](https://github.com/zeshuaro/firestore_cache/compare/v2.21.2...v2.21.3) (2026-09-27)
 
 ### Bug Fixes
