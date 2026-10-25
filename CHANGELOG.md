@@ -1,3 +1,16 @@
+## [2.21.6](https://github.com/zeshuaro/firestore_cache/compare/v2.21.5...v2.21.6) (2026-10-25)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.47.8 ([#1148](https://github.com/zeshuaro/firestore_cache/issues/1148)) ([72120a3](https://github.com/zeshuaro/firestore_cache/commit/72120a3ccbc70b27449ec7d134bc0765e5632b49))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency build_runner to v2.17.1 ([#1145](https://github.com/zeshuaro/firestore_cache/issues/1145)) ([aa5dd08](https://github.com/zeshuaro/firestore_cache/commit/aa5dd086d47f179aa1b59f22a71ac0c91b60e80d))
+* **deps:** update dependency semantic-release-pub to v0.13.8 ([#1143](https://github.com/zeshuaro/firestore_cache/issues/1143)) ([299772d](https://github.com/zeshuaro/firestore_cache/commit/299772df03f67a9c1138365a8316e9395f09b52a))
+* **example/deps:** update dependency dart to >=3.13.6 <4.0.0 ([#1142](https://github.com/zeshuaro/firestore_cache/issues/1142)) ([b66394d](https://github.com/zeshuaro/firestore_cache/commit/b66394d66d06c010a33b9feedd5d812980ebbfc3))
+* **node:** update node.js to v24.22.1 ([#1144](https://github.com/zeshuaro/firestore_cache/issues/1144)) ([beaed34](https://github.com/zeshuaro/firestore_cache/commit/beaed34204d22b1f54652c428aa8405ae866adf4))
+
 ## [2.21.5](https://github.com/zeshuaro/firestore_cache/compare/v2.21.4...v2.21.5) (2026-10-18)
 
 ### Bug Fixes
