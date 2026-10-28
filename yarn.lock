@@ -1086,7 +1086,7 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 
-execa@^10.0.0, execa@^10.1.1:
+execa@^10.0.0, execa@^10.2.0:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-10.2.1.tgz#9cc61f119fa0389a6a7f73cb1eb0edb834d8946c"
   integrity sha512-/Bofl3ZBh2Q4/PG0W63qFzP5vDAypi8Zc90UWTBzaDNIYiX7apPOd0N6L8hG8CojUdq4V51adu8BObP+iVsSTw==
@@ -1317,7 +1317,7 @@ glob@^8.1.0:
     minimatch "^5.0.1"
     once "^1.3.0"
 
-google-auth-library@^11.3.0:
+google-auth-library@^11.3.1:
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-11.3.1.tgz#89820f220d11df0b3a9de1c3b02be15ca63fd565"
   integrity sha512-mQS0R2Ev/DKkzuWSYtDeq15uhDeaWuT2qzLYqJ41LmooxVKHmn5ut3pc6dlHY6wfHW/D7FBmOYjAtkjaD1A7qA==
@@ -2699,15 +2699,15 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.13.8:
-  version "0.13.8"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.8.tgz#a2de36e257fdc49a70d37b84f1c4290607aa4bd6"
-  integrity sha512-sXUqBLjTiHnSoxYOqso2il6KoWdd/fHE0SlQ0eBYU1xMhQxViE3G8k3LCEGpYjTMlXgBY7BSAfCIeJx6Wxw9IQ==
+semantic-release-pub@0.13.9:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.9.tgz#ee1e7e7a78332aa6ac43c8d16b463b167dff1a35"
+  integrity sha512-Ow0MQDLtNyXsmWuqZtMEidEgyKY8SzMZWE03jqQzn1Z8ksm+1yl/jPLxAdSPAxykXolT3/IKz5WObZWEKuTFUQ==
   dependencies:
     "@actions/core" "^3.0.1"
     "@semantic-release/error" "^4.0.0"
-    execa "^10.1.1"
-    google-auth-library "^11.3.0"
+    execa "^10.2.0"
+    google-auth-library "^11.3.1"
     yaml "^2.9.1"
     zod "^4.6.7"
 
