@@ -1312,7 +1312,7 @@ glob@^8.1.0:
     minimatch "^5.0.1"
     once "^1.3.0"
 
-google-auth-library@^11.3.3:
+google-auth-library@^11.3.4:
   version "11.3.4"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-11.3.4.tgz#4feb24f095b478290c210644ff32aadbd7e243b2"
   integrity sha512-RaYCDoeYIIFTRgH8hesSxqLrmtC2l+DB3cSCS/SN1TPGjI2VpPdJmF3bfRLUn8VvP/4I2Af9fsktw2f9SvVSVg==
@@ -2693,15 +2693,15 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.13.11:
-  version "0.13.11"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.11.tgz#8107dbaf9f0b75d8ac8fb0449f9e7ef49e6bc629"
-  integrity sha512-+sk9U+rrYXa6iMHP1VLYR+9S32K/BHM5c/Rsuajje/+E012+t8Fdpftt+7rbPP5JpjYGlPw4avCl7mTtjdrsyw==
+semantic-release-pub@0.13.12:
+  version "0.13.12"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.12.tgz#ed7e807897d95ba43ac6ace0f116af704e153912"
+  integrity sha512-FJROJcz+2qjkhrbAds5HthpzRDYIG83QgI82ZZtFyOx5wXldULpc//rIsEchfa6oaurpY70WmI5VgB6Nv4KFLQ==
   dependencies:
     "@actions/core" "^3.0.1"
     "@semantic-release/error" "^4.0.0"
     execa "^10.2.1"
-    google-auth-library "^11.3.3"
+    google-auth-library "^11.3.4"
     yaml "^2.9.1"
     zod "^4.6.7"
 
